@@ -558,10 +558,10 @@
       }
 
       .flow-step-top {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
         min-height: 84px;
         margin-bottom: 1rem;
       }
@@ -584,6 +584,10 @@
       }
 
       .step-number {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
         width: 58px;
         height: 58px;
         margin: 0;
@@ -1979,6 +1983,8 @@
             </div>
           </div>
         </section>
+
+        
 
         <section class="section-block testimonials">
           <div class="container-fluid-wide text-center">
