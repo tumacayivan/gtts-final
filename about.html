@@ -847,7 +847,8 @@
       }
 
       .cta-proof {
-        display: inline-flex;
+        display: flex;
+        justify-content: center;
         align-items: center;
         gap: 12px;
         margin-top: 28px;
@@ -858,6 +859,13 @@
       .cta-proof i {
         font-size: 18px;
         line-height: 1;
+      }
+
+      .cta-proof img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
       }
 
       .site-footer {
@@ -1618,7 +1626,7 @@
           <p data-i18n="cta.body">Enroll in minutes. Complete at your own pace. Get back on the road.</p>
           <a class="cta-button" href="https://www.gototrafficschool.com/" data-i18n="cta.button">Register Now</a>
           <div class="cta-proof">
-            <i class="bi bi-people"></i>
+            <img src="assets/icons/about-hero-people.png" alt="">
             <span data-i18n="cta.proof">Trusted by over 10 million drivers nationwide.</span>
           </div>
         </div>
