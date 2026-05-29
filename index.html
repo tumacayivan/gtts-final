@@ -456,13 +456,18 @@
 
       .works-feature {
         display: grid;
-        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
-        gap: clamp(2.2rem, 5vw, 5rem);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+        gap: clamp(2.2rem, 4vw, 4rem);
         align-items: center;
       }
 
+      .works-feature .section-title {
+        white-space: nowrap;
+        font-size: clamp(1.5rem, 2.2vw, 2.3rem);
+      }
+
       .works-feature-shell {
-        width: min(1120px, calc(100% - 96px));
+        width: min(1280px, calc(100% - 64px));
         margin: 0 auto;
       }
 
@@ -511,7 +516,7 @@
 
       .device-showcase img {
         width: 100%;
-        max-width: 760px;
+        max-width: 900px;
         height: auto;
       }
 
