@@ -510,7 +510,7 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         overflow: hidden;
       }
 
@@ -527,7 +527,7 @@
       .metric strong {
         display: block;
         color: var(--brand-navy);
-        font-size: clamp(1.9rem, 2.35vw, 2.55rem);
+        font-size: clamp(1.4rem, 1.7vw, 1.85rem);
         font-weight: 800;
         line-height: 1;
         text-wrap: balance;
@@ -541,6 +541,11 @@
         font-size: 1.02rem;
         line-height: 1.25;
         text-wrap: balance;
+      }
+
+      .metric:nth-child(3) span {
+        max-width: none;
+        white-space: nowrap;
       }
 
       .story-copy {
