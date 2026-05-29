@@ -1,0 +1,1854 @@
+<%@ Page Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" %>
+
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us | GoToTrafficSchool</title>
+    <meta
+      id="pageDescription"
+      name="description"
+      content="Learn how GoToTrafficSchool helped pioneer online traffic school and why millions of drivers trust the platform today."
+    >
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17691289057">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17691289057');
+    </script>
+    <script>(function(){var pp=document.createElement('script'), ppr=document.getElementsByTagName('script')[0]; stid='dW9OZk0yWXhhbDI0em53cmNDTVVTZz09';pp.type='text/javascript'; pp.async=true; pp.src=('https:' == document.location.protocol ? 'https://' : 'http://') + 's01.live2support.com/dashboardv2/chatwindow/'; ppr.parentNode.insertBefore(pp, ppr);})();</script>
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="64x64"
+      href="assets/favicon.webp"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --brand-navy: #143f65;
+        --brand-blue: #0d4f92;
+        --brand-blue-2: #2f73d7;
+        --brand-sky: #e7f3ff;
+        --brand-sky-2: #dbeeff;
+        --brand-border: #b6d0e6;
+        --brand-text: #101114;
+        --brand-muted: #5c6670;
+        --brand-red: #ff4b4d;
+        --footer-bg: #d9edf8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        margin: 0;
+        color: var(--brand-text);
+        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+        background: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      button,
+      select {
+        font: inherit;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 10px;
+        z-index: 2000;
+        padding: 10px 16px;
+        border-radius: 10px;
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+      }
+
+      .skip-link:focus {
+        left: 12px;
+      }
+
+      .container-page {
+        width: min(1280px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .section-shell {
+        padding: 72px 0;
+      }
+
+      .section-inset {
+        width: min(1140px, calc(100% - 88px));
+      }
+
+      .section-title {
+        margin: 0;
+        color: #111;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        font-weight: 800;
+        line-height: 1.1;
+        text-align: center;
+      }
+
+      .section-underline {
+        width: 118px;
+        height: 4px;
+        margin: 16px auto 0;
+        border-radius: 999px;
+        background: var(--brand-blue);
+      }
+
+      .utility-bar {
+        background: #1e4b73;
+        color: #fff;
+        max-height: 40px;
+      }
+
+      .utility-inner {
+        min-height: 40px;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .share-button {
+        min-width: 184px;
+        height: 30px;
+        max-height: 30px;
+        padding: 0 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        background: transparent;
+        color: #fff;
+        line-height: 1;
+        font-size: 0.95rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .share-button:hover,
+      .share-button:focus {
+        background: #fff;
+        color: var(--brand-navy);
+      }
+
+      .utility-phone {
+        font-size: 1.05rem;
+        font-weight: 500;
+      }
+
+      .main-nav {
+        border-bottom: 1px solid #dfe8ee;
+        background: #fff;
+      }
+
+      .main-nav .container-page {
+        width: min(1360px, calc(100% - 32px));
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px 20px;
+        min-height: 108px;
+      }
+
+      .navbar {
+        padding: 0;
+      }
+
+      .navbar-brand {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .navbar-brand img {
+        width: clamp(220px, 23vw, 300px);
+      }
+
+      .navbar-collapse {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+      }
+
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+      }
+
+      .navbar-toggler {
+        border-color: rgba(0, 0, 0, 0.12);
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.2rem rgba(13, 79, 146, 0.15);
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2810, 30, 50, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .nav-link {
+        color: #111;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 12px 14px;
+        white-space: nowrap;
+      }
+
+      .nav-link.active,
+      .nav-link:hover,
+      .nav-link:focus {
+        color: var(--brand-blue);
+      }
+
+      .nav-link.active {
+        font-weight: 800;
+      }
+
+      .login-link {
+        min-width: 128px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 2px;
+        padding: 14px 22px;
+        border-radius: 22px;
+        color: #fff;
+        background: linear-gradient(180deg, #2f74aa 0%, #223e57 100%);
+        font-size: 1.05rem;
+        font-weight: 600;
+        flex-shrink: 0;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .login-link:hover,
+      .login-link:focus {
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 14px 24px rgba(20, 63, 101, 0.18);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 85% 12%, rgba(84, 152, 221, 0.22) 0 2px, transparent 2px 100%),
+          linear-gradient(180deg, #e4f2ff 0%, #dcedfb 100%);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 24px;
+        right: 0;
+        width: 340px;
+        height: 200px;
+        background-image: radial-gradient(circle, rgba(57, 131, 204, 0.35) 1.2px, transparent 1.2px);
+        background-size: 14px 14px;
+        opacity: 0.6;
+        pointer-events: none;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -180px;
+        bottom: -220px;
+        width: 760px;
+        height: 520px;
+        border-radius: 50%;
+        border: 28px solid rgba(255, 255, 255, 0.18);
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        position: relative;
+        padding: 32px 0 28px;
+      }
+
+      .language-picker {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        z-index: 1;
+        width: min(220px, 100%);
+      }
+
+      .language-picker label {
+        display: block;
+        margin-bottom: 8px;
+        color: #2f3540;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .language-control {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 10px 24px rgba(45, 92, 136, 0.12);
+      }
+
+      .language-control i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-control .form-select {
+        border: 0;
+        padding: 0 28px 0 0;
+        background-color: transparent;
+        box-shadow: none;
+        font-size: 1rem;
+        color: #111;
+      }
+
+      .hero-copy {
+        max-width: 710px;
+        padding-right: 32px;
+      }
+
+      .hero-title {
+        margin: 22px 0 24px;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-lead {
+        max-width: 690px;
+        margin: 0;
+        font-size: clamp(1.18rem, 2vw, 1.45rem);
+        line-height: 1.55;
+      }
+
+      .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 266px;
+        margin-top: 34px;
+        padding: 18px 32px;
+        border-radius: 20px;
+        background: var(--brand-red);
+        color: #fff;
+        font-size: 1.18rem;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .hero-cta:hover,
+      .hero-cta:focus {
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 16px 30px rgba(255, 75, 77, 0.25);
+      }
+
+      .hero-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 28px;
+        margin: 34px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .hero-pills li {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        max-width: 280px;
+        color: #1a2734;
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero-pills .check {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--brand-blue);
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .hero-right {
+        padding-top: 80px;
+      }
+
+      .hero-stat-list {
+        max-width: 360px;
+        margin-left: auto;
+        background: transparent;
+      }
+
+      .hero-stat {
+        display: grid;
+        grid-template-columns: 52px minmax(0, 1fr);
+        gap: 16px;
+        align-items: center;
+        padding: 13px 0;
+        border-bottom: 1px solid rgba(24, 92, 153, 0.45);
+      }
+
+      .hero-stat:last-child {
+        border-bottom: 0;
+      }
+
+      .hero-stat-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1px solid rgba(13, 79, 146, 0.18);
+        background: rgba(255, 255, 255, 0.62);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-stat-icon img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+      }
+
+      .hero-stat-icon.is-people img {
+        width: 34px;
+        height: 20px;
+      }
+
+      .hero-stat-icon.is-speed img {
+        width: 52px;
+        height: 52px;
+      }
+
+      .hero-stat-icon.is-map img {
+        width: 31px;
+        height: 20px;
+      }
+
+      .hero-stat-icon.is-trophy img {
+        width: 24px;
+        height: 25px;
+      }
+
+      .hero-stat p {
+        margin: 0;
+        color: var(--brand-blue);
+        font-size: 1rem;
+        line-height: 1.25;
+      }
+
+      .metrics-strip {
+        border-top: 1px solid #edf3f8;
+        border-bottom: 1px solid #edf3f8;
+        background: #fff;
+      }
+
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: 1fr 0.9fr 1.42fr 1.32fr 1.22fr;
+        gap: 0;
+      }
+
+      .metric {
+        position: relative;
+        min-height: 132px;
+        padding: 28px 18px 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .metric:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 28px;
+        right: 0;
+        width: 1px;
+        height: 80px;
+        background: rgba(17, 17, 17, 0.42);
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--brand-navy);
+        font-size: clamp(1.9rem, 2.35vw, 2.55rem);
+        font-weight: 800;
+        line-height: 1;
+        text-wrap: balance;
+      }
+
+      .metric span {
+        display: block;
+        max-width: 20ch;
+        margin: 18px auto 0;
+        color: #16181c;
+        font-size: 1.02rem;
+        line-height: 1.25;
+        text-wrap: balance;
+      }
+
+      .story-copy {
+        max-width: 840px;
+        margin: 34px auto 0;
+        color: #1a1c21;
+        font-size: clamp(1.16rem, 1.8vw, 1.3rem);
+        line-height: 1.75;
+        text-align: center;
+      }
+
+      .story-copy p + p {
+        margin-top: 24px;
+      }
+
+      .simplicity-grid {
+        margin-top: 44px;
+        border-top: 1px solid transparent;
+      }
+
+      .simplicity-row {
+        border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+      }
+
+      .simplicity-row:last-child {
+        border-bottom: 0;
+      }
+
+      .feature-tile {
+        height: 100%;
+        padding: 18px 28px 24px;
+        text-align: center;
+        border-right: 1px solid rgba(17, 17, 17, 0.2);
+      }
+
+      .simplicity-row .col-md-3:last-child .feature-tile {
+        border-right: 0;
+      }
+
+      .feature-icon {
+        width: 126px;
+        height: 126px;
+        margin: 0 auto 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .feature-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .feature-label {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      .courses-grid {
+        margin-top: 42px;
+      }
+
+      .course-card {
+        height: 100%;
+        padding: 34px 24px 22px;
+        border: 1px solid #dde6ef;
+        border-radius: 20px;
+        box-shadow: 0 4px 14px rgba(22, 52, 85, 0.08);
+        text-align: center;
+        background: #fff;
+      }
+
+      .course-icon {
+        width: 74px;
+        height: 74px;
+        margin: 0 auto 18px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .course-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .course-card h3 {
+        margin: 0 0 14px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        line-height: 1.28;
+      }
+
+      .course-card p {
+        margin: 0;
+        color: #2b3037;
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+        gap: 48px;
+        align-items: stretch;
+      }
+
+      .why-title {
+        margin: 0 0 26px;
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 1.16;
+      }
+
+      .why-list {
+        display: grid;
+        gap: 26px;
+      }
+
+      .why-item {
+        display: grid;
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+      }
+
+      .why-item .check {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--brand-blue);
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .why-item strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 1.08rem;
+        font-weight: 800;
+        line-height: 1.3;
+      }
+
+      .why-item p {
+        margin: 0;
+        color: #202631;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .efficiency-panel {
+        height: 100%;
+        padding: 40px 34px;
+        border-radius: 36px;
+        background: linear-gradient(180deg, #e3f0ff 0%, #ddeeff 100%);
+        text-align: center;
+      }
+
+      .efficiency-badge {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .efficiency-badge img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .efficiency-panel h3 {
+        margin: 0 0 18px;
+        font-size: clamp(1.9rem, 2.8vw, 3rem);
+        font-weight: 800;
+        line-height: 1.1;
+      }
+
+      .efficiency-panel p {
+        margin: 0;
+        font-size: clamp(1.1rem, 1.65vw, 1.35rem);
+        line-height: 1.6;
+      }
+
+      .difference-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0;
+        margin-top: 42px;
+      }
+
+      .difference-card {
+        display: grid;
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: 24px;
+        align-items: center;
+        padding: 12px 28px 12px 10px;
+        border-right: 1px solid rgba(17, 17, 17, 0.22);
+      }
+
+      .difference-card:last-child {
+        border-right: 0;
+      }
+
+      .difference-icon {
+        width: 88px;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .difference-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .difference-card p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.45;
+      }
+
+      .difference-card strong {
+        font-weight: 800;
+      }
+
+      .cta-section {
+        position: relative;
+        overflow: hidden;
+        min-height: 290px;
+        background: #18486b;
+        color: #fff;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: min(390px, 38vw);
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='390' height='290' viewBox='0 0 390 290' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='.33' stroke='%23B8D2E5' stroke-width='1'%3E%3Cpath d='M0 184C88 182 159 170 183 93C196 51 205 23 244 0'/%3E%3Cpath d='M0 198C97 194 166 181 190 105C204 61 215 30 258 0'/%3E%3Cpath d='M0 212C105 206 174 193 198 117C213 72 226 38 273 0'/%3E%3Cpath d='M0 226C113 218 182 205 207 129C223 83 238 46 288 0'/%3E%3Cpath d='M0 240C121 230 191 217 216 141C233 94 250 54 304 0'/%3E%3Cpath d='M0 254C130 243 200 230 226 153C243 105 263 63 320 0'/%3E%3Cpath d='M0 268C139 256 210 243 236 165C254 116 276 72 337 0'/%3E%3Cpath d='M0 282C149 269 220 256 247 178C265 128 290 82 355 0'/%3E%3Cpath d='M6 290C158 283 231 270 258 191C277 140 305 93 374 0'/%3E%3Cpath d='M32 290C170 287 242 278 270 204C290 153 321 105 390 14'/%3E%3Cpath d='M58 290C184 290 255 287 282 218C304 166 337 119 390 39'/%3E%3Cpath d='M86 290C199 294 268 296 296 233C319 181 353 134 390 66'/%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 100% 100%;
+        pointer-events: none;
+      }
+
+      .cta-inner {
+        position: relative;
+        z-index: 1;
+        padding: 52px 0 42px;
+        text-align: center;
+      }
+
+      .cta-inner h2 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .cta-inner p {
+        margin: 24px 0 18px;
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 236px;
+        min-height: 45px;
+        padding: 10px 28px;
+        border-radius: 10px;
+        background: var(--brand-red);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .cta-button:hover,
+      .cta-button:focus {
+        color: #fff;
+      }
+
+      .cta-proof {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 28px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .cta-proof i {
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .site-footer {
+        background: var(--footer-bg);
+      }
+
+      .footer-main {
+        padding: 56px 0 28px;
+      }
+
+      .footer-brand img {
+        width: min(210px, 100%);
+      }
+
+      .footer-brand p {
+        max-width: 380px;
+        margin: 30px 0 36px;
+        color: var(--brand-blue);
+        font-size: 1.15rem;
+        line-height: 1.5;
+      }
+
+      .footer-contact {
+        display: grid;
+        gap: 18px;
+      }
+
+      .footer-contact > a,
+      .footer-contact > span {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: #1f6db8;
+        font-size: 1rem;
+      }
+
+      .footer-contact i {
+        width: 20px;
+        flex: 0 0 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        font-size: 1.4rem;
+      }
+
+      .footer-contact > span > span,
+      .footer-contact > a > span {
+        display: block;
+      }
+
+      .footer-title {
+        margin: 0 0 18px;
+        color: var(--brand-blue);
+        font-size: 1.2rem;
+        font-weight: 800;
+      }
+
+      .footer-links,
+      .social-links {
+        display: grid;
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .footer-links a,
+      .social-links a {
+        color: var(--brand-blue);
+        font-size: 1rem;
+      }
+
+      .footer-links a:hover,
+      .footer-links a:focus,
+      .social-links a:hover,
+      .social-links a:focus {
+        text-decoration: underline;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .social-links img {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
+        object-fit: contain;
+      }
+
+      @media (min-width: 1200px) {
+        .navbar-collapse {
+          display: flex !important;
+          flex-basis: auto;
+          flex-grow: 1;
+        }
+      }
+
+      .copyright-bar {
+        padding: 20px 16px 28px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+      }
+
+      .copyright-bar a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 1199.98px) {
+        .main-nav .container-page {
+          min-height: 92px;
+          flex-wrap: wrap;
+        }
+
+        .navbar-collapse {
+          width: 100%;
+          display: block;
+          padding: 14px 0 6px;
+        }
+
+        .navbar-nav {
+          display: block;
+          align-items: flex-start;
+          gap: 0;
+        }
+
+        .nav-link {
+          padding: 10px 0;
+        }
+
+        .login-link {
+          margin: 16px 0 10px;
+          width: fit-content;
+        }
+
+        .hero-copy {
+          padding-right: 0;
+        }
+
+        .hero-right {
+          padding-top: 32px;
+        }
+
+        .hero-stat-list {
+          max-width: none;
+          margin-left: 0;
+        }
+
+        .difference-card {
+          grid-template-columns: 80px minmax(0, 1fr);
+          padding-left: 0;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .container-page {
+          width: min(1280px, calc(100% - 24px));
+        }
+
+        .section-inset {
+          width: min(1140px, calc(100% - 48px));
+        }
+
+        .utility-inner {
+          min-height: 40px;
+        }
+
+        .hero-inner {
+          padding-top: 18px;
+        }
+
+        .language-picker {
+          position: static;
+          margin: 0 0 26px auto;
+        }
+
+        .hero-title {
+          font-size: 32px;
+          line-height: 1.18;
+        }
+
+        .metrics-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .metric:not(:last-child)::after {
+          top: 24px;
+          height: calc(100% - 48px);
+        }
+
+        .metric:nth-child(2n)::after {
+          display: none;
+        }
+
+        .metric:nth-child(n + 3) {
+          border-top: 1px solid rgba(16, 17, 20, 0.18);
+        }
+
+        .metric span {
+          max-width: 18ch;
+        }
+
+        .simplicity-row .col-md-3:nth-child(2) .feature-tile {
+          border-right: 0;
+        }
+
+        .simplicity-row .col-md-3:nth-child(n + 3) .feature-tile {
+          border-top: 1px solid rgba(17, 17, 17, 0.2);
+        }
+
+        .why-grid,
+        .difference-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .difference-card {
+          border-right: 0;
+          padding: 14px 0;
+        }
+
+        .difference-card + .difference-card {
+          border-top: 1px solid rgba(17, 17, 17, 0.18);
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .section-shell {
+          padding: 54px 0;
+        }
+
+        .main-nav .container-page {
+          width: min(1280px, calc(100% - 20px));
+          min-height: 84px;
+        }
+
+        .utility-inner {
+          flex-direction: column;
+          justify-content: center;
+          max-height: none;
+          padding: 0;
+          text-align: center;
+        }
+
+        .share-button {
+          min-width: 0;
+          width: 100%;
+        }
+
+        .section-inset {
+          width: min(1140px, calc(100% - 24px));
+        }
+
+        .hero-title {
+          margin-top: 0;
+        }
+
+        .hero-inner {
+          padding: 18px 0 24px;
+        }
+
+        .hero-title {
+          font-size: 28px;
+          line-height: 1.2;
+        }
+
+        .language-picker {
+          width: 100%;
+          margin: 0 0 22px;
+        }
+
+        .language-control {
+          width: 100%;
+        }
+
+        .hero-cta,
+        .cta-button {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .hero-pills {
+          gap: 18px;
+        }
+
+        .hero-pills li {
+          max-width: none;
+        }
+
+        .feature-tile {
+          padding: 16px 14px 20px;
+        }
+
+        .feature-icon {
+          width: 92px;
+          height: 92px;
+          margin-bottom: 12px;
+        }
+
+        .metrics-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metric {
+          border-top: 1px solid rgba(16, 17, 20, 0.18);
+          min-height: 0;
+          padding: 22px 16px;
+        }
+
+        .metric::after {
+          display: none;
+        }
+
+        .metric:first-child {
+          border-top: 0;
+        }
+
+        .feature-tile {
+          border-right: 0;
+        }
+
+        .simplicity-row .col-6:nth-child(n + 3) .feature-tile {
+          border-top: 1px solid rgba(17, 17, 17, 0.2);
+        }
+
+        .feature-label br {
+          display: none;
+        }
+
+        .difference-card {
+          grid-template-columns: 72px minmax(0, 1fr);
+          gap: 16px;
+        }
+
+        .difference-icon {
+          width: 64px;
+          height: 64px;
+        }
+
+        .why-grid {
+          gap: 30px;
+        }
+
+        .efficiency-panel {
+          padding: 30px 22px;
+          border-radius: 28px;
+        }
+
+        .social-links {
+          grid-template-columns: repeat(2, minmax(0, max-content));
+          gap: 12px 18px;
+        }
+
+        .cta-proof {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .footer-main {
+          padding-bottom: 18px;
+        }
+      }
+    </style>
+</asp:Content>
+
+<asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
+<main id="mainContent">
+      <section class="hero">
+        <div class="container-page hero-inner">
+          <div class="language-picker">
+            <label for="languageSelect" data-i18n="language.label">Select Language</label>
+            <div class="language-control">
+              <i class="bi bi-globe2" aria-hidden="true"></i>
+              <select id="languageSelect" class="form-select" aria-label="Select Language">
+                <option value="en">English (US)</option>
+                <option value="es">Español</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row align-items-end g-4">
+            <div class="col-lg-8">
+              <div class="hero-copy">
+                <h1 class="hero-title" data-i18n="hero.title">We pioneered online traffic school. We’ve been refining it ever since.</h1>
+                <p class="hero-lead" data-i18n="hero.lead">
+                  Founded in 2000, GoToTrafficSchool helped bring traffic school online. Today, over 10 million drivers trust our platform nationwide.
+                </p>
+                <a class="hero-cta" href="Default.aspx" data-i18n="hero.cta">Start Your Course</a>
+                <ul class="hero-pills">
+                  <li>
+                    <span class="check"><i class="bi bi-check-lg"></i></span>
+                    <span data-i18n="hero.pill1">No timers</span>
+                  </li>
+                  <li>
+                    <span class="check"><i class="bi bi-check-lg"></i></span>
+                    <span data-i18n="hero.pill2">Self-paced</span>
+                  </li>
+                  <li>
+                    <span class="check"><i class="bi bi-check-lg"></i></span>
+                    <span data-i18n="hero.pill3">Same-day processing (State dependent)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="hero-right">
+                <div class="hero-stat-list">
+                  <div class="hero-stat">
+                    <span class="hero-stat-icon is-trophy" aria-hidden="true">
+                      <img src="assets/icons/about-hero-trophy.webp" alt="">
+                    </span>
+                    <p data-i18n="hero.stat1">One of the first online traffic schools (2000)</p>
+                  </div>
+                  <div class="hero-stat">
+                    <span class="hero-stat-icon is-people" aria-hidden="true">
+                      <img src="assets/icons/about-hero-people.webp" alt="">
+                    </span>
+                    <p data-i18n="hero.stat2">10 million+ drivers served</p>
+                  </div>
+                  <div class="hero-stat">
+                    <span class="hero-stat-icon is-map" aria-hidden="true">
+                      <img src="assets/icons/about-hero-map.webp" alt="">
+                    </span>
+                    <p data-i18n="hero.stat3">Approved nationwide where allowed</p>
+                  </div>
+                  <div class="hero-stat">
+                    <span class="hero-stat-icon is-speed" aria-hidden="true">
+                      <img src="assets/icons/about-hero-speed.webp" alt="">
+                    </span>
+                    <p data-i18n="hero.stat4">Same-day certificate processing (state dependent)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics-strip">
+        <div class="container-page">
+          <div class="metrics-grid">
+            <div class="metric">
+              <strong data-i18n="stats.one.value">10M+</strong>
+              <span data-i18n="stats.one.label">Drivers Served</span>
+            </div>
+            <div class="metric">
+              <strong data-i18n="stats.two.value">2000</strong>
+              <span data-i18n="stats.two.label">Founded</span>
+            </div>
+            <div class="metric">
+              <strong data-i18n="stats.three.value">Nationwide</strong>
+              <span data-i18n="stats.three.label">Approved Where Allowed</span>
+            </div>
+            <div class="metric">
+              <strong data-i18n="stats.four.value">Same-Day</strong>
+              <span data-i18n="stats.four.label">Certificate Processing</span>
+            </div>
+            <div class="metric">
+              <strong data-i18n="stats.five.value">Real Support</strong>
+              <span data-i18n="stats.five.label">No Bots</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="container-page">
+          <h2 class="section-title" data-i18n="story.title">Our Story</h2>
+          <div class="section-underline"></div>
+          <div class="story-copy">
+            <p data-i18n="story.p1">
+              GoToTrafficSchool launched one of the first fully online traffic school programs in California in 2000, replacing the inconvenience of classroom courses with a flexible alternative. Since then, more than 10 million drivers have completed courses through our platform. Today, we operate nationwide in every state that allows online traffic school, defensive driving, or driver improvement programs.
+            </p>
+            <p data-i18n="story.p2">
+              Traffic School, Defensive driving, and driver improvement may vary by state but the goal is the same: meet requirements, avoid points, and stay compliant.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell pt-0">
+        <div class="container-page">
+          <h2 class="section-title" data-i18n="simplicity.title">Built for Simplicity. Designed for Real Life</h2>
+          <div class="section-underline"></div>
+          <div class="simplicity-grid">
+            <div class="row g-0 simplicity-row">
+              <div class="col-6 col-md-3">
+                <div class="feature-tile">
+                  <div class="feature-icon" aria-hidden="true">
+                    <img src="assets/icons/simplicity-self-paced.webp" alt="">
+                  </div>
+                  <p class="feature-label" data-i18n="simplicity.item1">Fully Self-Paced</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-tile">
+                  <div class="feature-icon" aria-hidden="true">
+                    <img src="assets/icons/simplicity-no-timers.webp" alt="">
+                  </div>
+                  <p class="feature-label" data-i18n="simplicity.item2">No Timers</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-tile">
+                  <div class="feature-icon" aria-hidden="true">
+                    <img src="assets/icons/simplicity-devices.webp" alt="">
+                  </div>
+                  <p class="feature-label" data-i18n="simplicity.item3">Any Devices</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-tile">
+                  <div class="feature-icon" aria-hidden="true">
+                    <img src="assets/icons/simplicity-mobile.webp" alt="">
+                  </div>
+                  <p class="feature-label" data-i18n="simplicity.item4">Mobile Apps</p>
+                </div>
+              </div>
+            </div>
+            <div class="row g-0 simplicity-row">
+              <div class="col-6 col-md-3">
+                <div class="feature-tile">
+                  <div class="feature-icon" aria-hidden="true">
+                    <img src="assets/icons/simplicity-cloud.webp" alt="">
+                  </div>
+                  <p class="feature-label" data-i18n="simplicity.item5">Auto-Serve Progress</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-tile">
+                  <div class="feature-icon" aria-hidden="true">
+                    <img src="assets/icons/simplicity-switching.webp" alt="">
+                  </div>
+                  <p class="feature-label" data-i18n="simplicity.item6">Devices Switching</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-tile">
+                  <div class="feature-icon" aria-hidden="true">
+                    <img src="assets/icons/simplicity-processing.webp" alt="">
+                  </div>
+                  <p class="feature-label" data-i18n="simplicity.item7">Fast Processing</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-tile">
+                  <div class="feature-icon" aria-hidden="true">
+                    <img src="assets/icons/simplicity-calendar.webp" alt="">
+                  </div>
+                  <p class="feature-label" data-i18n="simplicity.item8">Fast Anytime</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell pt-0">
+        <div class="container-page section-inset">
+          <h2 class="section-title" data-i18n="courses.title">Courses for Every Driver</h2>
+          <div class="section-underline"></div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5 g-4 courses-grid">
+            <div class="col">
+              <article class="course-card">
+                <div class="course-icon" aria-hidden="true">
+                  <img src="assets/icons/course-ticket-dismissal.webp" alt="">
+                </div>
+                <h3 data-i18n="courses.card1.title">Ticket Dismissal</h3>
+                <p data-i18n="courses.card1.body">Keep points off your record where eligible and dismiss tickets.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="course-card">
+                <div class="course-icon" aria-hidden="true">
+                  <img src="assets/icons/course-insurance-discount.webp" alt="">
+                </div>
+                <h3 data-i18n="courses.card2.title">Insurance Discount</h3>
+                <p data-i18n="courses.card2.body">Qualify for potential insurance savings with a state-approved course.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="course-card">
+                <div class="course-icon" aria-hidden="true">
+                  <img src="assets/icons/course-mature-driver.webp" alt="">
+                </div>
+                <h3 data-i18n="courses.card3.title">Mature Driver Programs</h3>
+                <p data-i18n="courses.card3.body">Stay sharp, refresh your skills, and access discounts designed for experienced drivers.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="course-card">
+                <div class="course-icon" aria-hidden="true">
+                  <img src="assets/icons/course-fleet-safety.webp" alt="">
+                </div>
+                <h3 data-i18n="courses.card4.title">Fleet Safety Training</h3>
+                <p data-i18n="courses.card4.body">Provide driver safety training for employees and reduce risk for your organization.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="course-card">
+                <div class="course-icon" aria-hidden="true">
+                  <img src="assets/icons/course-teen-driver.webp" alt="">
+                </div>
+                <h3 data-i18n="courses.card5.title">Teen Driver Education</h3>
+                <p data-i18n="courses.card5.body">State-required courses for new drivers preparing for permits and licenses.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell pt-0">
+        <div class="container-page section-inset">
+          <div class="why-grid">
+            <div>
+              <h2 class="why-title" data-i18n="why.title">Why Drivers Choose GoToTrafficSchool</h2>
+              <div class="why-list">
+                <div class="why-item">
+                  <span class="check"><i class="bi bi-check-lg"></i></span>
+                  <div>
+                    <strong data-i18n="why.item1.title">No Timers or waiting periods</strong>
+                    <p data-i18n="why.item1.body">We never force time restrictions or unnecessary delays.</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <span class="check"><i class="bi bi-check-lg"></i></span>
+                  <div>
+                    <strong data-i18n="why.item2.title">True Self-Paced Learning</strong>
+                    <p data-i18n="why.item2.body">You’re in control-complete the course on your schedule.</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <span class="check"><i class="bi bi-check-lg"></i></span>
+                  <div>
+                    <strong data-i18n="why.item3.title">Same-Day Certificate Processing</strong>
+                    <p data-i18n="why.item3.body">Fast, reliable processing in many states.</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <span class="check"><i class="bi bi-check-lg"></i></span>
+                  <div>
+                    <strong data-i18n="why.item4.title">Real Human Support</strong>
+                    <p data-i18n="why.item4.body">Talk to a real person when you need help.</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <span class="check"><i class="bi bi-check-lg"></i></span>
+                  <div>
+                    <strong data-i18n="why.item5.title">Lowest Price Guarantee</strong>
+                    <p data-i18n="why.item5.body">If you find a comparable course for less, we will beat it.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <aside class="efficiency-panel">
+              <div class="efficiency-badge" aria-hidden="true">
+                <img src="assets/icons/efficiency-rocket.webp" alt="">
+              </div>
+              <h3 data-i18n="efficiency.title">Built for Efficiency</h3>
+              <p data-i18n="efficiency.body">
+                Most platforms add unnecessary steps.<br>
+                We remove them.<br><br>
+                Our system is designed to get you through traffic school quickly, correctly and without friction.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell pt-0">
+        <div class="container-page">
+          <h2 class="section-title" data-i18n="different.title">What Makes Us different</h2>
+          <div class="section-underline"></div>
+          <div class="difference-grid">
+            <div class="difference-card">
+              <div class="difference-icon" aria-hidden="true">
+                <img src="assets/icons/difference-experience.webp" alt="">
+              </div>
+              <p data-i18n="different.item1">We’ve been in this space longer than most- and it shows.</p>
+            </div>
+            <div class="difference-card">
+              <div class="difference-icon" aria-hidden="true">
+                <img src="assets/icons/difference-priority.webp" alt="">
+              </div>
+              <p data-i18n="different.item2">
+                <strong>Our platform prioritizes speed, flexibility, and simplicity</strong> over unnecessary restrictions.
+              </p>
+            </div>
+            <div class="difference-card">
+              <div class="difference-icon" aria-hidden="true">
+                <img src="assets/icons/difference-works.webp" alt="">
+              </div>
+              <p data-i18n="different.item3">
+                The result is a system that <strong>works the way drivers actually need it to.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container-page cta-inner">
+          <h2 data-i18n="cta.title">Start Your Traffic School Today</h2>
+          <p data-i18n="cta.body">Enroll in minutes. Complete at your own pace. Get back on the road.</p>
+          <a class="cta-button" href="Default.aspx" data-i18n="cta.button">Register Now</a>
+          <div class="cta-proof">
+            <i class="bi bi-people"></i>
+            <span data-i18n="cta.proof">Trusted by over 10 million drivers nationwide.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+</asp:Content>
+
+<asp:Content ID="ScriptContent" ContentPlaceHolderID="ScriptContent" runat="server">
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="shareToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body" data-i18n="toast.copied">Page link copied.</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const STORAGE_KEY = "gtts-about-lang";
+
+      const translations = {
+        en: {
+          pageTitle: "About Us | GoToTrafficSchool",
+          pageDescription: "Learn how GoToTrafficSchool helped pioneer online traffic school and why millions of drivers trust the platform today.",
+          skip: "Skip to main content",
+          "top.share": "Share This Page",
+          "top.contact": "Contact Us: 1-800-909-3909",
+          "nav.about": "About Us",
+          "nav.how": "How It Works",
+          "nav.faq": "FAQs",
+          "nav.partner": "Partner with us",
+          "nav.contact": "Contact Us",
+          "nav.login": "Log In",
+          "language.label": "Select Language",
+          "hero.title": "We pioneered online traffic school. We’ve been refining it ever since.",
+          "hero.lead": "Founded in 2000, GoToTrafficSchool helped bring traffic school online. Today, over 10 million drivers trust our platform nationwide.",
+          "hero.cta": "Start Your Course",
+          "hero.pill1": "No timers",
+          "hero.pill2": "Self-paced",
+          "hero.pill3": "Same-day processing (State dependent)",
+          "hero.stat1": "One of the first online traffic schools (2000)",
+          "hero.stat2": "10 million+ drivers served",
+          "hero.stat3": "Approved nationwide where allowed",
+          "hero.stat4": "Same-day certificate processing (state dependent)",
+          "stats.one.value": "10M+",
+          "stats.one.label": "Drivers Served",
+          "stats.two.value": "2000",
+          "stats.two.label": "Founded",
+          "stats.three.value": "Nationwide",
+          "stats.three.label": "Approved Where Allowed",
+          "stats.four.value": "Same-Day",
+          "stats.four.label": "Certificate Processing",
+          "stats.five.value": "Real Support",
+          "stats.five.label": "No Bots",
+          "story.title": "Our Story",
+          "story.p1": "GoToTrafficSchool launched one of the first fully online traffic school programs in California in 2000, replacing the inconvenience of classroom courses with a flexible alternative. Since then, more than 10 million drivers have completed courses through our platform. Today, we operate nationwide in every state that allows online traffic school, defensive driving, or driver improvement programs.",
+          "story.p2": "Traffic School, Defensive driving, and driver improvement may vary by state but the goal is the same: meet requirements, avoid points, and stay compliant.",
+          "simplicity.title": "Built for Simplicity. Designed for Real Life",
+          "simplicity.item1": "Fully Self-Paced",
+          "simplicity.item2": "No Timers",
+          "simplicity.item3": "Any Devices",
+          "simplicity.item4": "Mobile Apps",
+          "simplicity.item5": "Auto-Serve Progress",
+          "simplicity.item6": "Devices Switching",
+          "simplicity.item7": "Fast Processing",
+          "simplicity.item8": "Fast Anytime",
+          "courses.title": "Courses for Every Driver",
+          "courses.card1.title": "Ticket Dismissal",
+          "courses.card1.body": "Keep points off your record where eligible and dismiss tickets.",
+          "courses.card2.title": "Insurance Discount",
+          "courses.card2.body": "Qualify for potential insurance savings with a state-approved course.",
+          "courses.card3.title": "Mature Driver Programs",
+          "courses.card3.body": "Stay sharp, refresh your skills, and access discounts designed for experienced drivers.",
+          "courses.card4.title": "Fleet Safety Training",
+          "courses.card4.body": "Provide driver safety training for employees and reduce risk for your organization.",
+          "courses.card5.title": "Teen Driver Education",
+          "courses.card5.body": "State-required courses for new drivers preparing for permits and licenses.",
+          "why.title": "Why Drivers Choose GoToTrafficSchool",
+          "why.item1.title": "No Timers or waiting periods",
+          "why.item1.body": "We never force time restrictions or unnecessary delays.",
+          "why.item2.title": "True Self-Paced Learning",
+          "why.item2.body": "You’re in control-complete the course on your schedule.",
+          "why.item3.title": "Same-Day Certificate Processing",
+          "why.item3.body": "Fast, reliable processing in many states.",
+          "why.item4.title": "Real Human Support",
+          "why.item4.body": "Talk to a real person when you need help.",
+          "why.item5.title": "Lowest Price Guarantee",
+          "why.item5.body": "If you find a comparable course for less, we will beat it.",
+          "efficiency.title": "Built for Efficiency",
+          "efficiency.body": "Most platforms add unnecessary steps.<br>We remove them.<br><br>Our system is designed to get you through traffic school quickly, correctly and without friction.",
+          "different.title": "What Makes Us different",
+          "different.item1": "We’ve been in this space longer than most- and it shows.",
+          "different.item2": "<strong>Our platform prioritizes speed, flexibility, and simplicity</strong> over unnecessary restrictions.",
+          "different.item3": "The result is a system that <strong>works the way drivers actually need it to.</strong>",
+          "cta.title": "Start Your Traffic School Today",
+          "cta.body": "Enroll in minutes. Complete at your own pace. Get back on the road.",
+          "cta.button": "Register Now",
+          "cta.proof": "Trusted by over 10 million drivers nationwide.",
+          "footer.blurb": "The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.",
+          "footer.location": "8034 Garden Grove Blvd Suite C Garden Grove, CA 92844",
+          "footer.company": "Company",
+          "footer.about": "About Us",
+          "footer.how": "How It Works",
+          "footer.faq": "FAQ",
+          "footer.contact": "Contact",
+          "footer.partner": "Partner Program",
+          "footer.legal": "Legal",
+          "footer.privacy": "Privacy Policy",
+          "footer.terms": "Terms Of Service",
+          "footer.court": "Court Directory",
+          "footer.comments": "Student Comment",
+          "footer.follow": "Follow Us",
+          "footer.copyrightPrefix": "© 2026 gototrafficschool.com Powered by",
+          "footer.copyrightSuffix": "All rights reserved.",
+          "toast.copied": "Page link copied."
+        },
+        es: {
+          pageTitle: "Sobre Nosotros | GoToTrafficSchool",
+          pageDescription: "Conozca cómo GoToTrafficSchool ayudó a impulsar la escuela de tránsito en línea y por qué millones de conductores confían en la plataforma hoy.",
+          skip: "Saltar al contenido principal",
+          "top.share": "Compartir Esta Página",
+          "top.contact": "Contáctenos: 1-800-909-3909",
+          "nav.about": "Sobre Nosotros",
+          "nav.how": "Cómo Funciona",
+          "nav.faq": "Preguntas Frecuentes",
+          "nav.partner": "Asóciese con nosotros",
+          "nav.contact": "Contáctenos",
+          "nav.login": "Iniciar Sesión",
+          "language.label": "Seleccionar Idioma",
+          "hero.title": "Fuimos pioneros en la escuela de tránsito en línea. La hemos perfeccionado desde entonces.",
+          "hero.lead": "Fundada en el año 2000, GoToTrafficSchool ayudó a llevar la escuela de tránsito al entorno digital. Hoy, más de 10 millones de conductores confían en nuestra plataforma en todo el país.",
+          "hero.cta": "Comience Su Curso",
+          "hero.pill1": "Sin temporizadores",
+          "hero.pill2": "A su ritmo",
+          "hero.pill3": "Procesamiento el mismo día (según el estado)",
+          "hero.stat1": "Una de las primeras escuelas de tránsito en línea (2000)",
+          "hero.stat2": "Más de 10 millones de conductores atendidos",
+          "hero.stat3": "Aprobado a nivel nacional donde se permite",
+          "hero.stat4": "Procesamiento del certificado el mismo día (según el estado)",
+          "stats.one.value": "10M+",
+          "stats.one.label": "Conductores Atendidos",
+          "stats.two.value": "2000",
+          "stats.two.label": "Fundada",
+          "stats.three.value": "Nacional",
+          "stats.three.label": "Aprobado Donde Se Permite",
+          "stats.four.value": "Mismo Día",
+          "stats.four.label": "Procesamiento del Certificado",
+          "stats.five.value": "Soporte Real",
+          "stats.five.label": "Sin Bots",
+          "story.title": "Nuestra Historia",
+          "story.p1": "GoToTrafficSchool lanzó uno de los primeros programas de escuela de tránsito totalmente en línea en California en el año 2000, reemplazando la incomodidad de las clases presenciales por una alternativa flexible. Desde entonces, más de 10 millones de conductores han completado cursos a través de nuestra plataforma. Hoy operamos a nivel nacional en todos los estados que permiten escuela de tránsito en línea, manejo defensivo o programas de mejoramiento del conductor.",
+          "story.p2": "La escuela de tránsito, el manejo defensivo y el mejoramiento del conductor pueden variar según el estado, pero el objetivo es el mismo: cumplir requisitos, evitar puntos y mantenerse al día.",
+          "simplicity.title": "Creado para la simplicidad. Diseñado para la vida real",
+          "simplicity.item1": "Totalmente A Su Ritmo",
+          "simplicity.item2": "Sin Temporizadores",
+          "simplicity.item3": "Cualquier Dispositivo",
+          "simplicity.item4": "Aplicaciones Móviles",
+          "simplicity.item5": "Guardado Automático del Progreso",
+          "simplicity.item6": "Cambio de Dispositivo",
+          "simplicity.item7": "Procesamiento Rápido",
+          "simplicity.item8": "Rápido en Cualquier Momento",
+          "courses.title": "Cursos para Cada Conductor",
+          "courses.card1.title": "Desestimación de Multas",
+          "courses.card1.body": "Mantenga puntos fuera de su historial cuando sea elegible y desestime multas.",
+          "courses.card2.title": "Descuento de Seguro",
+          "courses.card2.body": "Califique para un posible ahorro en su seguro con un curso aprobado por el estado.",
+          "courses.card3.title": "Programas para Conductores Maduros",
+          "courses.card3.body": "Manténgase ágil, refuerce sus habilidades y acceda a descuentos diseñados para conductores con experiencia.",
+          "courses.card4.title": "Capacitación de Seguridad para Flotas",
+          "courses.card4.body": "Brinde capacitación de seguridad vial a sus empleados y reduzca el riesgo para su organización.",
+          "courses.card5.title": "Educación para Conductores Jóvenes",
+          "courses.card5.body": "Cursos requeridos por el estado para nuevos conductores que se preparan para permisos y licencias.",
+          "why.title": "Por Qué los Conductores Eligen GoToTrafficSchool",
+          "why.item1.title": "Sin temporizadores ni períodos de espera",
+          "why.item1.body": "Nunca imponemos restricciones de tiempo ni retrasos innecesarios.",
+          "why.item2.title": "Aprendizaje Verdaderamente A Su Ritmo",
+          "why.item2.body": "Usted tiene el control: complete el curso según su horario.",
+          "why.item3.title": "Procesamiento del Certificado el Mismo Día",
+          "why.item3.body": "Procesamiento rápido y confiable en muchos estados.",
+          "why.item4.title": "Soporte Humano Real",
+          "why.item4.body": "Hable con una persona real cuando necesite ayuda.",
+          "why.item5.title": "Garantía del Precio Más Bajo",
+          "why.item5.body": "Si encuentra un curso comparable por menos, mejoraremos ese precio.",
+          "efficiency.title": "Diseñado para la Eficiencia",
+          "efficiency.body": "La mayoría de las plataformas agregan pasos innecesarios.<br>Nosotros los eliminamos.<br><br>Nuestro sistema está diseñado para ayudarle a completar su escuela de tránsito de forma rápida, correcta y sin fricción.",
+          "different.title": "Lo Que Nos Hace Diferentes",
+          "different.item1": "Llevamos más tiempo en este espacio que la mayoría, y eso se nota.",
+          "different.item2": "<strong>Nuestra plataforma prioriza la velocidad, la flexibilidad y la simplicidad</strong> por encima de las restricciones innecesarias.",
+          "different.item3": "El resultado es un sistema que <strong>funciona como los conductores realmente lo necesitan.</strong>",
+          "cta.title": "Comience Hoy Su Escuela de Tránsito",
+          "cta.body": "Inscríbase en minutos. Complete el curso a su ritmo. Vuelva al camino.",
+          "cta.button": "Regístrese Ahora",
+          "cta.proof": "Con la confianza de más de 10 millones de conductores en todo el país.",
+          "footer.blurb": "La forma más rápida y sencilla de completar su escuela de tránsito en línea. Con la confianza de más de 10 millones de conductores en todo el país.",
+          "footer.location": "8034 Garden Grove Blvd Suite C Garden Grove, CA 92844",
+          "footer.company": "Empresa",
+          "footer.about": "Sobre Nosotros",
+          "footer.how": "Cómo Funciona",
+          "footer.faq": "Preguntas Frecuentes",
+          "footer.contact": "Contacto",
+          "footer.partner": "Programa de Socios",
+          "footer.legal": "Legal",
+          "footer.privacy": "Política de Privacidad",
+          "footer.terms": "Términos del Servicio",
+          "footer.court": "Directorio de Tribunales",
+          "footer.comments": "Comentario del Estudiante",
+          "footer.follow": "Síganos",
+          "footer.copyrightPrefix": "© 2026 gototrafficschool.com Desarrollado por",
+          "footer.copyrightSuffix": "Todos los derechos reservados.",
+          "toast.copied": "Enlace de la página copiado."
+        }
+      };
+
+      const translatableNodes = Array.from(document.querySelectorAll("[data-i18n]"));
+      const languageSelect = document.getElementById("languageSelect");
+      const shareButton = document.getElementById("sharePage");
+      const shareToastElement = document.getElementById("shareToast");
+      const descriptionElement = document.getElementById("pageDescription");
+
+      function applyLanguage(language) {
+        const dict = translations[language] || translations.en;
+
+        document.documentElement.lang = language === "es" ? "es" : "en";
+        document.title = dict.pageTitle;
+        descriptionElement.setAttribute("content", dict.pageDescription);
+
+        translatableNodes.forEach((node) => {
+          const key = node.dataset.i18n;
+          const value = dict[key];
+          if (!value) return;
+          if (value.includes("<br>") || value.includes("<strong>")) {
+            node.innerHTML = value;
+          } else {
+            node.textContent = value;
+          }
+        });
+
+        languageSelect.value = language;
+        localStorage.setItem(STORAGE_KEY, language);
+      }
+
+      async function sharePage() {
+        const currentLang = languageSelect.value || "en";
+        const dict = translations[currentLang] || translations.en;
+        const shareData = {
+          title: document.title,
+          url: window.location.href
+        };
+
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+            return;
+          }
+
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(window.location.href);
+            bootstrap.Toast.getOrCreateInstance(shareToastElement).show();
+            return;
+          }
+        } catch (error) {
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(window.location.href);
+            bootstrap.Toast.getOrCreateInstance(shareToastElement).show();
+            return;
+          }
+        }
+
+        window.prompt(dict["toast.copied"], window.location.href);
+      }
+
+      languageSelect.addEventListener("change", (event) => {
+        applyLanguage(event.target.value);
+      });
+
+      shareButton.addEventListener("click", sharePage);
+
+      const initialLanguage = localStorage.getItem(STORAGE_KEY) || "en";
+      applyLanguage(initialLanguage);
+    </script>
+</asp:Content>

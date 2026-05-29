@@ -1,0 +1,2891 @@
+<%@ Page Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" %>
+
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GoToTrafficSchool.com | America&rsquo;s Original Traffic School</title>
+    <meta
+      name="description"
+      content="State-approved traffic school and defensive driving courses that help you dismiss tickets, reduce points, and save on insurance."
+    >
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17691289057">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17691289057');
+    </script>
+    <script>(function(){var pp=document.createElement('script'), ppr=document.getElementsByTagName('script')[0]; stid='dW9OZk0yWXhhbDI0em53cmNDTVVTZz09';pp.type='text/javascript'; pp.async=true; pp.src=('https:' == document.location.protocol ? 'https://' : 'http://') + 's01.live2support.com/dashboardv2/chatwindow/'; ppr.parentNode.insertBefore(pp, ppr);})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --navy: #0f4f8c;
+        --navy-deep: #173c62;
+        --navy-ink: #1e466c;
+        --sky: #eaf4fb;
+        --line: rgba(15, 79, 140, 0.18);
+        --copy: #14212f;
+        --muted: #5f7082;
+        --accent: #ff4d4f;
+        --accent-dark: #e53b3d;
+        --success: #44a84e;
+        --hero-shadow: 0 28px 60px rgba(0, 0, 0, 0.24);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Source Sans 3", Arial, sans-serif;
+        color: var(--copy);
+        background: #ffffff;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        overflow-x: clip;
+      }
+
+      .container-fluid-wide {
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .utility-bar {
+        background: var(--navy-deep);
+        color: #fff;
+        max-height: 40px;
+      }
+
+      .utility-bar .container-fluid-wide {
+        min-height: 40px;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .share-trigger {
+        min-width: 164px;
+        height: 30px;
+        max-height: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        border-radius: 10px;
+        background: transparent;
+        color: #fff;
+        font-size: 0.95rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .utility-contact {
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .main-nav {
+        background: #fff;
+        border-bottom: 1px solid rgba(16, 58, 97, 0.08);
+      }
+
+      .main-nav .container-fluid-wide {
+        min-height: 112px;
+      }
+
+      .navbar-brand img {
+        width: clamp(200px, 19vw, 265px);
+      }
+
+      .navbar-nav {
+        gap: 0.6rem;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1b1d22;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus {
+        color: var(--navy);
+      }
+
+      .login-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 0.9rem 1.35rem;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #36597d 0%, #26486b 100%);
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        box-shadow: 0 12px 24px rgba(38, 72, 107, 0.18);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 78svh;
+        display: flex;
+        align-items: stretch;
+        background:
+          linear-gradient(90deg, rgba(17, 21, 28, 0.76) 0%, rgba(17, 21, 28, 0.58) 32%, rgba(17, 21, 28, 0.16) 58%, rgba(17, 21, 28, 0) 74%),
+          url("assets/vecteezy_luxury-electric-car-on-coastal-road-background_48608241 2.webp") center/cover no-repeat;
+        color: #fff;
+      }
+
+      .hero-inner {
+        position: relative;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: clamp(2rem, 3vw, 2.5rem) 0 0;
+      }
+
+      .hero-language {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        z-index: 2;
+        min-width: 170px;
+      }
+
+      .hero-language label {
+        display: block;
+        margin-bottom: 0.45rem;
+        font-size: 0.92rem;
+        font-weight: 700;
+      }
+
+      .hero-language .language-select-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.78rem 0.95rem;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.96);
+        color: #21262d;
+        box-shadow: var(--hero-shadow);
+      }
+
+      .hero-language .form-select {
+        border: 0;
+        box-shadow: none;
+        padding: 0.05rem 2rem 0.05rem 0;
+        font-weight: 600;
+        background-color: transparent;
+        background-position: right 0.1rem center;
+      }
+
+      .hero-content {
+        position: relative;
+        padding: clamp(5.5rem, 8vw, 7.5rem) 0 4rem;
+        max-width: 680px;
+        z-index: 1;
+      }
+
+      .hero h1,
+      .section-title,
+      .step-title,
+      .cta-title,
+      .footer-heading,
+      .compare-title,
+      .partner-title {
+        font-family: "Space Grotesk", Arial, sans-serif;
+      }
+
+      .hero h1 {
+        margin: 0 0 1.2rem;
+        font-size: 48px;
+        line-height: 0.98;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+      }
+
+      .hero-copy {
+        max-width: 620px;
+        margin: 0 0 1.85rem;
+        font-size: clamp(1.2rem, 1.7vw, 1.55rem);
+        line-height: 1.35;
+        color: rgba(255, 255, 255, 0.94);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-bottom: 3.4rem;
+      }
+
+      .btn-brand {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+        min-width: 254px;
+        min-height: 56px;
+        padding: 0.9rem 1.65rem;
+        border: 0;
+        border-radius: 18px;
+        font-size: 1rem;
+        font-weight: 700;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .btn-brand:hover,
+      .btn-brand:focus {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary-brand {
+        background: var(--accent);
+        color: #fff;
+        box-shadow: 0 16px 36px rgba(255, 77, 79, 0.3);
+      }
+
+      .btn-primary-brand:hover,
+      .btn-primary-brand:focus {
+        background: var(--accent-dark);
+        color: #fff;
+      }
+
+      .btn-outline-brand {
+        border: 1.5px solid rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.02);
+        color: #fff;
+      }
+
+      .hero-proof {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 1rem 1.75rem;
+      }
+
+      .hero-proof-item {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        min-width: 0;
+        flex: 0 0 auto;
+      }
+
+      .hero-proof-item img {
+        width: 40px;
+        flex: 0 0 40px;
+      }
+
+      .hero-proof-copy {
+        display: block;
+        white-space: normal;
+      }
+
+      .hero-proof-item strong,
+      .hero-proof-item span {
+        display: block;
+        line-height: 1.02;
+      }
+
+      .hero-proof-item strong {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .hero-proof-item span {
+        font-size: 1rem;
+        opacity: 0.95;
+      }
+
+      .hero-device {
+        position: absolute;
+        right: -0.75rem;
+        bottom: -1.95rem;
+        width: clamp(118px, 12.4vw, 182px);
+        filter: drop-shadow(0 24px 34px rgba(0, 0, 0, 0.28));
+      }
+
+      .hero-device img {
+        width: 100%;
+      }
+
+      .trust-strip {
+        background: #fff;
+        border-bottom: 1px solid rgba(15, 79, 140, 0.08);
+      }
+
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.7rem 1.5rem;
+        min-height: 138px;
+        border-left: 1px solid rgba(15, 79, 140, 0.18);
+      }
+
+      .trust-item:first-child {
+        border-left: 0;
+      }
+
+      .trust-item img {
+        width: 52px;
+        flex: 0 0 52px;
+      }
+
+      .trust-item h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--navy-ink);
+      }
+
+      .trust-item p {
+        margin: 0.2rem 0 0;
+        color: #283748;
+        font-size: 0.98rem;
+        line-height: 1.2;
+      }
+
+      .section-block {
+        padding: clamp(4rem, 7vw, 5.8rem) 0;
+      }
+
+      .section-title {
+        margin: 0 0 1rem;
+        font-size: clamp(2.05rem, 3.2vw, 3.25rem);
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+        color: #0f1318;
+      }
+
+      .section-subtitle {
+        max-width: 760px;
+        margin: 0 auto 2.3rem;
+        font-size: 1.2rem;
+        color: #59687a;
+        text-align: center;
+      }
+
+      .works-feature {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+        gap: clamp(2.2rem, 5vw, 5rem);
+        align-items: center;
+      }
+
+      .works-feature-shell {
+        width: min(1120px, calc(100% - 96px));
+        margin: 0 auto;
+      }
+
+      .checks {
+        display: grid;
+        gap: 1.35rem;
+        margin: 2rem 0 2.25rem;
+      }
+
+      .check-item {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .check-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--navy);
+        color: #fff;
+        flex: 0 0 30px;
+        margin-top: 0.1rem;
+      }
+
+      .check-item h3 {
+        margin: 0 0 0.15rem;
+        font-size: 1.15rem;
+        font-weight: 800;
+      }
+
+      .check-item p {
+        margin: 0;
+        color: #3d4e61;
+        font-size: 1rem;
+      }
+
+      .device-showcase {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 510px;
+      }
+
+      .device-showcase img {
+        width: 100%;
+        max-width: 760px;
+        height: auto;
+      }
+
+      .works-steps {
+        text-align: center;
+      }
+
+      .section-kicker {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding-bottom: 0.7rem;
+        position: relative;
+      }
+
+      .section-kicker::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 74px;
+        height: 4px;
+        transform: translateX(-50%);
+        border-radius: 999px;
+        background: var(--navy);
+      }
+
+      .steps-flow {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0.9rem;
+        margin-top: 2.6rem;
+      }
+
+      .flow-step {
+        flex: 1 1 0;
+        max-width: 248px;
+        text-align: center;
+      }
+
+      .flow-step-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        min-height: 84px;
+        margin-bottom: 1rem;
+      }
+
+      .flow-arrow {
+        flex: 0 0 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1.3rem;
+        color: #7aa2cc;
+        font-size: 1.15rem;
+      }
+
+      .flow-arrow::before {
+        content: "";
+        width: 26px;
+        margin-right: 0.45rem;
+        border-top: 1px dotted rgba(15, 79, 140, 0.54);
+      }
+
+      .step-number {
+        width: 58px;
+        height: 58px;
+        margin: 0;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--navy);
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+
+      .step-icon {
+        width: 74px;
+        height: 74px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .step-icon img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .step-title {
+        margin: 0 0 0.45rem;
+        font-size: 1.32rem;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .step-copy {
+        margin: 0;
+        color: #3e4b59;
+        font-size: 1rem;
+        line-height: 1.35;
+      }
+
+      .testimonials {
+        background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.65rem;
+        margin-top: 2.7rem;
+      }
+
+      .testimonial-card {
+        position: relative;
+        padding: 1.9rem 1.3rem 1.4rem;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 20px 50px rgba(18, 53, 86, 0.08);
+      }
+
+      .testimonial-quote {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.3rem;
+        width: 44px;
+        opacity: 0.35;
+      }
+
+      .testimonial-head {
+        display: flex;
+        align-items: center;
+        gap: 0.95rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .avatar-badge {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #f5d5c2 0%, #c48b65 100%);
+        color: #fff;
+        font-weight: 800;
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7);
+      }
+
+      .testimonial-name {
+        font-size: 1.08rem;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .testimonial-date {
+        color: #6c7d8e;
+        font-size: 0.95rem;
+      }
+
+      .testimonial-copy {
+        margin: 0;
+        color: #5f6f7f;
+        font-size: 1.02rem;
+        line-height: 1.2;
+      }
+
+      .compare-wrap {
+        max-width: 940px;
+        margin: 2.4rem auto 0;
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0 22px 58px rgba(14, 47, 78, 0.08);
+        overflow: hidden;
+      }
+
+      .compare-table {
+        width: 100%;
+        margin: 0;
+        border-collapse: collapse;
+      }
+
+      .compare-table th,
+      .compare-table td {
+        padding: 1rem 1.25rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(15, 79, 140, 0.08);
+      }
+
+      .compare-table thead th {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: #101820;
+        white-space: nowrap;
+      }
+
+      .compare-table thead th:nth-child(2) {
+        width: 30%;
+      }
+
+      .compare-table tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .compare-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 254px;
+        padding: 0.55rem 1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(15, 79, 140, 0.18);
+      }
+
+      .compare-yes {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: #1470df;
+        font-weight: 700;
+      }
+
+      .compare-yes i {
+        color: var(--success);
+        font-size: 1.7rem;
+        line-height: 1;
+      }
+
+      .courses-section {
+        background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+      }
+
+      .courses-carousel-wrap {
+        position: relative;
+        margin-top: 2.5rem;
+      }
+
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 58px;
+        height: 58px;
+        border: 1px solid rgba(15, 79, 140, 0.34);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--navy);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: 0 10px 26px rgba(15, 79, 140, 0.08);
+        z-index: 2;
+      }
+
+      .carousel-arrow.prev {
+        left: -1.7rem;
+      }
+
+      .carousel-arrow.next {
+        right: -1.7rem;
+      }
+
+      .courses-viewport {
+        overflow: hidden;
+      }
+
+      .courses-track {
+        display: flex;
+        transition: transform 320ms ease;
+      }
+
+      .course-card {
+        flex: 0 0 25%;
+        padding: 0 0.6rem;
+      }
+
+      .course-card-inner {
+        height: 300px;
+        min-height: 300px;
+        max-height: 300px;
+        padding: 1.1rem 0.95rem 1rem;
+        border: 1px solid rgba(15, 79, 140, 0.09);
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0 14px 36px rgba(16, 54, 92, 0.05);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .course-logo {
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.85rem;
+      }
+
+      .course-logo img {
+        max-height: 52px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .course-card p {
+        flex: 1;
+        margin: 0 0 1rem;
+        font-size: 0.94rem;
+        line-height: 1.28;
+        overflow: hidden;
+      }
+
+      .course-btn {
+        align-self: center;
+        min-width: 198px;
+        border-radius: 16px;
+        border: 1.5px solid var(--navy);
+        background: #fff;
+        color: var(--navy);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .course-btn:hover,
+      .course-btn:focus {
+        background: #f3f8fd;
+        color: var(--navy);
+      }
+
+      .partner-band {
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgba(8, 74, 136, 0.18) 0%, rgba(8, 74, 136, 0.18) 100%),
+          url("assets/ChatGPT Image May 5, 2026, 10_58_30 PM 1.webp") center/cover no-repeat;
+        color: #fff;
+        padding: 40px 0 40px 0;
+      }
+
+      .partner-band::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(5, 65, 121, 0.14) 0%, rgba(5, 65, 121, 0.08) 54%, rgba(5, 65, 121, 0) 78%);
+        pointer-events: none;
+      }
+
+      .partner-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+        gap: clamp(2rem, 4vw, 4rem);
+        align-items: stretch;
+        min-height: 395px;
+      }
+
+      .partner-kicker {
+        margin: 0 0 0.9rem;
+        font-size: 0.98rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .partner-copy {
+        max-width: 420px;
+        margin: 0 0 1rem;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 1rem;
+        line-height: 1.22;
+      }
+
+      .partner-title {
+        max-width: 420px;
+        margin: 0 0 1rem;
+        font-size: clamp(2.1rem, 3vw, 3.2rem);
+        line-height: 1.04;
+        letter-spacing: -0.045em;
+      }
+
+      .partner-button {
+        margin-top: 1.5rem;
+      }
+
+      .partner-button.btn-brand {
+        min-width: 332px;
+        min-height: 44px;
+        justify-content: space-between;
+        padding: 0.72rem 1rem 0.72rem 1.1rem;
+        border-radius: 14px;
+        background: #fff;
+        color: var(--navy);
+        border: 0;
+        box-shadow: none;
+      }
+
+      .partner-button.btn-brand:hover,
+      .partner-button.btn-brand:focus {
+        background: #f4f8fc;
+        color: var(--navy);
+      }
+
+      .partner-metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: start;
+        gap: 0;
+        padding: 4.9rem 0 4.25rem 2.2rem;
+        border-left: 1px solid rgba(255, 255, 255, 0.42);
+      }
+
+      .partner-metric {
+        padding: 0 1.1rem;
+        border-left: 1px solid rgba(255, 255, 255, 0.36);
+        text-align: center;
+      }
+
+      .partner-metric:first-child {
+        border-left: 0;
+      }
+
+      .partner-metric-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 0.7rem;
+        color: #fff;
+        font-size: 1.7rem;
+      }
+
+      .partner-metric h3 {
+        margin: 0 0 0.45rem;
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 1.35;
+      }
+
+      .partner-metric p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 0.96rem;
+        line-height: 1.45;
+      }
+
+      .ready-band {
+        position: relative;
+        background: #183b5d;
+        color: #fff;
+        padding: 3.15rem 0;
+        border-bottom: 4px solid #cfe8f5;
+      }
+
+      .ready-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .cta-title {
+        margin: 0 0 0.6rem;
+        font-size: clamp(2rem, 3vw, 3rem);
+        letter-spacing: -0.04em;
+      }
+
+      .ready-copy {
+        margin: 0;
+        font-size: 1.24rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .state-select-wrap {
+        position: relative;
+        min-width: 328px;
+      }
+
+      .state-select-wrap::after {
+        content: "";
+        position: absolute;
+        right: -152px;
+        top: 40%;
+        width: 112px;
+        height: 74px;
+        border-top: 3px dashed rgba(255, 255, 255, 0.92);
+        border-right: 3px dashed rgba(255, 255, 255, 0.92);
+        border-radius: 0 68px 0 0;
+        transform: rotate(18deg);
+      }
+
+      .state-select-shell {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        padding: 1rem 1.2rem;
+        border-radius: 16px;
+        background: #fff;
+        color: var(--navy);
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
+      }
+
+      .state-select-shell .form-select {
+        border: 0;
+        box-shadow: none;
+        color: var(--navy);
+        font-size: 1rem;
+        font-weight: 700;
+        padding-left: 0;
+      }
+
+      .site-footer {
+        background: #d9eef8;
+      }
+
+      .footer-top {
+        padding: 3.5rem 0 1.8rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) repeat(3, minmax(0, 0.7fr));
+        gap: 2rem;
+      }
+
+      .footer-brand img {
+        width: min(270px, 100%);
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-brand p {
+        max-width: 360px;
+        margin: 0 0 2rem;
+        color: var(--navy);
+        font-size: 1.12rem;
+        line-height: 1.28;
+      }
+
+      .footer-contact-list,
+      .footer-links,
+      .social-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 1rem;
+        color: var(--navy);
+        font-size: 1rem;
+      }
+
+      .footer-contact-list img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .footer-heading {
+        margin: 0 0 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .footer-links li,
+      .social-links li {
+        margin-bottom: 0.85rem;
+      }
+
+      .footer-links a,
+      .social-links a {
+        color: var(--navy);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      .social-links img {
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+      }
+
+      .footer-bottom {
+        padding: 1.2rem 1rem;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        font-size: 1.05rem;
+      }
+
+      .footer-bottom a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 460ms ease, transform 460ms ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .toast-shell {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 1055;
+        padding: 0.9rem 1rem;
+        border-radius: 14px;
+        background: rgba(17, 26, 35, 0.94);
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(12px);
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .toast-shell.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1199.98px) {
+        .hero-device {
+          right: 0;
+          bottom: -1rem;
+        }
+
+        .trust-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .trust-item:nth-child(3) {
+          border-left: 0;
+        }
+
+        .steps-flow {
+          flex-wrap: wrap;
+          gap: 1.5rem 1rem;
+        }
+
+        .flow-step {
+          flex-basis: calc(50% - 0.5rem);
+          max-width: none;
+        }
+
+        .flow-arrow {
+          display: none;
+        }
+
+        .course-card {
+          flex-basis: 33.3333%;
+        }
+
+        .partner-grid,
+        .ready-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .partner-metrics {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.4rem 0;
+          padding: 1.8rem 0 0;
+          border-left: 0;
+        }
+
+        .partner-metric:nth-child(3) {
+          border-left: 0;
+        }
+
+        .state-select-wrap::after {
+          display: none;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .hero {
+          min-height: auto;
+          background-position: 60% center;
+        }
+
+        .hero-language {
+          position: static;
+          margin-left: auto;
+          margin-bottom: 1.5rem;
+        }
+
+        .hero-content {
+          padding-top: 0;
+          max-width: 100%;
+        }
+
+        .hero-device {
+          position: static;
+          margin: 1.5rem 0 0 auto;
+        }
+
+        .works-feature {
+          grid-template-columns: 1fr;
+        }
+
+        .works-feature-shell {
+          width: min(100%, calc(100% - 56px));
+        }
+
+        .device-showcase {
+          min-height: auto;
+        }
+
+        .testimonial-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .course-card {
+          flex-basis: 50%;
+        }
+
+        .carousel-arrow.prev {
+          left: -0.6rem;
+        }
+
+        .carousel-arrow.next {
+          right: -0.6rem;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .container-fluid-wide {
+          width: min(100% - 28px, 100%);
+        }
+
+        .utility-bar .container-fluid-wide {
+          min-height: 74px;
+          padding: 0.8rem 0;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .main-nav .container-fluid-wide {
+          min-height: 92px;
+        }
+
+        .navbar-brand img {
+          width: 220px;
+        }
+
+        .hero-inner {
+          width: min(100% - 28px, 100%);
+        }
+
+        .hero h1 {
+          font-size: 48px;
+        }
+
+        .hero-copy {
+          font-size: 1.15rem;
+        }
+
+        .hero-actions .btn-brand {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .hero-proof {
+          flex-wrap: wrap;
+        }
+
+        .hero-proof-copy {
+          display: block;
+          white-space: normal;
+        }
+
+        .hero-proof-item strong,
+        .hero-proof-item span {
+          display: block;
+        }
+
+        .trust-grid,
+        .partner-metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .partner-metric {
+          border-left: 0;
+          padding: 0;
+        }
+
+        .trust-item,
+        .trust-item:nth-child(3) {
+          border-left: 0;
+          border-top: 1px solid rgba(15, 79, 140, 0.18);
+        }
+
+        .trust-item:first-child {
+          border-top: 0;
+        }
+
+        .steps-flow {
+          flex-direction: column;
+          align-items: center;
+          gap: 1.8rem;
+        }
+
+        .flow-step {
+          max-width: 280px;
+          flex-basis: auto;
+        }
+
+        .compare-wrap {
+          overflow-x: auto;
+        }
+
+        .compare-table {
+          min-width: 660px;
+        }
+
+        .course-card {
+          flex-basis: 100%;
+        }
+
+        .carousel-arrow {
+          display: none;
+        }
+
+        .device-showcase {
+          min-height: auto;
+        }
+
+        .state-select-wrap {
+          min-width: 0;
+        }
+
+        .footer-bottom {
+          font-size: 0.95rem;
+        }
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 10px;
+        z-index: 2000;
+        padding: 10px 16px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        background: #fff;
+        color: #000;
+      }
+
+      .skip-link:focus {
+        left: 12px;
+      }
+
+      .container-page {
+        width: min(1280px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .section-inset {
+        width: min(1140px, calc(100% - 88px));
+      }
+
+      .site-header .utility-bar {
+        background: #1e4b73;
+        color: #fff;
+        max-height: 40px;
+      }
+
+      .site-header .utility-inner {
+        min-height: 40px;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .site-header .share-button {
+        min-width: 184px;
+        height: 30px;
+        max-height: 30px;
+        padding: 0 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        background: transparent;
+        color: #fff;
+        line-height: 1;
+        font-size: 0.95rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .site-header .share-button:hover,
+      .site-header .share-button:focus {
+        background: #fff;
+        color: #173c62;
+      }
+
+      .site-header .utility-phone {
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: #fff;
+      }
+
+      .site-header .main-nav {
+        border-bottom: 1px solid #dfe8ee;
+        background: #fff;
+      }
+
+      .site-header .main-nav .container-page {
+        width: min(1360px, calc(100% - 32px));
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px 20px;
+        min-height: 108px;
+      }
+
+      .site-header .navbar {
+        padding: 0;
+      }
+
+      .site-header .navbar-brand {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .site-header .navbar-brand img {
+        width: clamp(220px, 23vw, 300px);
+      }
+
+      .site-header .navbar-collapse {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+      }
+
+      .site-header .navbar-nav {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+      }
+
+      .site-header .navbar-toggler {
+        border-color: rgba(0, 0, 0, 0.12);
+      }
+
+      .site-header .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.2rem rgba(13, 79, 146, 0.15);
+      }
+
+      .site-header .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2810, 30, 50, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .site-header .nav-link {
+        color: #111;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 12px 14px;
+        white-space: nowrap;
+      }
+
+      .site-header .nav-link.active,
+      .site-header .nav-link:hover,
+      .site-header .nav-link:focus {
+        color: #0f4f8c;
+      }
+
+      .site-header .nav-link.active {
+        font-weight: 800;
+      }
+
+      .site-header .login-link {
+        min-width: 128px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 2px;
+        padding: 14px 22px;
+        border-radius: 22px;
+        color: #fff;
+        background: linear-gradient(180deg, #2f74aa 0%, #223e57 100%);
+        font-size: 1.05rem;
+        font-weight: 600;
+        flex-shrink: 0;
+        box-shadow: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .site-header .login-link:hover,
+      .site-header .login-link:focus {
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 14px 24px rgba(20, 63, 101, 0.18);
+      }
+
+      .site-footer {
+        background: #d9edf8;
+      }
+
+      .site-footer .footer-main {
+        padding: 56px 0 28px;
+      }
+
+      .site-footer .footer-brand img {
+        width: min(210px, 100%);
+      }
+
+      .site-footer .footer-brand p {
+        max-width: 380px;
+        margin: 30px 0 36px;
+        color: #0f4f8c;
+        font-size: 1.15rem;
+        line-height: 1.5;
+      }
+
+      .site-footer .footer-contact {
+        display: grid;
+        gap: 18px;
+      }
+
+      .site-footer .footer-contact > a,
+      .site-footer .footer-contact > span {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: #1f6db8;
+        font-size: 1rem;
+      }
+
+      .site-footer .footer-contact i {
+        width: 20px;
+        flex: 0 0 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        font-size: 1.4rem;
+      }
+
+      .site-footer .footer-contact > span > span,
+      .site-footer .footer-contact > a > span {
+        display: block;
+      }
+
+      .site-footer .footer-title {
+        margin: 0 0 18px;
+        color: #0f4f8c;
+        font-size: 1.2rem;
+        font-weight: 800;
+      }
+
+      .site-footer .footer-links,
+      .site-footer .social-links {
+        display: grid;
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .site-footer .footer-links a,
+      .site-footer .social-links a {
+        color: #0f4f8c;
+        font-size: 1rem;
+      }
+
+      .site-footer .footer-links a:hover,
+      .site-footer .footer-links a:focus,
+      .site-footer .social-links a:hover,
+      .site-footer .social-links a:focus {
+        text-decoration: underline;
+      }
+
+      .site-footer .social-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .site-footer .social-links img {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
+        object-fit: contain;
+      }
+
+      .copyright-bar {
+        padding: 20px 16px 28px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+      }
+
+      .copyright-bar a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      @media (min-width: 1200px) {
+        .site-header .navbar-collapse {
+          display: flex !important;
+          flex-basis: auto;
+          flex-grow: 1;
+        }
+      }
+
+      @media (max-width: 1199.98px) {
+        .site-header .main-nav .container-page {
+          min-height: 92px;
+          flex-wrap: wrap;
+        }
+
+        .site-header .navbar-collapse {
+          width: 100%;
+          display: block;
+          padding: 14px 0 6px;
+        }
+
+        .site-header .navbar-nav {
+          display: block;
+          align-items: flex-start;
+          gap: 0;
+        }
+
+        .site-header .nav-link {
+          padding: 10px 0;
+        }
+
+        .site-header .login-link {
+          margin: 16px 0 10px;
+          width: fit-content;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .container-page {
+          width: min(1280px, calc(100% - 24px));
+        }
+
+        .section-inset {
+          width: min(1140px, calc(100% - 48px));
+        }
+
+        .site-header .utility-inner {
+          min-height: 40px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .site-header .main-nav .container-page {
+          width: min(1280px, calc(100% - 20px));
+          min-height: 84px;
+        }
+
+        .site-header .utility-inner {
+          flex-direction: column;
+          justify-content: center;
+          max-height: none;
+          padding: 0;
+          text-align: center;
+        }
+
+        .site-header .share-button {
+          min-width: 0;
+          width: 100%;
+        }
+
+        .section-inset {
+          width: min(1140px, calc(100% - 24px));
+        }
+
+        .site-footer .social-links {
+          grid-template-columns: repeat(2, minmax(0, max-content));
+          gap: 12px 18px;
+        }
+
+        .site-footer .footer-main {
+          padding-bottom: 18px;
+        }
+      }
+    </style>
+</asp:Content>
+
+<asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
+<main id="mainContent">
+        <section class="hero">
+          <div class="hero-inner">
+            <div class="hero-language">
+              <label for="languageSelect" data-i18n="lang.label">Select Language</label>
+              <div class="language-select-wrap">
+                <i class="bi bi-globe2"></i>
+                <select class="form-select" id="languageSelect" aria-label="Select language">
+                  <option value="en" data-i18n="lang.english">English (US)</option>
+                  <option value="es" data-i18n="lang.spanish">Español</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="hero-content reveal visible">
+              <h1 data-i18n="hero.title">America&rsquo;s Original Traffic School</h1>
+              <p class="hero-copy" data-i18n="hero.copy">
+                State-approved traffic school and defensive driving courses that help you dismiss tickets, reduce points,
+                and save on insurance &mdash; from the comfort of home.
+              </p>
+              <div class="hero-actions">
+                <a class="btn-brand btn-primary-brand" href="#ready">
+                  <span data-i18n="hero.primary">Get Started Now</span>
+                  <i class="bi bi-chevron-right"></i>
+                </a>
+                <a class="btn-brand btn-outline-brand" href="#how-it-works" data-i18n="hero.secondary">How it Works</a>
+              </div>
+
+              <div class="hero-proof">
+                <div class="hero-proof-item">
+                  <img src="assets/Mask group (3).webp" alt="">
+                  <div class="hero-proof-copy">
+                    <strong data-i18n="hero.proof1a">State Approved</strong>
+                    <span data-i18n="hero.proof1b">Trusted by Courts</span>
+                  </div>
+                </div>
+                <div class="hero-proof-item">
+                  <img src="assets/Group (1).webp" alt="">
+                  <div class="hero-proof-copy">
+                    <strong data-i18n="hero.proof2a">Certificate Delivered</strong>
+                    <span data-i18n="hero.proof2b">Fast &amp; Secure</span>
+                  </div>
+                </div>
+                <div class="hero-proof-item">
+                  <img src="assets/Group 1000005354.webp" alt="">
+                  <div class="hero-proof-copy">
+                    <strong data-i18n="hero.proof3a">10 Million+</strong>
+                    <span data-i18n="hero.proof3b">Drivers Served</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-device reveal visible" aria-hidden="true">
+              <img src="assets/ChatGPT Image May 2, 2026, 01_19_41 AM 1.webp" alt="">
+            </div>
+          </div>
+        </section>
+
+        <section class="trust-strip">
+          <div class="container-fluid-wide">
+            <div class="trust-grid">
+              <div class="trust-item reveal">
+                <img src="assets/icons/Group 2147224570.webp" alt="">
+                <div>
+                  <h3 data-i18n="trust.1.title">Fast Certificate</h3>
+                  <p data-i18n="trust.1.copy">Receive your certificate as soon as you finish.</p>
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <img src="assets/Mask group (2).webp" alt="">
+                <div>
+                  <h3 data-i18n="trust.2.title">Court Accepted</h3>
+                  <p data-i18n="trust.2.copy">Accepted in most states and all local courts.</p>
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <img src="assets/icons/Mask group (12).webp" alt="">
+                <div>
+                  <h3 data-i18n="trust.3.title">100% Online</h3>
+                  <p data-i18n="trust.3.copy">Complete your course on any device, anytime.</p>
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <img src="assets/icons/Mask group (6).webp" alt="">
+                <div>
+                  <h3 data-i18n="trust.4.title">Money Back Guarantee</h3>
+                  <p data-i18n="trust.4.copy">14-day money back guarantee.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="container-fluid-wide works-feature-shell">
+            <div class="works-feature">
+              <div class="reveal">
+                <h2 class="section-title" data-i18n="worksFeature.title">Traffic School That Works For You</h2>
+                <div class="checks">
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item1.title">Dismiss Tickets</h3>
+                      <p data-i18n="worksFeature.item1.copy">Qualify to dismiss eligible tickets.</p>
+                    </div>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item2.title">Avoid Points</h3>
+                      <p data-i18n="worksFeature.item2.copy">Prevent points from going on your record.</p>
+                    </div>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item3.title">Lower Insurance Rates</h3>
+                      <p data-i18n="worksFeature.item3.copy">Complete and save on your insurance.</p>
+                    </div>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item4.title">Court &amp; DMV Approved</h3>
+                      <p data-i18n="worksFeature.item4.copy">State-approved and court-accepted courses.</p>
+                    </div>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item5.title">Action Button</h3>
+                      <p data-i18n="worksFeature.item5.copy">Check If We Accept Your Ticket</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-brand btn-primary-brand" href="Default.aspx">
+                  <span data-i18n="worksFeature.cta">Check If we accept your ticket</span>
+                  <i class="bi bi-chevron-right"></i>
+                </a>
+              </div>
+
+              <div class="device-showcase reveal">
+                <img src="assets/ChatGPT Image May 2, 2026, 01_09_51 AM 1.webp" alt="How It Works course preview on laptop and phone">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block works-steps" id="how-it-works">
+          <div class="container-fluid-wide">
+            <div class="section-kicker">
+              <h2 class="section-title mb-0" data-i18n="steps.heading">How It Works</h2>
+            </div>
+            <div class="steps-flow">
+              <article class="flow-step reveal">
+                <div class="flow-step-top">
+                  <div class="step-number">1</div>
+                  <div class="step-icon"><img src="assets/Group 2147224770.webp" alt=""></div>
+                </div>
+                <h3 class="step-title" data-i18n="steps.1.title">Sign Up</h3>
+                <p class="step-copy" data-i18n="steps.1.copy">Create your account in just a few minutes.</p>
+              </article>
+              <div class="flow-arrow reveal" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+              <article class="flow-step reveal">
+                <div class="flow-step-top">
+                  <div class="step-number">2</div>
+                  <div class="step-icon"><img src="assets/Vector.webp" alt=""></div>
+                </div>
+                <h3 class="step-title" data-i18n="steps.2.title">Take the Course</h3>
+                <p class="step-copy" data-i18n="steps.2.copy">Complete the course online at your own pace.</p>
+              </article>
+              <div class="flow-arrow reveal" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+              <article class="flow-step reveal">
+                <div class="flow-step-top">
+                  <div class="step-number">3</div>
+                  <div class="step-icon"><img src="assets/Group 2147224772.webp" alt=""></div>
+                </div>
+                <h3 class="step-title" data-i18n="steps.3.title">Pass the Final Exam</h3>
+                <p class="step-copy" data-i18n="steps.3.copy">Pass the final exam with a 70% or higher.</p>
+              </article>
+              <div class="flow-arrow reveal" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+              <article class="flow-step reveal">
+                <div class="flow-step-top">
+                  <div class="step-number">4</div>
+                  <div class="step-icon"><img src="assets/Group 2147224774.webp" alt=""></div>
+                </div>
+                <h3 class="step-title" data-i18n="steps.4.title">Receive Certificate</h3>
+                <p class="step-copy" data-i18n="steps.4.copy">Download your certificate and we notify the court.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block testimonials">
+          <div class="container-fluid-wide text-center">
+            <h2 class="section-title" data-i18n="testimonials.title">Trusted by Millions of Drivers</h2>
+            <p class="section-subtitle" data-i18n="testimonials.subtitle">
+              Don&rsquo;t just take our word for it. See what our satisfied customers have to say.
+            </p>
+
+            <div class="testimonial-grid">
+              <article class="testimonial-card reveal">
+                <img class="testimonial-quote" src="assets/Inverted Commas.webp" alt="">
+                <div class="testimonial-head">
+                  <span class="avatar-badge">J</span>
+                  <div class="text-start">
+                    <div class="testimonial-name">Jakyah J.</div>
+                    <div class="testimonial-date" data-i18n="testimonials.1.date">January 2026</div>
+                  </div>
+                </div>
+                <p class="testimonial-copy" data-i18n="testimonials.1.copy">
+                  &ldquo;I like the course just the way it is.&rdquo;
+                </p>
+              </article>
+
+              <article class="testimonial-card reveal">
+                <img class="testimonial-quote" src="assets/Inverted Commas.webp" alt="">
+                <div class="testimonial-head">
+                  <span class="avatar-badge" style="background: linear-gradient(180deg, #d9c39a 0%, #7d8f4b 100%);">E</span>
+                  <div class="text-start">
+                    <div class="testimonial-name">Emily H.</div>
+                    <div class="testimonial-date" data-i18n="testimonials.2.date">January 2026</div>
+                  </div>
+                </div>
+                <p class="testimonial-copy" data-i18n="testimonials.2.copy">
+                  &ldquo;I think its good the way it is.&rdquo;
+                </p>
+              </article>
+
+              <article class="testimonial-card reveal">
+                <img class="testimonial-quote" src="assets/Inverted Commas.webp" alt="">
+                <div class="testimonial-head">
+                  <span class="avatar-badge" style="background: linear-gradient(180deg, #f0d7b9 0%, #a6774f 100%);">C</span>
+                  <div class="text-start">
+                    <div class="testimonial-name">Corben R.</div>
+                    <div class="testimonial-date" data-i18n="testimonials.3.date">December 2025</div>
+                  </div>
+                </div>
+                <p class="testimonial-copy" data-i18n="testimonials.3.copy">
+                  &ldquo;I thought the course was great and it was a great reminder of everything I learned while in class.&rdquo;
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="container-fluid-wide text-center">
+            <h2 class="section-title compare-title" data-i18n="compare.title">See How GoToTrafficSchool.com Compares</h2>
+            <div class="compare-wrap reveal">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="compare.col1">Feature</th>
+                    <th>
+                      <span class="compare-pill">GoToTrafficSchool.com</span>
+                    </th>
+                    <th data-i18n="compare.col3">Other online traffic schools</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n="compare.row1.label">State licensed</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row1.other">Varies</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row2.label">100% Online</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row2.other">Most</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row3.label">Mobile-Friendly</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row3.other">Varies</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row4.label">Self-Paced</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row4.other">Most</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row5.label">Instant Enrollment</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row5.other">Varies</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row6.label">Designed Specifically for California Drivers</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row6.other">Not Always</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row7.label">Clear, Upfront Pricing</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row7.other">Varies</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block courses-section">
+          <div class="container-fluid-wide text-center">
+            <h2 class="section-title" data-i18n="courses.title">Looking For A Different Course?</h2>
+            <p class="section-subtitle" data-i18n="courses.subtitle">
+              Browse our additional online programs and find the one that fits your requirements.
+            </p>
+
+            <div class="courses-carousel-wrap">
+              <button class="carousel-arrow prev" type="button" id="coursePrev" aria-label="Previous courses">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <div class="courses-viewport">
+                <div class="courses-track" id="courseTrack">
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="assets/figma-home/abetterdriver.webp" alt="A Better Driver"></div>
+                      <p data-i18n="courses.1.copy">
+                        Indiana BMV-approved driver safety program for ticket dismissal and point reduction.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.abetterdriver.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="assets/figma-home/getdefensive.webp" alt="Get Defensive"></div>
+                      <p data-i18n="courses.2.copy">
+                        Texas-approved defensive driving to dismiss tickets and earn insurance discounts.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.getdefensive.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="assets/f92e7f8107279daf2f458f9a8b70ef725190e321.webp" alt="DriverEdToGo"></div>
+                      <p data-i18n="courses.3.copy">
+                        State-approved online teen driver education courses built for first-time drivers.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.driveredtogo.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="assets/figma-home/illinoisadult.webp" alt="Illinois Adult DriversEd"></div>
+                      <p data-i18n="courses.4.copy">
+                        Illinois-approved adult driver education for first-time drivers age 18 and older.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.illinoisadultdriversed.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="assets/figma-home/adultdriversed.webp" alt="Adult Drivers Ed"></div>
+                      <p data-i18n="courses.5.copy">
+                        Online adult driver education courses for students in eligible states.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.adultdriversed.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="assets/figma-home/askillfuldriver.webp" alt="A Skillful Driver"></div>
+                      <p data-i18n="courses.6.copy">
+                        Online driver education courses designed to make the learning process simple.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.askillfuldriver.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <button class="carousel-arrow next" type="button" id="courseNext" aria-label="Next courses">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block partner-band">
+          <div class="container-fluid-wide">
+            <div class="partner-grid">
+              <div class="reveal">
+                <p class="partner-kicker" data-i18n="partner.kicker">Partner with Cyberactive</p>
+                <p class="partner-copy" data-i18n="partner.copy1">
+                  We partner with courts and government agencies to offer approved online traffic school programs to ticketed drivers.
+                  Through white-label or referral solutions, we handle enrollment, payment collection, and certificate reporting &mdash;
+                  helping reduce administrative workload while ensuring drivers are properly educated.
+                </p>
+                <h2 class="partner-title" data-i18n="partner.title">Court-Approved Programs. Simplified.</h2>
+                <p class="partner-copy" data-i18n="partner.copy2">
+                  Offer a seamless traffic school solution without adding operational burden.
+                </p>
+                <a class="btn-brand btn-outline-brand partner-button" href="Partners.aspx">
+                  <span data-i18n="partner.cta">Learn More About Court Solutions</span>
+                  <i class="bi bi-chevron-right"></i>
+                </a>
+              </div>
+
+              <div class="partner-metrics reveal">
+                <div class="partner-metric">
+                  <span class="partner-metric-icon" aria-hidden="true"><i class="bi bi-envelope"></i></span>
+                  <h3 data-i18n="partner.metric1.title">Automated Notifications</h3>
+                  <p data-i18n="partner.metric1.copy">Real-time updates and reporting.</p>
+                </div>
+                <div class="partner-metric">
+                  <span class="partner-metric-icon" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
+                  <h3 data-i18n="partner.metric2.title">Compliance You Can Trust</h3>
+                  <p data-i18n="partner.metric2.copy">State-approved programs with built-in compliance.</p>
+                </div>
+                <div class="partner-metric">
+                  <span class="partner-metric-icon" aria-hidden="true"><i class="bi bi-ticket-perforated"></i></span>
+                  <h3 data-i18n="partner.metric3.title">White-Label Options</h3>
+                  <p data-i18n="partner.metric3.copy">Fully branded for your court.</p>
+                </div>
+                <div class="partner-metric">
+                  <span class="partner-metric-icon" aria-hidden="true"><i class="bi bi-people"></i></span>
+                  <h3 data-i18n="partner.metric4.title">Dedicated Support</h3>
+                  <p data-i18n="partner.metric4.copy">Hands-on support from implementation to ongoing success.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ready-band" id="ready">
+          <div class="container-fluid-wide">
+            <div class="ready-grid">
+              <div class="reveal">
+                <h2 class="cta-title" data-i18n="ready.title">Ready to get started?</h2>
+                <p class="ready-copy" data-i18n="ready.copy">Select your state and get started in just 5 minutes.</p>
+              </div>
+
+              <div class="state-select-wrap reveal">
+                <div class="state-select-shell">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <select class="form-select" id="stateSelect" aria-label="Choose your state">
+                    <option value="" selected data-i18n="ready.placeholder">Choose Your State</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+</asp:Content>
+
+<asp:Content ID="ScriptContent" ContentPlaceHolderID="ScriptContent" runat="server">
+</div>
+
+    <div class="toast-shell" id="shareToast" role="status" aria-live="polite"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const STORAGE_KEY = "gtts-home-language";
+      const STATE_BASE = "https://gototrafficschool.com/state/";
+      const translations = {
+        en: {
+          pageTitle: "GoToTrafficSchool.com | America's Original Traffic School",
+          skip: "Skip to main content",
+          "share.button": "Share This Page",
+          "share.success": "Page link copied.",
+          "utility.contact": "Contact Us: 1-800-909-3909",
+          "nav.about": "About Us",
+          "nav.how": "How It Works",
+          "nav.faq": "FAQs",
+          "nav.partner": "Partner with us",
+          "nav.contact": "Contact Us",
+          "nav.login": "Log In",
+          "lang.label": "Select Language",
+          "lang.english": "English (US)",
+          "lang.spanish": "Español",
+          "hero.title": "America's Original Traffic School",
+          "hero.copy": "State-approved traffic school and defensive driving courses that help you dismiss tickets, reduce points, and save on insurance — from the comfort of home.",
+          "hero.primary": "Get Started Now",
+          "hero.secondary": "How it Works",
+          "hero.proof1a": "State Approved",
+          "hero.proof1b": "Trusted by Courts",
+          "hero.proof2a": "Certificate Delivered",
+          "hero.proof2b": "Fast & Secure",
+          "hero.proof3a": "10 Million+",
+          "hero.proof3b": "Drivers Served",
+          "trust.1.title": "Fast Certificate",
+          "trust.1.copy": "Receive your certificate as soon as you finish.",
+          "trust.2.title": "Court Accepted",
+          "trust.2.copy": "Accepted in most states and all local courts.",
+          "trust.3.title": "100% Online",
+          "trust.3.copy": "Complete your course on any device, anytime.",
+          "trust.4.title": "Money Back Guarantee",
+          "trust.4.copy": "14-day money back guarantee.",
+          "worksFeature.title": "Traffic School That Works For You",
+          "worksFeature.item1.title": "Dismiss Tickets",
+          "worksFeature.item1.copy": "Qualify to dismiss eligible tickets.",
+          "worksFeature.item2.title": "Avoid Points",
+          "worksFeature.item2.copy": "Prevent points from going on your record.",
+          "worksFeature.item3.title": "Lower Insurance Rates",
+          "worksFeature.item3.copy": "Complete and save on your insurance.",
+          "worksFeature.item4.title": "Court & DMV Approved",
+          "worksFeature.item4.copy": "State-approved and court-accepted courses.",
+          "worksFeature.item5.title": "Action Button",
+          "worksFeature.item5.copy": "Check If We Accept Your Ticket",
+          "worksFeature.cta": "Check If we accept your ticket",
+          "steps.heading": "How It Works",
+          "steps.1.title": "Sign Up",
+          "steps.1.copy": "Create your account in just a few minutes.",
+          "steps.2.title": "Take the Course",
+          "steps.2.copy": "Complete the course online at your own pace.",
+          "steps.3.title": "Pass the Final Exam",
+          "steps.3.copy": "Pass the final exam with a 70% or higher.",
+          "steps.4.title": "Receive Certificate",
+          "steps.4.copy": "Download your certificate and we notify the court.",
+          "testimonials.title": "Trusted by Millions of Drivers",
+          "testimonials.subtitle": "Don't just take our word for it. See what our satisfied customers have to say.",
+          "testimonials.1.date": "January 2026",
+          "testimonials.1.copy": "“I like the course just the way it is.”",
+          "testimonials.2.date": "January 2026",
+          "testimonials.2.copy": "“I think its good the way it is.”",
+          "testimonials.3.date": "December 2025",
+          "testimonials.3.copy": "“I thought the course was great and it was a great reminder of everything I learned while in class.”",
+          "compare.title": "See How GoToTrafficSchool.com Compares",
+          "compare.col1": "Feature",
+          "compare.col3": "Other online traffic schools",
+          "compare.yes": "Yes",
+          "compare.row1.label": "State licensed",
+          "compare.row1.other": "Varies",
+          "compare.row2.label": "100% Online",
+          "compare.row2.other": "Most",
+          "compare.row3.label": "Mobile-Friendly",
+          "compare.row3.other": "Varies",
+          "compare.row4.label": "Self-Paced",
+          "compare.row4.other": "Most",
+          "compare.row5.label": "Instant Enrollment",
+          "compare.row5.other": "Varies",
+          "compare.row6.label": "Designed Specifically for California Drivers",
+          "compare.row6.other": "Not Always",
+          "compare.row7.label": "Clear, Upfront Pricing",
+          "compare.row7.other": "Varies",
+          "courses.title": "Looking For A Different Course?",
+          "courses.subtitle": "Browse our additional online programs and find the one that fits your requirements.",
+          "courses.cta": "Start Now",
+          "courses.1.copy": "Indiana BMV-approved driver safety program for ticket dismissal and point reduction.",
+          "courses.2.copy": "Texas-approved defensive driving to dismiss tickets and earn insurance discounts.",
+          "courses.3.copy": "State-approved online teen driver education courses built for first-time drivers.",
+          "courses.4.copy": "Illinois-approved adult driver education for first-time drivers age 18 and older.",
+          "courses.5.copy": "Online adult driver education courses for students in eligible states.",
+          "courses.6.copy": "Online driver education courses designed to make the learning process simple.",
+          "partner.kicker": "Partner with Cyberactive",
+          "partner.copy1": "We partner with courts and government agencies to offer approved online traffic school programs to ticketed drivers. Through white-label or referral solutions, we handle enrollment, payment collection, and certificate reporting — helping reduce administrative workload while ensuring drivers are properly educated.",
+          "partner.title": "Court-Approved Programs. Simplified.",
+          "partner.copy2": "Offer a seamless traffic school solution without adding operational burden.",
+          "partner.cta": "Learn More About Court Solutions",
+          "partner.metric1.title": "Automated Notifications",
+          "partner.metric1.copy": "Real-time updates and reporting.",
+          "partner.metric2.title": "Compliance You Can Trust",
+          "partner.metric2.copy": "State-approved programs with built-in compliance.",
+          "partner.metric3.title": "White-Label Options",
+          "partner.metric3.copy": "Fully branded for your court.",
+          "partner.metric4.title": "Dedicated Support",
+          "partner.metric4.copy": "Hands-on support from implementation to ongoing success.",
+          "ready.title": "Ready to get started?",
+          "ready.copy": "Select your state and get started in just 5 minutes.",
+          "ready.placeholder": "Choose Your State",
+          "footer.brand": "The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.",
+          "footer.location": "8034 Garden Grove Blvd Suite C Garden Grove, CA 92844",
+          "footer.company": "Company",
+          "footer.home": "Home",
+          "footer.about": "About Us",
+          "footer.how": "How It Works",
+          "footer.faq": "FAQ",
+          "footer.contact": "Contact",
+          "footer.partner": "Partner Program",
+          "footer.legal": "Legal",
+          "footer.privacy": "Privacy Policy",
+          "footer.terms": "Terms Of Service",
+          "footer.court": "Court Directory",
+          "footer.comments": "Student Comment",
+          "footer.follow": "Follow Us",
+          "footer.copyrightLead": "© 2026 gototrafficschool.com Powered by",
+          "footer.copyrightTail": "All rights reserved."
+        },
+        es: {
+          pageTitle: "GoToTrafficSchool.com | La escuela de tránsito original de Estados Unidos",
+          skip: "Saltar al contenido principal",
+          "share.button": "Compartir Esta Página",
+          "share.success": "Enlace de la página copiado.",
+          "utility.contact": "Contáctenos: 1-800-909-3909",
+          "nav.about": "Sobre Nosotros",
+          "nav.how": "Cómo Funciona",
+          "nav.faq": "Preguntas Frecuentes",
+          "nav.partner": "Asóciese con nosotros",
+          "nav.contact": "Contáctenos",
+          "nav.login": "Iniciar Sesión",
+          "lang.label": "Seleccionar Idioma",
+          "lang.english": "Inglés (EE. UU.)",
+          "lang.spanish": "Español",
+          "hero.title": "La escuela de tránsito original de Estados Unidos",
+          "hero.copy": "Cursos aprobados por el estado de escuela de tránsito y manejo defensivo que le ayudan a desestimar multas, reducir puntos y ahorrar en el seguro, todo desde la comodidad de su hogar.",
+          "hero.primary": "Comenzar Ahora",
+          "hero.secondary": "Cómo Funciona",
+          "hero.proof1a": "Aprobado por el Estado",
+          "hero.proof1b": "Con la confianza de los tribunales",
+          "hero.proof2a": "Certificado Entregado",
+          "hero.proof2b": "Rápido y Seguro",
+          "hero.proof3a": "10 Millones+",
+          "hero.proof3b": "Conductores Atendidos",
+          "trust.1.title": "Certificado Rápido",
+          "trust.1.copy": "Reciba su certificado tan pronto como termine.",
+          "trust.2.title": "Aceptado por Tribunales",
+          "trust.2.copy": "Aceptado en la mayoría de los estados y tribunales locales.",
+          "trust.3.title": "100% En Línea",
+          "trust.3.copy": "Complete su curso en cualquier dispositivo, en cualquier momento.",
+          "trust.4.title": "Garantía de Reembolso",
+          "trust.4.copy": "Garantía de devolución de dinero de 14 días.",
+          "worksFeature.title": "Escuela de Tránsito que Funciona Para Usted",
+          "worksFeature.item1.title": "Desestime Multas",
+          "worksFeature.item1.copy": "Califique para desestimar multas elegibles.",
+          "worksFeature.item2.title": "Evite Puntos",
+          "worksFeature.item2.copy": "Evite que los puntos aparezcan en su historial.",
+          "worksFeature.item3.title": "Reduzca el Seguro",
+          "worksFeature.item3.copy": "Complete el curso y ahorre en su seguro.",
+          "worksFeature.item4.title": "Aprobado por Tribunal y DMV",
+          "worksFeature.item4.copy": "Cursos aprobados por el estado y aceptados por tribunales.",
+          "worksFeature.item5.title": "Botón de Acción",
+          "worksFeature.item5.copy": "Verifique si aceptamos su multa",
+          "worksFeature.cta": "Verifique si aceptamos su multa",
+          "steps.heading": "Cómo Funciona",
+          "steps.1.title": "Regístrese",
+          "steps.1.copy": "Cree su cuenta en solo unos minutos.",
+          "steps.2.title": "Tome el Curso",
+          "steps.2.copy": "Complete el curso en línea a su propio ritmo.",
+          "steps.3.title": "Apruebe el Examen Final",
+          "steps.3.copy": "Apruebe el examen final con 70% o más.",
+          "steps.4.title": "Reciba su Certificado",
+          "steps.4.copy": "Descargue su certificado y notificamos al tribunal.",
+          "testimonials.title": "Con la Confianza de Millones de Conductores",
+          "testimonials.subtitle": "No se quede solo con nuestra palabra. Vea lo que dicen nuestros clientes satisfechos.",
+          "testimonials.1.date": "Enero 2026",
+          "testimonials.1.copy": "“Me gusta el curso tal como está.”",
+          "testimonials.2.date": "Enero 2026",
+          "testimonials.2.copy": "“Creo que está bien tal como está.”",
+          "testimonials.3.date": "Diciembre 2025",
+          "testimonials.3.copy": "“Me pareció que el curso fue excelente y fue un gran recordatorio de todo lo que aprendí en clase.”",
+          "compare.title": "Vea Cómo Se Compara GoToTrafficSchool.com",
+          "compare.col1": "Característica",
+          "compare.col3": "Otras escuelas de tránsito en línea",
+          "compare.yes": "Sí",
+          "compare.row1.label": "Con licencia estatal",
+          "compare.row1.other": "Varía",
+          "compare.row2.label": "100% En Línea",
+          "compare.row2.other": "La mayoría",
+          "compare.row3.label": "Compatible con móviles",
+          "compare.row3.other": "Varía",
+          "compare.row4.label": "A su propio ritmo",
+          "compare.row4.other": "La mayoría",
+          "compare.row5.label": "Inscripción instantánea",
+          "compare.row5.other": "Varía",
+          "compare.row6.label": "Diseñado específicamente para conductores de California",
+          "compare.row6.other": "No siempre",
+          "compare.row7.label": "Precios claros y por adelantado",
+          "compare.row7.other": "Varía",
+          "courses.title": "¿Busca un curso diferente?",
+          "courses.subtitle": "Explore nuestros programas adicionales en línea y encuentre el que se ajuste a sus necesidades.",
+          "courses.cta": "Comenzar",
+          "courses.1.copy": "Programa de seguridad vial aprobado por el BMV de Indiana para desestimar multas y reducir puntos.",
+          "courses.2.copy": "Curso de manejo defensivo aprobado en Texas para desestimar multas y obtener descuentos en el seguro.",
+          "courses.3.copy": "Cursos estatales en línea para educación vial de adolescentes diseñados para conductores primerizos.",
+          "courses.4.copy": "Educación vial para adultos aprobada en Illinois para conductores primerizos de 18 años o más.",
+          "courses.5.copy": "Cursos en línea de educación vial para adultos para estudiantes en estados elegibles.",
+          "courses.6.copy": "Cursos en línea de educación vial diseñados para simplificar el proceso de aprendizaje.",
+          "partner.kicker": "Asóciese con Cyberactive",
+          "partner.copy1": "Nos asociamos con tribunales y agencias gubernamentales para ofrecer programas aprobados de escuela de tránsito en línea a conductores con infracciones. A través de soluciones de marca blanca o referidos, gestionamos la inscripción, el cobro de pagos y el reporte de certificados, ayudando a reducir la carga administrativa mientras garantizamos que los conductores reciban la educación adecuada.",
+          "partner.title": "Programas Aprobados por Tribunales. Simplificados.",
+          "partner.copy2": "Ofrezca una solución fluida de escuela de tránsito sin agregar carga operativa.",
+          "partner.cta": "Más Información Sobre Soluciones para Tribunales",
+          "partner.metric1.title": "Notificaciones Automatizadas",
+          "partner.metric1.copy": "Actualizaciones e informes en tiempo real.",
+          "partner.metric2.title": "Cumplimiento Confiable",
+          "partner.metric2.copy": "Programas aprobados por el estado con cumplimiento incorporado.",
+          "partner.metric3.title": "Opciones de Marca Blanca",
+          "partner.metric3.copy": "Totalmente adaptado a la marca de su tribunal.",
+          "partner.metric4.title": "Soporte Dedicado",
+          "partner.metric4.copy": "Soporte práctico desde la implementación hasta el éxito continuo.",
+          "ready.title": "¿Listo para comenzar?",
+          "ready.copy": "Seleccione su estado y comience en solo 5 minutos.",
+          "ready.placeholder": "Elija Su Estado",
+          "footer.brand": "La forma más rápida y sencilla de completar su escuela de tránsito en línea. Con la confianza de más de 10 millones de conductores en todo el país.",
+          "footer.location": "8034 Garden Grove Blvd Suite C Garden Grove, CA 92844",
+          "footer.company": "Empresa",
+          "footer.home": "Inicio",
+          "footer.about": "Sobre Nosotros",
+          "footer.how": "Cómo Funciona",
+          "footer.faq": "Preguntas Frecuentes",
+          "footer.contact": "Contacto",
+          "footer.partner": "Programa de Socios",
+          "footer.legal": "Legal",
+          "footer.privacy": "Política de Privacidad",
+          "footer.terms": "Términos del Servicio",
+          "footer.court": "Directorio de Tribunales",
+          "footer.comments": "Comentario del Estudiante",
+          "footer.follow": "Síganos",
+          "footer.copyrightLead": "© 2026 gototrafficschool.com Desarrollado por",
+          "footer.copyrightTail": "Todos los derechos reservados."
+        }
+      };
+
+      const STATE_MAP = {
+        "alabama": {
+          "slug": "alabama-online-defensive-driving",
+          "title": "Alabama Online Defensive Driving Course",
+          "stateName": "Alabama",
+          "stateCode": "AL"
+        },
+        "alaska": {
+          "slug": "alaska-online-defensive-driving",
+          "title": "Alaska Online Defensive Driving Course",
+          "stateName": "Alaska",
+          "stateCode": "AK"
+        },
+        "arizona": {
+          "slug": "arizona-online-defensive-driving",
+          "title": "Arizona Online Defensive Driving Course",
+          "stateName": "Arizona",
+          "stateCode": "AZ"
+        },
+        "arkansas": {
+          "slug": "arkansas-online-defensive-driving",
+          "title": "Arkansas Online Defensive Driving Course",
+          "stateName": "Arkansas",
+          "stateCode": "AR"
+        },
+        "california": {
+          "slug": "california-online-traffic-school",
+          "title": "California Online Traffic School",
+          "stateName": "California",
+          "stateCode": "CA"
+        },
+        "colorado": {
+          "slug": "colorado-online-defensive-driving",
+          "title": "Colorado Online Defensive Driving Course",
+          "stateName": "Colorado",
+          "stateCode": "CO"
+        },
+        "connecticut": {
+          "slug": "connecticut-online-defensive-driving",
+          "title": "Connecticut Online Defensive Driving Course",
+          "stateName": "Connecticut",
+          "stateCode": "CT"
+        },
+        "delaware": {
+          "slug": "delaware-online-defensive-driving",
+          "title": "Delaware Online Defensive Driving Course",
+          "stateName": "Delaware",
+          "stateCode": "DE"
+        },
+        "florida": {
+          "slug": "florida-online-traffic-school",
+          "title": "Florida Online Traffic School",
+          "stateName": "Florida",
+          "stateCode": "FL"
+        },
+        "georgia": {
+          "slug": "georgia-online-defensive-driving",
+          "title": "Georgia Online Defensive Driving Course",
+          "stateName": "Georgia",
+          "stateCode": "GA"
+        },
+        "hawaii": {
+          "slug": "hawaii-online-defensive-driving",
+          "title": "Hawaii Online Defensive Driving Course",
+          "stateName": "Hawaii",
+          "stateCode": "HI"
+        },
+        "idaho": {
+          "slug": "idaho-online-defensive-driving",
+          "title": "Idaho Online Defensive Driving Course",
+          "stateName": "Idaho",
+          "stateCode": "ID"
+        },
+        "illinois": {
+          "slug": "illinois-online-defensive-driving",
+          "title": "Illinois Online Defensive Driving Course",
+          "stateName": "Illinois",
+          "stateCode": "IL"
+        },
+        "indiana": {
+          "slug": "indiana-online-traffic-school",
+          "title": "Indiana Online Traffic School",
+          "stateName": "Indiana",
+          "stateCode": "IN"
+        },
+        "iowa": {
+          "slug": "iowa-online-defensive-driving",
+          "title": "Iowa Online Defensive Driving Course",
+          "stateName": "Iowa",
+          "stateCode": "IA"
+        },
+        "kansas": {
+          "slug": "kansas-online-traffic-school",
+          "title": "Kansas Online Traffic School",
+          "stateName": "Kansas",
+          "stateCode": "KS"
+        },
+        "kentucky": {
+          "slug": "kentucky-online-traffic-school",
+          "title": "Kentucky Online Traffic School",
+          "stateName": "Kentucky",
+          "stateCode": "KY"
+        },
+        "louisiana": {
+          "slug": "louisiana-online-defensive-driving",
+          "title": "Louisiana Online Defensive Driving Course",
+          "stateName": "Louisiana",
+          "stateCode": "LA"
+        },
+        "maine": {
+          "slug": "maine-online-driver-improvement",
+          "title": "Maine Online Driver Improvement Course",
+          "stateName": "Maine",
+          "stateCode": "ME"
+        },
+        "maryland": {
+          "slug": "maryland-online-driver-improvement",
+          "title": "Maryland Online Driver Improvement Course",
+          "stateName": "Maryland",
+          "stateCode": "MD"
+        },
+        "massachusetts": {
+          "slug": "massachusetts-online-driver-retraining",
+          "title": "Massachusetts Online Driver Retraining Course",
+          "stateName": "Massachusetts",
+          "stateCode": "MA"
+        },
+        "michigan": {
+          "slug": "michigan-online-driver-improvement",
+          "title": "Michigan Online Driver Improvement Course",
+          "stateName": "Michigan",
+          "stateCode": "MI"
+        },
+        "minnesota": {
+          "slug": "minnesota-online-defensive-driving",
+          "title": "Minnesota Online Defensive Driving Course",
+          "stateName": "Minnesota",
+          "stateCode": "MN"
+        },
+        "mississippi": {
+          "slug": "mississippi-online-defensive-driving",
+          "title": "Mississippi Online Defensive Driving Course",
+          "stateName": "Mississippi",
+          "stateCode": "MS"
+        },
+        "missouri": {
+          "slug": "missouri-online-driver-improvement",
+          "title": "Missouri Online Driver Improvement Course",
+          "stateName": "Missouri",
+          "stateCode": "MO"
+        },
+        "montana": {
+          "slug": "montana-online-defensive-driving",
+          "title": "Montana Online Defensive Driving Course",
+          "stateName": "Montana",
+          "stateCode": "MT"
+        },
+        "nebraska": {
+          "slug": "nebraska-online-defensive-driving",
+          "title": "Nebraska Online Defensive Driving Course",
+          "stateName": "Nebraska",
+          "stateCode": "NE"
+        },
+        "nevada": {
+          "slug": "nevada-online-traffic-school",
+          "title": "Nevada Online Traffic School",
+          "stateName": "Nevada",
+          "stateCode": "NV"
+        },
+        "new-hampshire": {
+          "slug": "new-hampshire-online-driver-improvement",
+          "title": "New Hampshire Online Driver Improvement Course",
+          "stateName": "New Hampshire",
+          "stateCode": "NH"
+        },
+        "new-jersey": {
+          "slug": "new-jersey-online-defensive-driving",
+          "title": "New Jersey Online Defensive Driving Course",
+          "stateName": "New Jersey",
+          "stateCode": "NJ"
+        },
+        "new-mexico": {
+          "slug": "new-mexico-online-defensive-driving",
+          "title": "New Mexico Online Defensive Driving Course",
+          "stateName": "New Mexico",
+          "stateCode": "NM"
+        },
+        "new-york": {
+          "slug": "new-york-online-defensive-driving",
+          "title": "New York Online Defensive Driving Course",
+          "stateName": "New York",
+          "stateCode": "NY"
+        },
+        "north-carolina": {
+          "slug": "north-carolina-online-traffic-school",
+          "title": "North Carolina Online Traffic School",
+          "stateName": "North Carolina",
+          "stateCode": "NC"
+        },
+        "north-dakota": {
+          "slug": "north-dakota-online-defensive-driving",
+          "title": "North Dakota Online Defensive Driving Course",
+          "stateName": "North Dakota",
+          "stateCode": "ND"
+        },
+        "ohio": {
+          "slug": "ohio-online-remedial-driving",
+          "title": "Ohio Online Remedial Driving Course",
+          "stateName": "Ohio",
+          "stateCode": "OH"
+        },
+        "oklahoma": {
+          "slug": "oklahoma-online-defensive-driving",
+          "title": "Oklahoma Online Defensive Driving Course",
+          "stateName": "Oklahoma",
+          "stateCode": "OK"
+        },
+        "oregon": {
+          "slug": "oregon-online-traffic-school",
+          "title": "Oregon Online Traffic School",
+          "stateName": "Oregon",
+          "stateCode": "OR"
+        },
+        "pennsylvania": {
+          "slug": "pennsylvania-online-driver-improvement",
+          "title": "Pennsylvania Online Driver Improvement Course",
+          "stateName": "Pennsylvania",
+          "stateCode": "PA"
+        },
+        "rhode-island": {
+          "slug": "rhode-island-online-defensive-driving",
+          "title": "Rhode Island Online Defensive Driving Course",
+          "stateName": "Rhode Island",
+          "stateCode": "RI"
+        },
+        "south-carolina": {
+          "slug": "south-carolina-online-defensive-driving",
+          "title": "South Carolina Online Defensive Driving Course",
+          "stateName": "South Carolina",
+          "stateCode": "SC"
+        },
+        "south-dakota": {
+          "slug": "south-dakota-online-defensive-driving",
+          "title": "South Dakota Online Defensive Driving Course",
+          "stateName": "South Dakota",
+          "stateCode": "SD"
+        },
+        "tennessee": {
+          "slug": "tennessee-online-defensive-driving",
+          "title": "Tennessee Online Defensive Driving Course",
+          "stateName": "Tennessee",
+          "stateCode": "TN"
+        },
+        "texas": {
+          "slug": "texas-online-defensive-driving",
+          "title": "Texas Online Defensive Driving Course",
+          "stateName": "Texas",
+          "stateCode": "TX"
+        },
+        "utah": {
+          "slug": "utah-online-traffic-school",
+          "title": "Utah Online Traffic School",
+          "stateName": "Utah",
+          "stateCode": "UT"
+        },
+        "vermont": {
+          "slug": "vermont-online-defensive-driving",
+          "title": "Vermont Online Defensive Driving Course",
+          "stateName": "Vermont",
+          "stateCode": "VT"
+        },
+        "virginia": {
+          "slug": "virginia-online-driver-improvement",
+          "title": "Virginia Online Driver Improvement Course",
+          "stateName": "Virginia",
+          "stateCode": "VA"
+        },
+        "washington": {
+          "slug": "washington-online-traffic-school",
+          "title": "Washington Online Traffic School",
+          "stateName": "Washington",
+          "stateCode": "WA"
+        },
+        "west-virginia": {
+          "slug": "west-virginia-online-defensive-driving",
+          "title": "West Virginia Online Defensive Driving Course",
+          "stateName": "West Virginia",
+          "stateCode": "WV"
+        },
+        "wisconsin": {
+          "slug": "wisconsin-online-traffic-school",
+          "title": "Wisconsin Online Traffic School",
+          "stateName": "Wisconsin",
+          "stateCode": "WI"
+        },
+        "wyoming": {
+          "slug": "wyoming-online-defensive-driving",
+          "title": "Wyoming Online Defensive Driving Course",
+          "stateName": "Wyoming",
+          "stateCode": "WY"
+        },
+        "district-of-columbia": {
+          "slug": "district-of-columbia",
+          "title": "Washington, D.C. Online Course",
+          "stateName": "Washington,D.C.",
+          "stateCode": "DC"
+        }
+      };
+
+      const languageSelect = document.getElementById("languageSelect");
+      const stateSelect = document.getElementById("stateSelect");
+      const shareButton = document.getElementById("sharePage");
+      const shareToast = document.getElementById("shareToast");
+      const courseTrack = document.getElementById("courseTrack");
+      const prevButton = document.getElementById("coursePrev");
+      const nextButton = document.getElementById("courseNext");
+
+      let courseIndex = 0;
+
+      function getStoredLanguage() {
+        try {
+          return localStorage.getItem(STORAGE_KEY);
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function setStoredLanguage(language) {
+        try {
+          localStorage.setItem(STORAGE_KEY, language);
+        } catch (error) {
+          return;
+        }
+      }
+
+      function populateStates() {
+        Object.entries(STATE_MAP).forEach(([stateKey, state]) => {
+          const option = document.createElement("option");
+          option.value = stateKey;
+          option.textContent = state.stateName;
+          option.setAttribute("data-state-code", state.stateCode);
+          stateSelect.appendChild(option);
+        });
+      }
+
+      function applyLanguage(language) {
+        const dictionary = translations[language] || translations.en;
+        document.documentElement.lang = language === "es" ? "es" : "en";
+        document.title = dictionary.pageTitle;
+
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          const key = node.getAttribute("data-i18n");
+          if (dictionary[key]) {
+            node.textContent = dictionary[key];
+          }
+        });
+
+        const placeholder = stateSelect.querySelector("option[value='']");
+        if (placeholder) {
+          placeholder.textContent = dictionary["ready.placeholder"];
+        }
+
+        setStoredLanguage(language);
+      }
+
+      function showToast(message) {
+        shareToast.textContent = message;
+        shareToast.classList.add("show");
+        window.clearTimeout(showToast._timer);
+        showToast._timer = window.setTimeout(() => {
+          shareToast.classList.remove("show");
+        }, 2200);
+      }
+
+      async function sharePage() {
+        const currentLanguage = languageSelect.value;
+        const dictionary = translations[currentLanguage] || translations.en;
+
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: document.title,
+              text: document.title,
+              url: window.location.href
+            });
+            return;
+          } catch (error) {
+            if (error && error.name === "AbortError") {
+              return;
+            }
+          }
+        }
+
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          showToast(dictionary["share.success"]);
+        } catch (error) {
+          showToast(dictionary["share.success"]);
+        }
+      }
+
+      function visibleCards() {
+        if (window.innerWidth < 768) return 1;
+        if (window.innerWidth < 992) return 2;
+        if (window.innerWidth < 1200) return 3;
+        return 4;
+      }
+
+      function totalCoursePages() {
+        return Math.max(0, courseTrack.children.length - visibleCards());
+      }
+
+      function updateCarousel() {
+        const perView = visibleCards();
+        const maxIndex = totalCoursePages();
+        courseIndex = Math.min(courseIndex, maxIndex);
+        const offset = (100 / perView) * courseIndex;
+        courseTrack.style.transform = `translateX(-${offset}%)`;
+        prevButton.disabled = courseIndex === 0;
+        nextButton.disabled = courseIndex >= maxIndex;
+        prevButton.style.opacity = prevButton.disabled ? "0.45" : "1";
+        nextButton.style.opacity = nextButton.disabled ? "0.45" : "1";
+      }
+
+      function initReveal() {
+        const revealNodes = document.querySelectorAll(".reveal:not(.visible)");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.16 });
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
+
+      populateStates();
+
+      const savedLanguage = getStoredLanguage() || "en";
+      languageSelect.value = savedLanguage;
+      applyLanguage(savedLanguage);
+      initReveal();
+      updateCarousel();
+
+      languageSelect.addEventListener("change", (event) => {
+        applyLanguage(event.target.value);
+      });
+
+      shareButton.addEventListener("click", sharePage);
+
+      stateSelect.addEventListener("change", () => {
+        if (stateSelect.value && STATE_MAP[stateSelect.value]) {
+          window.location.href = `${STATE_BASE}${STATE_MAP[stateSelect.value].slug}`;
+        }
+      });
+
+      prevButton.addEventListener("click", () => {
+        courseIndex = Math.max(0, courseIndex - 1);
+        updateCarousel();
+      });
+
+      nextButton.addEventListener("click", () => {
+        courseIndex = Math.min(totalCoursePages(), courseIndex + 1);
+        updateCarousel();
+      });
+
+      window.addEventListener("resize", updateCarousel);
+
+      window.addEventListener("pageshow", () => {
+        stateSelect.value = "";
+      });
+    </script>
+</asp:Content>
