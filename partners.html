@@ -232,39 +232,60 @@
         padding: clamp(26px, 4vw, 44px) clamp(20px, 4vw, 66px) clamp(28px, 4vw, 44px);
       }
 
-      .hero-language {
+      .language-picker {
         position: absolute;
-        top: 8px;
-        right: clamp(20px, 4vw, 38px);
-        z-index: 3;
-        width: min(100%, 230px);
+        top: 16px;
+        right: 24px;
+        z-index: 5;
+        width: fit-content;
+        max-width: 100%;
+        text-align: right;
       }
 
-      .hero-language span {
-        display: block;
-        margin-bottom: 8px;
-        color: #fff;
-        font-size: 15px;
-        font-weight: 700;
-      }
-
-      .hero-language .language-box {
+      .language-heading {
         display: flex;
         align-items: center;
-        gap: 10px;
-        padding: 0 14px;
-        min-height: 52px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.96);
-        color: #23384d;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 8px;
       }
 
-      .hero-language .form-select {
+      .language-heading i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-picker label {
+        display: inline;
+        margin: 0;
+        color: #2f3540;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .language-control {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 10px 24px rgba(45, 92, 136, 0.12);
+      }
+
+      .language-control i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-control .form-select {
         border: 0;
+        padding: 0 28px 0 0;
+        background-color: transparent;
         box-shadow: none;
-        padding-left: 0;
-        color: #23384d;
-        font-size: 16px;
+        font-size: 1rem;
+        color: #111;
       }
 
       .hero-grid {
@@ -1132,7 +1153,7 @@
           display: none;
         }
 
-        .hero-language {
+        .language-picker {
           position: static;
           margin-left: auto;
           margin-bottom: 22px;
@@ -1607,15 +1628,17 @@
     <main id="mainContent">
       <section class="partner-hero">
         <div class="container-xxl">
-          <div class="hero-language reveal-on-scroll is-visible">
-            <span data-i18n="languageLabel">Select Language</span>
-            <label class="language-box" for="languageSelect">
+          <div class="language-picker">
+            <span class="language-heading">
               <i class="bi bi-globe2" aria-hidden="true"></i>
+              <label for="languageSelect" data-i18n="languageLabel">Select Language</label>
+            </span>
+            <div class="language-control">
               <select id="languageSelect" class="form-select" aria-label="Select language">
                 <option value="en">English (US)</option>
                 <option value="es">Español</option>
               </select>
-            </label>
+            </div>
           </div>
 
           <div class="hero-grid">

@@ -227,12 +227,16 @@
       }
 
       .hero-section {
+        position: relative;
         padding: 1.9rem 0 1.35rem;
       }
 
       .hero-section .container-xxl,
       .timeline-section .container-xxl {
-        max-width: 1180px;
+        width: min(1360px, calc(100% - 32px));
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
       }
 
       .hero-grid {
@@ -274,7 +278,7 @@
 
       .hero-device-scene {
         position: relative;
-        width: min(100%, 400px);
+        width: min(100%, 520px);
       }
 
       .hero-device-scene img {
@@ -632,6 +636,11 @@
           gap: 2rem;
         }
 
+        .language-picker {
+          position: static;
+          margin: 0 0 18px auto;
+        }
+
         .hero-visual-col {
           align-items: flex-start;
         }
@@ -879,14 +888,60 @@
         box-shadow: none;
       }
 
-      .hero-language-block {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 1.25rem;
+      .language-picker {
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        z-index: 5;
+        width: fit-content;
+        max-width: 100%;
+        text-align: right;
       }
 
-      .hero-language-block .language-block {
-        width: min(220px, 100%);
+      .language-heading {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .language-heading i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-picker label {
+        display: inline;
+        margin: 0;
+        color: #2f3540;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .language-control {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 10px 24px rgba(45, 92, 136, 0.12);
+      }
+
+      .language-control i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-control .form-select {
+        border: 0;
+        padding: 0 28px 0 0;
+        background-color: transparent;
+        box-shadow: none;
+        font-size: 1rem;
+        color: #111;
       }
 
       .site-footer {
@@ -1267,15 +1322,16 @@
       <main id="mainContent">
         <section class="hero-section">
           <div class="container-xxl">
-            <div class="hero-language-block">
-              <div class="language-block">
+            <div class="language-picker">
+              <span class="language-heading">
+                <i class="bi bi-globe2" aria-hidden="true"></i>
                 <label for="languageSelect" data-i18n="lang.label">Select Language</label>
-                <div class="language-select-wrap">
-                  <select class="form-select language-select" id="languageSelect" aria-label="Select language">
-                    <option value="en">English (US)</option>
-                    <option value="es">Español</option>
-                  </select>
-                </div>
+              </span>
+              <div class="language-control">
+                <select class="form-select" id="languageSelect" aria-label="Select language">
+                  <option value="en">English (US)</option>
+                  <option value="es">Español</option>
+                </select>
               </div>
             </div>
             <div class="hero-grid">

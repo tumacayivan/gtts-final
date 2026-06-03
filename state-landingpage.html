@@ -158,22 +158,41 @@
           url("assets/vecteezy_luxury-electric-car-on-coastal-road-background_48608241 2.png") center right / cover no-repeat;
       }
 
-      .hero-inner {
+      .hero {
         position: relative;
+      }
+
+      .hero-inner {
+        position: static;
       }
 
       .language-picker {
         position: absolute;
         top: 16px;
-        right: 0;
+        right: 24px;
         z-index: 2;
-        width: min(220px, 100%);
+        width: fit-content;
+        max-width: 100%;
+        text-align: right;
+      }
+
+      .language-heading {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .language-heading i {
+        color: #313e4f;
+        font-size: 1rem;
       }
 
       .language-picker label {
-        display: block;
-        margin-bottom: 8px;
-        color: #fff;
+        display: inline;
+        margin: 0;
+        color: #2f3540;
         font-size: 0.95rem;
         font-weight: 600;
       }
@@ -181,6 +200,7 @@
       .language-control {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         gap: 10px;
         padding: 10px 14px;
         border-radius: 12px;
@@ -1492,9 +1512,11 @@
         <section class="hero" id="about">
           <div class="container-page hero-inner">
             <div class="language-picker">
-              <label for="languageSelect">Select Language</label>
-              <div class="language-control">
+              <span class="language-heading">
                 <i class="bi bi-globe2" aria-hidden="true"></i>
+                <label for="languageSelect">Select Language</label>
+              </span>
+              <div class="language-control">
                 <select id="languageSelect" class="form-select" aria-label="Select Language">
                   <option value="en">English (US)</option>
                   <option value="es">Español</option>

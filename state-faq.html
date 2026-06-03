@@ -317,31 +317,60 @@
         color: #131c27;
       }
 
-      .language-block {
-        min-width: 160px;
-        padding-top: 0.15rem;
-      }
-
-      .language-block label {
-        display: block;
-        margin-bottom: 0.45rem;
-        font-size: 0.92rem;
-        color: #344253;
-      }
-
-      .language-wrap {
-        position: relative;
-      }
-
-      .language-wrap::before {
-        content: "\F3E8";
+      .language-picker {
         position: absolute;
-        top: 50%;
-        left: 0.9rem;
-        transform: translateY(-50%);
-        font-family: bootstrap-icons;
-        color: #546172;
-        pointer-events: none;
+        top: 16px;
+        right: 24px;
+        z-index: 5;
+        width: fit-content;
+        max-width: 100%;
+        text-align: right;
+      }
+
+      .language-heading {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .language-heading i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-picker label {
+        display: inline;
+        margin: 0;
+        color: #2f3540;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .language-control {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 10px 24px rgba(45, 92, 136, 0.12);
+      }
+
+      .language-control i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-control .form-select {
+        border: 0;
+        padding: 0 28px 0 0;
+        background-color: transparent;
+        box-shadow: none;
+        font-size: 1rem;
+        color: #111;
       }
 
       .language-select {
@@ -835,9 +864,9 @@
           grid-template-columns: 1fr;
         }
 
-        .language-block {
-          max-width: 220px;
-          margin-left: auto;
+        .language-picker {
+          position: static;
+          margin: 0 0 22px auto;
         }
 
         .enroll-action,
@@ -990,10 +1019,13 @@
                 </div>
               </div>
 
-              <div class="language-block">
-                <label for="languageSelect" data-i18n="language.label">Select Language</label>
-                <div class="language-wrap">
-                  <select class="form-select language-select" id="languageSelect" aria-label="Select language">
+              <div class="language-picker">
+                <span class="language-heading">
+                  <i class="bi bi-globe2" aria-hidden="true"></i>
+                  <label for="languageSelect" data-i18n="language.label">Select Language</label>
+                </span>
+                <div class="language-control">
+                  <select class="form-select" id="languageSelect" aria-label="Select language">
                     <option value="en" data-i18n="language.english">English (US)</option>
                     <option value="es" data-i18n="language.spanish">Español</option>
                   </select>

@@ -166,7 +166,6 @@
       }
 
       .hero-inner {
-        position: relative;
         width: min(1240px, calc(100% - 40px));
         margin: 0 auto;
         padding: clamp(2rem, 3vw, 2.5rem) 0 0;
@@ -175,22 +174,38 @@
       .language-picker {
         position: absolute;
         top: 16px;
-        right: 0;
-        z-index: 2;
-        width: min(220px, 100%);
+        right: 24px;
+        z-index: 5;
+        width: fit-content;
+        max-width: 100%;
+        text-align: right;
+      }
+
+      .language-heading {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .language-heading i {
+        color: #313e4f;
+        font-size: 1rem;
       }
 
       .language-picker label {
-        display: block;
-        margin-bottom: 8px;
-        color: #fff;
-        font-size: 0.92rem;
+        display: inline;
+        margin: 0;
+        color: #2f3540;
+        font-size: 0.95rem;
         font-weight: 600;
       }
 
       .language-control {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         gap: 10px;
         padding: 10px 14px;
         border-radius: 12px;
@@ -1839,9 +1854,11 @@
         <section class="hero">
           <div class="hero-inner">
             <div class="language-picker">
-              <label for="languageSelect" data-i18n="lang.label">Select Language</label>
-              <div class="language-control">
+              <span class="language-heading">
                 <i class="bi bi-globe2" aria-hidden="true"></i>
+                <label for="languageSelect" data-i18n="lang.label">Select Language</label>
+              </span>
+              <div class="language-control">
                 <select class="form-select" id="languageSelect" aria-label="Select Language">
                   <option value="en" data-i18n="lang.english">English (US)</option>
                   <option value="es" data-i18n="lang.spanish">Español</option>
