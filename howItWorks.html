@@ -302,7 +302,18 @@
         grid-template-columns: 116px 30px 100px minmax(0, 1fr);
         align-items: start;
         gap: 0 16px;
-        padding: 0.75rem 0 1.85rem;
+        padding: 0.95rem 0 3.1rem;
+      }
+
+      .timeline-item:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        left: 58px;
+        top: 96px;
+        bottom: -53px;
+        border-left: 2px dashed #d7dce4;
+        transform: translateX(-50%);
+        z-index: 0;
       }
 
       .timeline-item:not(:last-child)::after {
@@ -320,18 +331,9 @@
         justify-content: center;
       }
 
-      .step-rail::after {
-        content: "";
-        position: absolute;
-        top: 84px;
-        bottom: -36px;
-        left: 50%;
-        border-left: 2px dashed #d7dce4;
-        transform: translateX(-50%);
-      }
-
-      .timeline-item:last-child .step-rail::after {
-        display: none;
+      .step-badge {
+        position: relative;
+        z-index: 1;
       }
 
       .step-badge {
@@ -399,8 +401,8 @@
       }
 
       .benefit img {
-        width: 92px;
-        height: 92px;
+        width: 120px;
+        height: 120px;
         margin: 0 auto 1.1rem;
       }
 
@@ -654,6 +656,10 @@
           left: 129px;
         }
 
+        .timeline-item:not(:last-child)::before {
+          left: 55px;
+        }
+
         .benefits-grid {
           grid-template-columns: repeat(3, minmax(0, 1fr));
         }
@@ -707,7 +713,7 @@
           justify-content: flex-start;
         }
 
-        .step-rail::after,
+        .timeline-item:not(:last-child)::before,
         .step-dot {
           display: none;
         }
