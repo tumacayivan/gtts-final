@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Traffic School FAQ | GoToTrafficSchool.com</title>
+    <title>[STATE] Traffic School FAQ | GoToTrafficSchool.com</title>
     <meta
       id="pageDescription"
       name="description"
-      content="Find answers to the most common traffic school questions about eligibility, tickets, insurance, deadlines, and how GoToTrafficSchool works."
+      content="Find answers to the most common questions about [STATE] traffic school, eligibility, tickets, insurance, and deadlines."
     >
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17691289057">
@@ -41,37 +41,32 @@
       }
 
       :root {
-        --brand-navy: #1d4b72;
-        --brand-navy-deep: #14344f;
-        --brand-blue: #0a5399;
-        --brand-blue-soft: #dfeefb;
-        --brand-blue-ice: #ebf5ff;
-        --brand-pink-soft: #fff1f2;
-        --brand-red: #ff5759;
-        --brand-text: #121826;
-        --brand-muted: #5b6674;
-        --brand-line: #d9e2eb;
-        --footer-bg: #d7ebf6;
-        --shadow-soft: 0 18px 40px rgba(20, 52, 79, 0.08);
-        --shadow-card: 0 18px 35px rgba(17, 54, 84, 0.08);
+        --navy: #0f4f8c;
+        --navy-deep: #123d63;
+        --navy-ink: #1f2c3c;
+        --sky: #d9ecfb;
+        --sky-soft: #eef6fd;
+        --footer-sky: #d7ebf6;
+        --line: #d9e2eb;
+        --copy: #1b2430;
+        --muted: #5c6877;
+        --white: #ffffff;
+        --shadow-soft: 0 16px 34px rgba(16, 63, 103, 0.08);
       }
 
       * {
         box-sizing: border-box;
       }
 
-      html,
-      body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
         margin: 0;
-        background: #ffffff;
-        color: var(--brand-text);
         font-family: Arial, sans-serif;
+        color: var(--copy);
+        background: #fff;
       }
 
       a {
@@ -92,12 +87,12 @@
 
       .skip-link {
         position: absolute;
-        top: 10px;
+        top: 12px;
         left: -9999px;
-        z-index: 5000;
-        padding: 10px 16px;
+        z-index: 999;
+        padding: 0.75rem 1rem;
         border: 2px solid #000;
-        border-radius: 10px;
+        border-radius: 0.75rem;
         background: #fff;
         color: #000;
       }
@@ -107,7 +102,7 @@
       }
 
       .page-shell {
-        overflow: hidden;
+        overflow-x: clip;
       }
 
       .container-page {
@@ -117,6 +112,11 @@
 
       .section-inset {
         width: min(1140px, calc(100% - 88px));
+      }
+
+      .container-site {
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
       }
 
       .utility-bar {
@@ -142,8 +142,8 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
         background: transparent;
         color: #fff;
         line-height: 1;
@@ -155,21 +155,18 @@
       .share-button:hover,
       .share-button:focus {
         background: #fff;
-        color: var(--brand-navy-deep);
+        color: var(--navy-deep);
       }
 
       .utility-phone {
         font-size: 1.05rem;
+        color: #fff;
         font-weight: 500;
       }
 
       .main-nav {
         background: #fff;
-        border-bottom: 1px solid #e6edf4;
-      }
-
-      .navbar {
-        padding: 0;
+        border-bottom: 1px solid #dfe8ee;
       }
 
       .main-nav .container-page {
@@ -180,6 +177,10 @@
         justify-content: space-between;
         gap: 18px 20px;
         min-height: 108px;
+      }
+
+      .navbar {
+        padding: 0;
       }
 
       .navbar-brand {
@@ -194,18 +195,6 @@
         width: clamp(220px, 23vw, 300px);
       }
 
-      .navbar-toggler {
-        border-color: rgba(0, 0, 0, 0.12);
-      }
-
-      .navbar-toggler:focus {
-        box-shadow: 0 0 0 0.2rem rgba(13, 79, 146, 0.15);
-      }
-
-      .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2810, 30, 50, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-      }
-
       .navbar-collapse {
         display: flex;
         flex-grow: 1;
@@ -217,24 +206,24 @@
       .navbar-nav {
         display: flex;
         align-items: center;
-        gap: 22px;
+        gap: 2px;
       }
 
-      .nav-link {
-        color: #111;
-        font-size: 1.3rem;
-        font-weight: 500;
+      .navbar-nav .nav-link {
         padding: 12px 14px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #111;
         white-space: nowrap;
       }
 
-      .nav-link:hover,
-      .nav-link:focus,
-      .nav-link.active {
-        color: var(--brand-blue);
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus,
+      .navbar-nav .nav-link.active {
+        color: var(--navy);
       }
 
-      .nav-link.active {
+      .navbar-nav .nav-link.active {
         font-weight: 800;
       }
 
@@ -265,36 +254,37 @@
       .hero-section {
         position: relative;
         overflow: hidden;
-        background: linear-gradient(180deg, #dff0fe 0%, #d8ebfb 100%);
+        background: linear-gradient(180deg, #dceefc 0%, #d7ebfb 100%);
       }
 
       .hero-section::before {
         content: "";
         position: absolute;
-        right: -5%;
-        bottom: -30%;
-        width: min(46vw, 640px);
-        aspect-ratio: 1;
+        right: -7%;
+        bottom: -28%;
+        width: min(58vw, 860px);
+        height: min(58vw, 860px);
         border-radius: 50%;
-        border: 40px solid rgba(120, 176, 233, 0.15);
+        border: 34px solid rgba(104, 168, 226, 0.16);
+        pointer-events: none;
       }
 
       .hero-section::after {
         content: "";
         position: absolute;
         top: 18px;
-        right: 32px;
-        width: min(20vw, 280px);
-        height: 160px;
-        background-image: radial-gradient(rgba(72, 150, 220, 0.4) 1px, transparent 1px);
+        right: 18px;
+        width: min(26vw, 290px);
+        height: 136px;
+        background-image: radial-gradient(rgba(71, 151, 222, 0.42) 1px, transparent 1px);
         background-size: 12px 12px;
-        opacity: 0.9;
-        clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 86%);
+        clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 0% 76%);
+        pointer-events: none;
       }
 
       .hero-inner {
         position: relative;
-        padding: 3rem 0 3.1rem;
+        padding: 0.85rem 0 2.7rem;
         z-index: 1;
       }
 
@@ -305,39 +295,38 @@
         gap: 2rem;
       }
 
-      .hero-copy {
-        max-width: 730px;
+      .hero-content {
+        max-width: 760px;
+        padding-top: 1.8rem;
       }
 
       .hero-title {
         margin: 0 0 1rem;
-        color: #050608;
         font-family: Arial, sans-serif;
         font-size: 48px;
-        line-height: 0.98;
+        line-height: 1;
         font-weight: 800;
+        color: #050608;
       }
 
-      .hero-lead {
-        max-width: 760px;
+      .hero-copy {
         margin: 0;
-        color: #1d2430;
-        font-size: clamp(1.16rem, 2vw, 1.42rem);
-        line-height: 1.46;
+        max-width: 760px;
+        font-size: clamp(1.12rem, 1.8vw, 1.35rem);
+        line-height: 1.45;
+        color: #131c27;
       }
 
       .language-block {
-        min-width: 184px;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        flex-shrink: 0;
+        min-width: 160px;
+        padding-top: 0.15rem;
       }
 
       .language-block label {
-        color: #3d4752;
-        font-size: 0.95rem;
-        font-weight: 600;
+        display: block;
+        margin-bottom: 0.45rem;
+        font-size: 0.92rem;
+        color: #344253;
       }
 
       .language-wrap {
@@ -352,39 +341,36 @@
         transform: translateY(-50%);
         font-family: bootstrap-icons;
         color: #546172;
-        font-size: 0.96rem;
         pointer-events: none;
       }
 
       .language-select {
-        min-height: 46px;
+        min-height: 42px;
         border: 1px solid #d6e0ea;
-        border-radius: 0.85rem;
-        padding-left: 2.55rem;
+        border-radius: 0.78rem;
+        padding-left: 2.5rem;
         background-color: #fff;
-        color: #28313d;
-        box-shadow: 0 10px 26px rgba(20, 52, 79, 0.06);
+        box-shadow: var(--shadow-soft);
       }
 
       .language-select:focus,
       .search-input:focus,
-      .support-link:focus,
-      .cta-link:focus {
-        border-color: rgba(10, 83, 153, 0.45);
-        box-shadow: 0 0 0 0.22rem rgba(10, 83, 153, 0.12);
+      .cta-button:focus,
+      .enroll-button:focus {
+        border-color: rgba(15, 79, 140, 0.4);
+        box-shadow: 0 0 0 0.22rem rgba(15, 79, 140, 0.12);
       }
 
       .search-shell {
-        margin-top: 2rem;
-        max-width: 720px;
+        max-width: 606px;
+        margin-top: 1.25rem;
       }
 
       .search-form {
         display: flex;
-        align-items: center;
-        gap: 0.9rem;
-        padding: 0.38rem;
-        border-radius: 0.9rem;
+        gap: 0.45rem;
+        padding: 0.28rem;
+        border-radius: 0.55rem;
         background: #fff;
         box-shadow: var(--shadow-soft);
       }
@@ -397,17 +383,15 @@
       .search-input-wrap i {
         position: absolute;
         top: 50%;
-        left: 1rem;
+        left: 0.95rem;
         transform: translateY(-50%);
         color: #4f5d6e;
-        font-size: 1.08rem;
       }
 
       .search-input {
-        min-height: 56px;
+        min-height: 52px;
         border: 0;
-        border-radius: 0.72rem;
-        padding: 0.95rem 1rem 0.95rem 2.9rem;
+        padding: 0.85rem 1rem 0.85rem 2.55rem;
         box-shadow: none;
       }
 
@@ -415,121 +399,102 @@
         outline: none;
       }
 
-      .search-submit {
-        min-width: 104px;
-        min-height: 48px;
+      .search-button {
+        min-width: 120px;
         border: 0;
-        border-radius: 0.7rem;
-        background: var(--brand-blue);
+        border-radius: 0.45rem;
+        background: var(--navy);
         color: #fff;
         font-weight: 700;
-        transition: transform 0.2s ease, background-color 0.2s ease;
       }
 
-      .search-submit:hover,
-      .search-submit:focus {
-        background: #08467f;
-        transform: translateY(-1px);
+      .search-button:hover,
+      .search-button:focus {
+        background: #0d4579;
       }
 
-      .support-section {
-        padding: 2.4rem 0 1.6rem;
+      .enroll-section {
+        padding: 1.2rem 0 2.1rem;
       }
 
-      .support-grid {
+      .enroll-card {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 2rem;
+        grid-template-columns: auto minmax(0, 1fr) minmax(290px, 330px);
+        align-items: center;
+        gap: 1.6rem;
+        padding: 1.9rem 1.5rem;
+        border-radius: 0.9rem;
+        background: #e8f3fd;
       }
 
-      .support-card {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        gap: 1.4rem;
-        align-items: start;
-        padding: 1.55rem 1.7rem 1.6rem;
-        border-radius: 1.2rem;
-      }
-
-      .support-card.is-pink {
-        background: var(--brand-pink-soft);
-      }
-
-      .support-card.is-blue {
-        background: #e8f2fc;
-      }
-
-      .support-icon {
-        width: 84px;
-        height: 84px;
+      .enroll-icon {
+        width: 74px;
+        height: 74px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border: 1.5px solid currentColor;
+        border: 1.5px solid var(--navy);
         border-radius: 50%;
+        color: var(--navy);
         font-size: 2rem;
-        flex-shrink: 0;
       }
 
-      .support-card.is-pink .support-icon {
-        color: var(--brand-red);
-      }
-
-      .support-card.is-blue .support-icon {
-        color: var(--brand-blue);
-      }
-
-      .support-title {
+      .enroll-title {
         margin: 0;
-        color: #2b3646;
         font-family: Arial, sans-serif;
-        font-size: clamp(1.55rem, 2vw, 2.05rem);
-        line-height: 1.16;
+        font-size: clamp(1.85rem, 2.3vw, 2.3rem);
+        line-height: 1.12;
         font-weight: 700;
+        color: #263244;
       }
 
-      .support-copy {
-        margin: 0.55rem 0 1.2rem;
-        color: #27303d;
-        font-size: 1.15rem;
+      .enroll-copy {
+        margin: 0.55rem 0 0;
+        max-width: 420px;
+        font-size: 1.05rem;
         line-height: 1.45;
       }
 
-      .support-link {
+      .enroll-action {
+        text-align: center;
+      }
+
+      .enroll-button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 0.8rem;
-        min-width: 258px;
-        padding: 1rem 1.35rem;
-        border-radius: 0.8rem;
+        gap: 0.75rem;
+        width: 100%;
+        min-height: 84px;
+        padding: 1rem 1.3rem;
+        border-radius: 0.85rem;
+        background: var(--navy);
         color: #fff;
-        font-size: 1.05rem;
-        font-weight: 700;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        font-size: 0.98rem;
+        font-weight: 600;
       }
 
-      .support-card.is-pink .support-link {
-        background: var(--brand-red);
-      }
-
-      .support-card.is-blue .support-link {
-        background: var(--brand-blue);
-      }
-
-      .support-link:hover,
-      .support-link:focus {
+      .enroll-button:hover,
+      .enroll-button:focus {
         color: #fff;
-        transform: translateY(-1px);
-        box-shadow: 0 14px 28px rgba(20, 52, 79, 0.14);
+        background: #0d4579;
+      }
+
+      .enroll-note {
+        margin: 0.75rem 0 0;
+        font-size: 0.76rem;
+        color: #425263;
       }
 
       .faq-section {
-        padding: 0.55rem 0 3.2rem;
+        padding: 0.1rem 0 2rem;
       }
 
-      .faq-shell {
-        background: #fff;
+      .faq-heading {
+        margin: 0 0 0.85rem;
+        font-size: 1.12rem;
+        font-weight: 700;
+        color: #2c3747;
       }
 
       .faq-meta {
@@ -537,139 +502,128 @@
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
       }
 
       .faq-meta p {
         margin: 0;
-        color: var(--brand-muted);
-        font-size: 0.98rem;
-      }
-
-      .faq-meta strong {
-        color: var(--brand-blue);
+        font-size: 0.95rem;
+        color: var(--muted);
       }
 
       .faq-list {
-        border-top: 1px solid var(--brand-line);
+        border-top: 1px solid var(--line);
       }
 
       .faq-item {
-        border: 0;
-        border-bottom: 1px solid var(--brand-line);
-        border-radius: 0;
-        background: transparent;
-      }
-
-      .faq-question-heading {
-        display: grid;
-        grid-template-columns: 34px minmax(0, 1fr);
-        align-items: start;
-        gap: 1rem;
-        margin: 0;
-        padding: 1rem 0 0.45rem;
-        color: var(--brand-blue);
-        font-size: 1rem;
-        font-weight: 700;
-      }
-
-      .faq-index {
-        width: 22px;
-        min-height: 22px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 0.12rem;
-        border-radius: 0.35rem;
-        background: #edf4fb;
-        color: #7b8ca0;
-        font-size: 0.82rem;
-        font-weight: 700;
+        padding: 1.1rem 0 1rem;
+        border-bottom: 1px solid var(--line);
       }
 
       .faq-question {
-        padding-right: 2.8rem;
-        line-height: 1.45;
+        margin: 0 0 0.55rem;
+        color: var(--navy);
+        font-size: 0.98rem;
+        font-weight: 700;
       }
 
-      .faq-body {
-        padding: 0 0 1rem 3rem;
-        color: var(--brand-muted);
-        font-size: 0.95rem;
-        line-height: 1.6;
+      .faq-answer {
+        margin: 0;
+        max-width: 960px;
+        color: #5b6675;
+        font-size: 0.93rem;
+        line-height: 1.55;
       }
 
       .faq-empty {
         display: none;
-        margin-top: 1.25rem;
-        padding: 1.2rem 1.3rem;
-        border: 1px solid #d7e6f3;
-        border-radius: 1rem;
+        margin-top: 1rem;
+        padding: 1rem 1.1rem;
+        border: 1px solid #d6e5f3;
+        border-radius: 0.9rem;
         background: #f7fbff;
-        color: #3d5065;
+        color: #44576c;
       }
 
       .faq-empty.is-visible {
         display: block;
       }
 
-      .cta-section {
-        padding: 0 0 0.1rem;
+      .show-more-wrap {
+        display: flex;
+        justify-content: center;
+        padding-top: 1.5rem;
       }
 
-      .cta-panel {
-        position: relative;
-        display: grid;
-        grid-template-columns: auto minmax(0, 1.2fr) minmax(320px, 370px);
-        align-items: center;
-        gap: 2.5rem;
-        padding: 2.5rem 3rem;
-        background: linear-gradient(135deg, #0f4069 0%, #0d4d88 100%);
+      .show-more-button {
+        min-width: 90px;
+        padding: 0.42rem 0.9rem;
+        border: 0;
+        border-radius: 0.35rem;
+        background: var(--navy);
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+
+      .show-more-button:hover,
+      .show-more-button:focus {
+        background: #0d4579;
+      }
+
+      .cta-section {
+        margin-top: 0.2rem;
+        background: linear-gradient(90deg, #143f68 0%, #0e4b82 100%);
         color: #fff;
       }
 
-      .shield-orb {
-        position: relative;
-        width: 150px;
-        aspect-ratio: 1;
-        display: flex;
+      .cta-panel {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) minmax(270px, 364px);
         align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background: rgba(191, 220, 244, 0.2);
-        box-shadow: inset 0 0 0 14px rgba(191, 220, 244, 0.16);
+        gap: 1.9rem;
+        padding: 2rem 0;
       }
 
-      .shield-orb::before {
-        content: "";
-        width: 92px;
+      .shield-ring {
+        position: relative;
+        width: 146px;
         aspect-ratio: 1;
+        display: grid;
+        place-items: center;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.26);
+        background: rgba(197, 219, 240, 0.18);
+        box-shadow: inset 0 0 0 13px rgba(197, 219, 240, 0.16);
       }
 
-      .shield-orb::after {
-        content: "\F633";
+      .shield-ring::before {
+        content: "";
         position: absolute;
-        font-family: bootstrap-icons;
+        inset: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .shield-ring i {
+        position: relative;
         font-size: 3rem;
-        color: #ffffff;
+        color: #fff;
       }
 
       .cta-copy h2 {
-        margin: 0 0 0.85rem;
+        margin: 0 0 0.75rem;
         font-family: Arial, sans-serif;
-        font-size: clamp(2rem, 3.2vw, 3.1rem);
+        font-size: clamp(2rem, 3vw, 2.85rem);
         line-height: 1.08;
         font-weight: 800;
       }
 
       .cta-copy p {
-        max-width: 560px;
         margin: 0;
-        color: rgba(255, 255, 255, 0.94);
-        font-size: 1.15rem;
-        line-height: 1.55;
+        max-width: 480px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.95);
       }
 
       .cta-action {
@@ -679,55 +633,53 @@
       .cta-action::before {
         content: "";
         position: absolute;
-        left: -118px;
+        left: -125px;
         top: 50%;
-        width: 72px;
-        border-top: 2px dashed rgba(255, 255, 255, 0.72);
-        transform: translateY(-50%);
+        width: 76px;
+        height: 24px;
+        border-top: 2px dashed rgba(255, 255, 255, 0.62);
+        border-radius: 999px;
+        transform: translateY(-50%) rotate(10deg);
       }
 
       .cta-action::after {
         content: "\F138";
         position: absolute;
-        left: -52px;
-        top: calc(50% - 15px);
+        left: -57px;
+        top: calc(50% - 18px);
         font-family: bootstrap-icons;
-        color: rgba(255, 255, 255, 0.86);
-        font-size: 1.15rem;
+        font-size: 1.08rem;
+        color: rgba(255, 255, 255, 0.82);
       }
 
-      .cta-link {
+      .cta-button {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
         width: 100%;
-        padding: 1.15rem 1.35rem;
-        border-radius: 0.9rem;
+        min-height: 78px;
+        padding: 1rem 1.35rem;
+        border-radius: 0.75rem;
         background: #fff;
-        color: var(--brand-blue);
-        font-size: 1rem;
-        font-weight: 700;
-        box-shadow: 0 20px 38px rgba(4, 23, 39, 0.16);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        color: var(--navy);
+        font-size: 0.95rem;
+        font-weight: 600;
       }
 
-      .cta-link:hover,
-      .cta-link:focus {
-        color: var(--brand-blue);
-        transform: translateY(-1px);
-        box-shadow: 0 22px 42px rgba(4, 23, 39, 0.2);
+      .cta-button:hover,
+      .cta-button:focus {
+        color: var(--navy);
       }
 
-      .cta-link-label {
+      .cta-button-label {
         display: inline-flex;
         align-items: center;
         gap: 0.8rem;
       }
 
       .site-footer {
-        margin-top: 0;
-        background: var(--footer-bg);
+        background: var(--footer-sky);
       }
 
       .footer-main {
@@ -741,7 +693,7 @@
       .footer-brand p {
         max-width: 380px;
         margin: 30px 0 36px;
-        color: var(--brand-blue);
+        color: var(--navy);
         font-size: 1.15rem;
         line-height: 1.5;
       }
@@ -777,7 +729,7 @@
 
       .footer-title {
         margin: 0 0 18px;
-        color: var(--brand-blue);
+        color: var(--navy);
         font-size: 1.2rem;
         font-weight: 800;
       }
@@ -793,7 +745,7 @@
 
       .footer-links a,
       .social-links a {
-        color: var(--brand-blue);
+        color: var(--navy);
         font-size: 1rem;
       }
 
@@ -801,7 +753,7 @@
       .footer-links a:focus,
       .social-links a:hover,
       .social-links a:focus {
-        color: var(--brand-navy-deep);
+        text-decoration: underline;
       }
 
       .social-links a {
@@ -834,12 +786,11 @@
         position: fixed;
         right: 18px;
         bottom: 18px;
-        z-index: 4000;
-        padding: 0.85rem 1rem;
-        border-radius: 0.85rem;
-        background: rgba(10, 17, 25, 0.94);
+        z-index: 1000;
+        padding: 0.8rem 1rem;
+        border-radius: 0.75rem;
+        background: rgba(8, 18, 30, 0.94);
         color: #fff;
-        font-size: 0.94rem;
         opacity: 0;
         pointer-events: none;
         transform: translateY(10px);
@@ -852,11 +803,6 @@
       }
 
       @media (max-width: 1199.98px) {
-        .main-nav .container-page {
-          min-height: 92px;
-          flex-wrap: wrap;
-        }
-
         .navbar-collapse {
           width: 100%;
           display: block;
@@ -869,7 +815,7 @@
           gap: 0;
         }
 
-        .nav-link {
+        .navbar-nav .nav-link {
           padding: 10px 0;
         }
 
@@ -878,27 +824,24 @@
           width: fit-content;
         }
 
-        .hero-top {
-          flex-direction: column;
+        .main-nav .container-page {
+          min-height: 92px;
+          flex-wrap: wrap;
         }
 
-        .language-block {
-          min-width: 0;
-          width: 100%;
-          max-width: 260px;
-          margin-left: auto;
-        }
-
-        .support-grid {
+        .hero-top,
+        .enroll-card,
+        .cta-panel {
           grid-template-columns: 1fr;
         }
 
-        .cta-panel {
-          grid-template-columns: auto minmax(0, 1fr);
+        .language-block {
+          max-width: 220px;
+          margin-left: auto;
         }
 
+        .enroll-action,
         .cta-action {
-          grid-column: 1 / -1;
           max-width: 360px;
         }
 
@@ -911,6 +854,14 @@
       @media (max-width: 767.98px) {
         .container-page {
           width: min(1280px, calc(100% - 20px));
+        }
+
+        .section-inset {
+          width: min(1140px, calc(100% - 24px));
+        }
+
+        .container-site {
+          width: min(1240px, calc(100% - 22px));
         }
 
         .utility-inner {
@@ -926,69 +877,41 @@
           min-width: 0;
         }
 
-        .section-inset {
-          width: min(1140px, calc(100% - 24px));
+        .hero-inner {
+          padding-bottom: 2rem;
         }
 
-        .hero-inner {
-          padding: 2.4rem 0 2.5rem;
+        .hero-content {
+          padding-top: 0.6rem;
         }
 
         .search-form {
           flex-direction: column;
-          padding: 0.7rem;
+        }
+
+        .search-button {
+          min-height: 48px;
         }
 
         .search-input-wrap,
-        .search-submit {
+        .search-button,
+        .enroll-button,
+        .cta-button {
           width: 100%;
-        }
-
-        .support-card {
-          grid-template-columns: 1fr;
-          padding: 1.4rem;
-        }
-
-        .support-link {
-          width: 100%;
-          min-width: 0;
         }
 
         .faq-meta {
-          align-items: flex-start;
           flex-direction: column;
+          align-items: flex-start;
         }
 
-        .faq-question-heading {
-          grid-template-columns: 28px minmax(0, 1fr);
-          gap: 0.75rem;
-        }
-
-        .faq-question {
-          padding-right: 2.1rem;
-        }
-
-        .faq-body {
-          padding-left: 2.25rem;
-        }
-
-        .cta-panel {
-          grid-template-columns: 1fr;
-          padding: 2rem 1.2rem;
-          gap: 1.4rem;
-        }
-
-        .shield-orb {
-          width: 124px;
+        .footer-main {
+          padding-bottom: 18px;
         }
 
         .social-links {
           grid-template-columns: repeat(2, minmax(0, max-content));
           gap: 12px 18px;
-        }
-
-        .footer-main {
-          padding-bottom: 18px;
         }
       }
     </style>
@@ -1000,8 +923,8 @@
       <header class="site-header">
         <div class="utility-bar">
           <div class="container-page utility-inner">
-            <button class="share-button" type="button" id="sharePage" data-i18n="share.button">Share This Page</button>
-            <a class="utility-phone" href="tel:18009093909" data-i18n="utility.phone">Contact Us: 1-800-909-3909</a>
+            <button class="share-button" id="sharePage" type="button" data-i18n="share.button">Share This Page</button>
+            <a class="utility-phone" href="tel:18009093909" data-i18n="utility.contact">Contact Us: 1-800-909-3909</a>
           </div>
         </div>
 
@@ -1041,12 +964,12 @@
 
       <main id="mainContent">
         <section class="hero-section">
-          <div class="container-page hero-inner">
+          <div class="container-site hero-inner">
             <div class="hero-top">
-              <div class="hero-copy">
-                <h1 class="hero-title" data-i18n="hero.title">Traffic School FAQ</h1>
-                <p class="hero-lead" data-i18n="hero.lead">
-                  Find answers to the most common questions about traffic school, eligibility, tickets, insurance, and more.
+              <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero.title">[STATE] Traffic School FAQ</h1>
+                <p class="hero-copy" data-i18n="hero.copy">
+                  Find answers to the most common questions about [STATE] traffic school, eligibility, tickets, insurance, and more.
                 </p>
 
                 <div class="search-shell">
@@ -1058,11 +981,11 @@
                         id="faqSearch"
                         type="search"
                         placeholder="Search for a question"
-                        data-i18n-placeholder="search.placeholder"
                         autocomplete="off"
+                        data-i18n-placeholder="search.placeholder"
                       >
                     </div>
-                    <button class="search-submit" type="submit" data-i18n="search.button">Search</button>
+                    <button class="search-button" type="submit" data-i18n="search.button">Search</button>
                   </form>
                 </div>
               </div>
@@ -1080,76 +1003,64 @@
           </div>
         </section>
 
-        <section class="support-section">
-          <div class="container-page section-inset">
-            <div class="support-grid">
-              <article class="support-card is-pink">
-                <span class="support-icon" aria-hidden="true">
-                  <i class="bi bi-geo-alt-fill"></i>
-                </span>
-                <div>
-                  <h2 class="support-title" data-i18n="support.state.title">Looking for questions specific to your state?</h2>
-                  <p class="support-copy" data-i18n="support.state.copy">
-                    Check out your state FAQ page for rules, eligibility, and requirements.
-                  </p>
-                  <a class="support-link" href="https://www.gototrafficschool.com/FAQ-v2.aspx">
-                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-                    <span data-i18n="support.state.button">Find Your State FAQ</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </article>
-
-              <article class="support-card is-blue">
-                <span class="support-icon" aria-hidden="true">
-                  <i class="bi bi-file-earmark-check"></i>
-                </span>
-                <div>
-                  <h2 class="support-title" data-i18n="support.course.title">Are you ready to sign up for the course?</h2>
-                  <p class="support-copy" data-i18n="support.course.copy">
-                    Select your state to see your course options and get started today.
-                  </p>
-                  <a class="support-link" href="https://www.gototrafficschool.com/">
-                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-                    <span data-i18n="support.course.button">Select Your State to Get Started</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </article>
-            </div>
+        <section class="enroll-section">
+          <div class="container-site">
+            <article class="enroll-card">
+              <div class="enroll-icon" aria-hidden="true">
+                <i class="bi bi-file-earmark-check"></i>
+              </div>
+              <div>
+                <h2 class="enroll-title" data-i18n="enroll.title">Are you ready to sign up for the course?</h2>
+                <p class="enroll-copy" data-i18n="enroll.copy">
+                  Select your state to see your course options and get started today.
+                </p>
+              </div>
+              <div class="enroll-action">
+                <a class="enroll-button" href="https://www.gototrafficschool.com/" data-course-link>
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                  <span data-i18n="enroll.button">Go to [STATE] Traffic School</span>
+                  <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                </a>
+                <p class="enroll-note" data-i18n="enroll.note">See [STATE] course details, pricing, and requirements.</p>
+              </div>
+            </article>
           </div>
         </section>
 
         <section class="faq-section">
-          <div class="container-page section-inset">
-            <div class="faq-shell">
-              <div class="faq-meta">
-                <p id="faqSummary">20 frequently asked questions</p>
-                <p data-i18n="faq.helper">Search by question, topic, or keyword.</p>
-              </div>
-              <div class="faq-list" id="faqAccordion"></div>
-              <div class="faq-empty" id="faqEmpty" aria-live="polite"></div>
+          <div class="container-site">
+            <h2 class="faq-heading" data-i18n="faq.sectionTitle">[STATE] Traffic School Questions</h2>
+            <div class="faq-meta">
+              <p id="faqSummary">14 frequently asked questions</p>
+              <p data-i18n="faq.helper">Search by question, topic, or keyword.</p>
+            </div>
+            <div class="faq-list" id="faqList"></div>
+            <div class="faq-empty" id="faqEmpty" aria-live="polite"></div>
+            <div class="show-more-wrap">
+              <button class="show-more-button" id="showMoreFaqs" type="button" data-i18n="faq.showMore">Show More</button>
             </div>
           </div>
         </section>
 
         <section class="cta-section">
-          <div class="cta-panel">
-            <div class="shield-orb" aria-hidden="true"></div>
-            <div class="cta-copy">
-              <h2 data-i18n="cta.title">Ready to get started?</h2>
-              <p data-i18n="cta.copy">
-                Start your Alabama traffic school course today and complete it at your own pace.
-              </p>
-            </div>
-            <div class="cta-action">
-              <a class="cta-link" href="https://www.gototrafficschool.com/state/alabama-online-defensive-driving">
-                <span class="cta-link-label">
-                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-                  <span data-i18n="cta.button">Go to Alabama Traffic School</span>
-                </span>
-                <i class="bi bi-chevron-right" aria-hidden="true"></i>
-              </a>
+          <div class="container-site">
+            <div class="cta-panel">
+              <div class="shield-ring" aria-hidden="true">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="cta-copy">
+                <h2 data-i18n="cta.title">Ready to get started?</h2>
+                <p data-i18n="cta.copy">Start your [STATE] traffic school course today and complete it at your own pace.</p>
+              </div>
+              <div class="cta-action">
+                <a class="cta-button" href="https://www.gototrafficschool.com/" data-course-link>
+                  <span class="cta-button-label">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    <span data-i18n="cta.button">Go to [STATE] Traffic School</span>
+                  </span>
+                  <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -1162,7 +1073,9 @@
               <a href="https://www.gototrafficschool.com/" aria-label="GoToTrafficSchool home">
                 <img src="assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
               </a>
-              <p data-i18n="footer.blurb">The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.</p>
+              <p data-i18n="footer.blurb">
+                The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.
+              </p>
               <div class="footer-contact">
                 <a href="tel:18883297069"><i class="bi bi-telephone"></i><span>1-888-329-7069</span></a>
                 <a href="mailto:info@gototrafficschool.com"><i class="bi bi-envelope"></i><span>info@gototrafficschool.com</span></a>
@@ -1228,9 +1141,10 @@
             </div>
           </div>
         </div>
+
         <div class="copyright-bar">
           <span data-i18n="footer.copyrightPrefix">© 2026 gototrafficschool.com Powered by</span>
-          <a href="https://www.cyberactiveonline.com/">Cyberactive.</a>
+          <a href="https://www.cyberactiveonline.com/">Cyberactive</a>.
           <span data-i18n="footer.copyrightSuffix">All rights reserved.</span>
         </div>
       </footer>
@@ -1245,41 +1159,48 @@
     ></script>
     <script>
       (function () {
-        const STORAGE_KEY = "gtts:faq:lang";
+        const STORAGE_KEY = "gtts:state-faq:lang";
+        const INITIAL_FAQ_COUNT = 8;
+        const PAGE_CONFIG = {
+          stateName: "[STATE]",
+          courseUrl: "https://www.gototrafficschool.com/"
+        };
+
         const translations = {
           en: {
-            pageTitle: "Traffic School FAQ | GoToTrafficSchool.com",
-            pageDescription: "Find answers to the most common traffic school questions about eligibility, tickets, insurance, deadlines, and how GoToTrafficSchool works.",
+            pageTitle: "[STATE] Traffic School FAQ | GoToTrafficSchool.com",
+            pageDescription: "Find answers to the most common questions about [STATE] traffic school, eligibility, tickets, insurance, and deadlines.",
             skip: "Skip to main content",
             "share.button": "Share This Page",
             "share.toast": "Page link copied.",
-            "utility.phone": "Contact Us: 1-800-909-3909",
+            "utility.contact": "Contact Us: 1-800-909-3909",
             "nav.about": "About Us",
             "nav.how": "How It Works",
             "nav.faq": "FAQs",
             "nav.partner": "Partner with us",
             "nav.contact": "Contact Us",
             "nav.login": "Log In",
-            "hero.title": "Traffic School FAQ",
-            "hero.lead": "Find answers to the most common questions about traffic school, eligibility, tickets, insurance, and more.",
+            "hero.title": "[STATE] Traffic School FAQ",
+            "hero.copy": "Find answers to the most common questions about [STATE] traffic school, eligibility, tickets, insurance, and more.",
             "language.label": "Select Language",
             "language.english": "English (US)",
             "language.spanish": "Español",
             "search.placeholder": "Search for a question",
             "search.button": "Search",
-            "support.state.title": "Looking for questions specific to your state?",
-            "support.state.copy": "Check out your state FAQ page for rules, eligibility, and requirements.",
-            "support.state.button": "Find Your State FAQ",
-            "support.course.title": "Are you ready to sign up for the course?",
-            "support.course.copy": "Select your state to see your course options and get started today.",
-            "support.course.button": "Select Your State to Get Started",
+            "enroll.title": "Are you ready to sign up for the course?",
+            "enroll.copy": "Select your state to see your course options and get started today.",
+            "enroll.button": "Go to [STATE] Traffic School",
+            "enroll.note": "See [STATE] course details, pricing, and requirements.",
+            "faq.sectionTitle": "[STATE] Traffic School Questions",
             "faq.helper": "Search by question, topic, or keyword.",
             "faq.summaryAll": "frequently asked questions",
             "faq.summaryFiltered": "questions match",
+            "faq.showMore": "Show More",
+            "faq.showLess": "Show Less",
             "faq.noResults": "No FAQ results matched your search. Try a broader keyword such as ticket, insurance, state, or course.",
             "cta.title": "Ready to get started?",
-            "cta.copy": "Start your Alabama traffic school course today and complete it at your own pace.",
-            "cta.button": "Go to Alabama Traffic School",
+            "cta.copy": "Start your [STATE] traffic school course today and complete it at your own pace.",
+            "cta.button": "Go to [STATE] Traffic School",
             "footer.blurb": "The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.",
             "footer.location": "8034 Garden Grove Blvd Suite C Garden Grove, CA 92844",
             "footer.company": "Company",
@@ -1299,39 +1220,40 @@
             "footer.copyrightSuffix": "All rights reserved."
           },
           es: {
-            pageTitle: "Preguntas Frecuentes de la Escuela de Tránsito | GoToTrafficSchool.com",
-            pageDescription: "Encuentre respuestas a las preguntas más comunes sobre elegibilidad, multas, seguros, plazos y cómo funciona GoToTrafficSchool.",
+            pageTitle: "Preguntas Frecuentes de la Escuela de Tránsito de [STATE] | GoToTrafficSchool.com",
+            pageDescription: "Encuentre respuestas a las preguntas más comunes sobre la escuela de tránsito de [STATE], elegibilidad, multas, seguro y fechas límite.",
             skip: "Saltar al contenido principal",
             "share.button": "Compartir Esta Página",
-            "share.toast": "Enlace de la página copiado.",
-            "utility.phone": "Contáctenos: 1-800-909-3909",
+            "share.toast": "Se copió el enlace de la página.",
+            "utility.contact": "Contáctenos: 1-800-909-3909",
             "nav.about": "Sobre Nosotros",
             "nav.how": "Cómo Funciona",
             "nav.faq": "Preguntas Frecuentes",
             "nav.partner": "Asóciese con nosotros",
             "nav.contact": "Contáctenos",
             "nav.login": "Iniciar Sesión",
-            "hero.title": "Preguntas Frecuentes de la Escuela de Tránsito",
-            "hero.lead": "Encuentre respuestas a las preguntas más comunes sobre escuela de tránsito, elegibilidad, multas, seguros y mucho más.",
-            "language.label": "Seleccionar idioma",
-            "language.english": "Inglés (EE. UU.)",
+            "hero.title": "Preguntas Frecuentes de la Escuela de Tránsito de [STATE]",
+            "hero.copy": "Encuentre respuestas a las preguntas más comunes sobre la escuela de tránsito de [STATE], elegibilidad, multas, seguro y más.",
+            "language.label": "Seleccionar Idioma",
+            "language.english": "English (US)",
             "language.spanish": "Español",
             "search.placeholder": "Busque una pregunta",
             "search.button": "Buscar",
-            "support.state.title": "¿Busca preguntas específicas de su estado?",
-            "support.state.copy": "Consulte la página de preguntas frecuentes de su estado para conocer reglas, elegibilidad y requisitos.",
-            "support.state.button": "Encuentre las FAQ de su estado",
-            "support.course.title": "¿Está listo para inscribirse en el curso?",
-            "support.course.copy": "Seleccione su estado para ver las opciones de su curso y comenzar hoy mismo.",
-            "support.course.button": "Seleccione su estado para comenzar",
+            "enroll.title": "¿Está listo para inscribirse en el curso?",
+            "enroll.copy": "Seleccione su estado para ver sus opciones de curso y comenzar hoy mismo.",
+            "enroll.button": "Ir a la Escuela de Tránsito de [STATE]",
+            "enroll.note": "Vea los detalles, precios y requisitos del curso de [STATE].",
+            "faq.sectionTitle": "Preguntas de la Escuela de Tránsito de [STATE]",
             "faq.helper": "Busque por pregunta, tema o palabra clave.",
             "faq.summaryAll": "preguntas frecuentes",
             "faq.summaryFiltered": "preguntas coinciden",
+            "faq.showMore": "Mostrar Más",
+            "faq.showLess": "Mostrar Menos",
             "faq.noResults": "Ningún resultado coincide con su búsqueda. Pruebe con una palabra más general como multa, seguro, estado o curso.",
             "cta.title": "¿Listo para comenzar?",
-            "cta.copy": "Comience hoy su curso de escuela de tránsito de Alabama y complételo a su propio ritmo.",
-            "cta.button": "Ir a la escuela de tránsito de Alabama",
-            "footer.blurb": "La forma más rápida y sencilla de completar su escuela de tránsito en línea. Con la confianza de más de 10 millones de conductores en todo el país.",
+            "cta.copy": "Comience hoy su curso de escuela de tránsito de [STATE] y complételo a su propio ritmo.",
+            "cta.button": "Ir a la Escuela de Tránsito de [STATE]",
+            "footer.blurb": "La manera más rápida y fácil de completar su escuela de tránsito en línea. Con la confianza de más de 10 millones de conductores en todo el país.",
             "footer.location": "8034 Garden Grove Blvd Suite C Garden Grove, CA 92844",
             "footer.company": "Empresa",
             "footer.home": "Inicio",
@@ -1354,187 +1276,146 @@
         const faqEntries = {
           en: [
             {
-              question: "What is traffic school?",
-              answer: "Traffic school is a course designed to improve driving knowledge and, in many cases, reduce the impact of a traffic ticket."
+              question: "Who is eligible for traffic school in [STATE]?",
+              answer: "Eligibility depends on the court, but typically you must have a valid driver’s license and a qualifying violation."
             },
             {
-              question: "Is traffic school the same as defensive driving?",
-              answer: "Yes. Depending on your state, it may be called defensive driving, driver improvement, basic driver improvement (BDI), or driver safety program (DSP). All refer to similar courses."
+              question: "How do I know if traffic school is an option for my ticket in [STATE]?",
+              answer: "Check your ticket or contact the court that issued it to confirm whether traffic school is available for your case."
             },
             {
-              question: "Is online traffic school accepted?",
-              answer: "Yes. As long as the course is approved by your state or accepted by your court, it is valid."
+              question: "Will traffic school dismiss my ticket in [STATE]?",
+              answer: "It depends on your court and the violation. Some courts may dismiss the ticket, while others may only help prevent points."
             },
             {
-              question: "Am I eligible to take traffic school?",
-              answer: "Eligibility depends on your state and court. Typically, you must have a valid driver's license and a minor violation."
+              question: "How does traffic school affect points on my [STATE] driving record?",
+              answer: "Completing traffic school may prevent points from being added to your driving record, depending on your case."
             },
             {
-              question: "Can I take traffic school for any ticket?",
-              answer: "No. Serious violations like DUI or reckless driving are usually not eligible."
+              question: "Will traffic school affect my insurance rates in [STATE]?",
+              answer: "In most cases, completing traffic school can help prevent increases in your insurance rates. Always check with your insurance carrier."
             },
             {
-              question: "Do I need court approval before taking traffic school?",
-              answer: "Yes. If your state does not have a state-approved program, you should confirm with your court that the course will be accepted before enrolling."
+              question: "How long do I have to complete traffic school in [STATE]?",
+              answer: "Deadlines are set by the court that issued your ticket. Be sure to complete the course before your due date."
             },
             {
-              question: "Will traffic school dismiss my ticket?",
-              answer: "It depends on your state and court. Some states allow dismissal, while others only prevent points from affecting your record. Rules vary by location."
+              question: "How long is the [STATE] traffic school course?",
+              answer: "The exact course length depends on the program requirement tied to your state or court."
             },
             {
-              question: "Will I still have to pay my ticket?",
-              answer: "Yes. Traffic school does not remove the fine."
+              question: "Is the [STATE] traffic school course online?",
+              answer: "Yes. Our traffic school courses are 100% online, self-paced, and available 24/7 from any supported device."
             },
             {
-              question: "Does traffic school remove points from my record?",
-              answer: "Not exactly. In most cases, it prevents points from being visible to insurance companies."
+              question: "Do I have to pay before I start the [STATE] traffic school course?",
+              answer: "You can start the course for free. You must pay before the final step to complete the course and receive your certificate."
             },
             {
-              question: "Will my insurance accept traffic school?",
-              answer: "In most cases, yes, but you should confirm with your insurance carrier to be sure the course qualifies."
+              question: "Is there a final exam for [STATE] traffic school?",
+              answer: "Some programs include a final exam. If one applies to your course, the instructions will appear inside your account."
             },
             {
-              question: "Can traffic school lower my insurance?",
-              answer: "Some insurance providers offer discounts for completing a defensive driving or traffic school course, but approval varies by carrier."
+              question: "How many questions are on the final exam?",
+              answer: "The total number of final exam questions can vary by program, but it is clearly explained before you begin."
             },
             {
-              question: "How long is the course?",
-              answer: "Most courses take between 4 and 8 hours, depending on state requirements."
+              question: "What happens if I fail the final exam?",
+              answer: "If you do not pass, you can usually retake the exam. Additional attempts may be available if needed."
             },
             {
-              question: "Is the course self-paced?",
-              answer: "Yes. You can start, stop, and resume anytime."
+              question: "How will my completion be reported in [STATE]?",
+              answer: "Your completion is reported or your certificate is provided according to the state or court requirement connected to your enrollment."
             },
             {
-              question: "Can I take it on my phone?",
-              answer: "Yes. Courses are mobile-friendly and work across devices."
-            },
-            {
-              question: "Do I have to pay before taking the course?",
-              answer: "You can start your course for free. However, you must pay before taking the final exam and completing the course."
-            },
-            {
-              question: "Is there a final exam?",
-              answer: "Yes, in most states. It is designed to be straightforward and easy to pass."
-            },
-            {
-              question: "What happens after I complete the course?",
-              answer: "Your completion is processed and your certificate is delivered based on your state or court requirements."
-            },
-            {
-              question: "How long do I have to complete traffic school?",
-              answer: "Your deadline is set by the court or state."
-            },
-            {
-              question: "What happens if I miss my deadline?",
-              answer: "You may lose eligibility or face additional penalties."
-            },
-            {
-              question: "How do I know the exact rules for my state?",
-              answer: "Traffic school rules vary by state, court, and insurance provider. Check the state page for where your ticket was issued to see the exact rules that apply to you."
+              question: "What happens if I miss my deadline in [STATE]?",
+              answer: "Missing your deadline may result in additional penalties, fines, or loss of eligibility. Contact your court as soon as possible."
             }
           ],
           es: [
             {
-              question: "¿Qué es la escuela de tránsito?",
-              answer: "La escuela de tránsito es un curso diseñado para mejorar el conocimiento de manejo y, en muchos casos, reducir el impacto de una multa."
+              question: "¿Quién es elegible para la escuela de tránsito en [STATE]?",
+              answer: "La elegibilidad depende del tribunal, pero normalmente debe tener una licencia válida y una infracción que califique."
             },
             {
-              question: "¿La escuela de tránsito es lo mismo que manejo defensivo?",
-              answer: "Sí. Según su estado, puede llamarse manejo defensivo, mejoramiento del conductor, basic driver improvement (BDI) o driver safety program (DSP). Todos se refieren a cursos similares."
+              question: "¿Cómo sé si la escuela de tránsito es una opción para mi multa en [STATE]?",
+              answer: "Revise su multa o comuníquese con el tribunal que la emitió para confirmar si la escuela de tránsito está disponible para su caso."
             },
             {
-              question: "¿Se acepta la escuela de tránsito en línea?",
-              answer: "Sí. Siempre que el curso esté aprobado por su estado o aceptado por su tribunal, es válido."
+              question: "¿La escuela de tránsito desestimará mi multa en [STATE]?",
+              answer: "Depende de su tribunal y de la infracción. Algunos tribunales pueden desestimar la multa, mientras que otros solo pueden ayudar a evitar puntos."
             },
             {
-              question: "¿Soy elegible para tomar escuela de tránsito?",
-              answer: "La elegibilidad depende de su estado y tribunal. Por lo general, debe tener una licencia válida y una infracción menor."
+              question: "¿Cómo afecta la escuela de tránsito a los puntos de mi historial de manejo en [STATE]?",
+              answer: "Completar la escuela de tránsito puede evitar que se agreguen puntos a su historial de manejo, según su caso."
             },
             {
-              question: "¿Puedo tomar escuela de tránsito por cualquier multa?",
-              answer: "No. Las infracciones graves, como DUI o manejo temerario, normalmente no son elegibles."
+              question: "¿La escuela de tránsito afectará mis tarifas de seguro en [STATE]?",
+              answer: "En muchos casos, completar la escuela de tránsito puede ayudar a evitar aumentos en su seguro. Siempre verifique con su aseguradora."
             },
             {
-              question: "¿Necesito aprobación del tribunal antes de tomar escuela de tránsito?",
-              answer: "Sí. Si su estado no tiene un programa aprobado por el estado, debe confirmar con su tribunal que el curso será aceptado antes de inscribirse."
+              question: "¿Cuánto tiempo tengo para completar la escuela de tránsito en [STATE]?",
+              answer: "Las fechas límite las establece el tribunal que emitió su multa. Asegúrese de completar el curso antes de su fecha límite."
             },
             {
-              question: "¿La escuela de tránsito eliminará mi multa?",
-              answer: "Depende de su estado y tribunal. Algunos estados permiten la desestimación, mientras que otros solo evitan que los puntos afecten su historial. Las reglas varían según la ubicación."
+              question: "¿Cuánto dura el curso de escuela de tránsito de [STATE]?",
+              answer: "La duración exacta del curso depende del requisito del programa asociado con su estado o tribunal."
             },
             {
-              question: "¿Aun tendré que pagar mi multa?",
-              answer: "Sí. La escuela de tránsito no elimina la multa."
+              question: "¿El curso de escuela de tránsito de [STATE] es en línea?",
+              answer: "Sí. Nuestros cursos de escuela de tránsito son 100% en línea, a su propio ritmo y están disponibles las 24 horas desde cualquier dispositivo compatible."
             },
             {
-              question: "¿La escuela de tránsito elimina puntos de mi historial?",
-              answer: "No exactamente. En la mayoría de los casos, evita que los puntos sean visibles para las compañías de seguros."
+              question: "¿Tengo que pagar antes de comenzar el curso de escuela de tránsito de [STATE]?",
+              answer: "Puede comenzar el curso gratis. Debe pagar antes del paso final para completar el curso y recibir su certificado."
             },
             {
-              question: "¿Mi seguro aceptará la escuela de tránsito?",
-              answer: "En la mayoría de los casos sí, pero debe confirmarlo con su compañía de seguros para asegurarse de que el curso califique."
+              question: "¿Hay un examen final para la escuela de tránsito de [STATE]?",
+              answer: "Algunos programas incluyen un examen final. Si aplica a su curso, las instrucciones aparecerán dentro de su cuenta."
             },
             {
-              question: "¿La escuela de tránsito puede bajar mi seguro?",
-              answer: "Algunas aseguradoras ofrecen descuentos por completar un curso de manejo defensivo o escuela de tránsito, pero la aprobación varía según la compañía."
+              question: "¿Cuántas preguntas hay en el examen final?",
+              answer: "La cantidad total de preguntas del examen final puede variar según el programa, pero se explica claramente antes de comenzar."
             },
             {
-              question: "¿Cuánto dura el curso?",
-              answer: "La mayoría de los cursos duran entre 4 y 8 horas, según los requisitos del estado."
+              question: "¿Qué sucede si repruebo el examen final?",
+              answer: "Si no aprueba, normalmente puede volver a tomar el examen. Pueden existir intentos adicionales si son necesarios."
             },
             {
-              question: "¿El curso es a su propio ritmo?",
-              answer: "Sí. Puede comenzar, detenerse y reanudar en cualquier momento."
+              question: "¿Cómo se reportará mi finalización en [STATE]?",
+              answer: "Su finalización se reporta o su certificado se proporciona de acuerdo con el requisito estatal o judicial asociado con su inscripción."
             },
             {
-              question: "¿Puedo tomarlo en mi teléfono?",
-              answer: "Sí. Los cursos son compatibles con dispositivos móviles y funcionan en distintos dispositivos."
-            },
-            {
-              question: "¿Tengo que pagar antes de tomar el curso?",
-              answer: "Puede comenzar su curso gratis. Sin embargo, debe pagar antes de tomar el examen final y completar el curso."
-            },
-            {
-              question: "¿Hay examen final?",
-              answer: "Sí, en la mayoría de los estados. Está diseñado para ser claro y fácil de aprobar."
-            },
-            {
-              question: "¿Qué sucede después de completar el curso?",
-              answer: "Su finalización se procesa y su certificado se entrega según los requisitos de su estado o tribunal."
-            },
-            {
-              question: "¿Cuánto tiempo tengo para completar la escuela de tránsito?",
-              answer: "Su fecha límite la establece el tribunal o el estado."
-            },
-            {
-              question: "¿Qué pasa si pierdo mi fecha límite?",
-              answer: "Puede perder la elegibilidad o enfrentar sanciones adicionales."
-            },
-            {
-              question: "¿Cómo sé las reglas exactas de mi estado?",
-              answer: "Las reglas de escuela de tránsito varían según el estado, el tribunal y la aseguradora. Consulte la página del estado donde recibió su multa para ver las reglas exactas que se aplican a usted."
+              question: "¿Qué pasa si pierdo mi fecha límite en [STATE]?",
+              answer: "Perder su fecha límite puede ocasionar sanciones adicionales, multas o pérdida de elegibilidad. Comuníquese con su tribunal lo antes posible."
             }
           ]
         };
 
         const elements = {
           languageSelect: document.getElementById("languageSelect"),
-          searchInput: document.getElementById("faqSearch"),
           searchForm: document.getElementById("searchForm"),
-          faqAccordion: document.getElementById("faqAccordion"),
+          searchInput: document.getElementById("faqSearch"),
+          faqList: document.getElementById("faqList"),
           faqSummary: document.getElementById("faqSummary"),
           faqEmpty: document.getElementById("faqEmpty"),
+          showMoreButton: document.getElementById("showMoreFaqs"),
           shareButton: document.getElementById("sharePage"),
           shareToast: document.getElementById("shareToast"),
-          pageDescription: document.getElementById("pageDescription")
+          pageDescription: document.getElementById("pageDescription"),
+          courseLinks: document.querySelectorAll("[data-course-link]")
         };
 
         let currentLang = localStorage.getItem(STORAGE_KEY) === "es" ? "es" : "en";
+        let expandedFaqs = false;
         let shareToastTimer = null;
 
+        function replaceState(value) {
+          return String(value || "").replace(/\[STATE\]/g, PAGE_CONFIG.stateName);
+        }
+
         function translate(key) {
-          return translations[currentLang][key] || "";
+          return replaceState(translations[currentLang][key] || "");
         }
 
         function normalizeText(value) {
@@ -1545,38 +1426,45 @@
         }
 
         function renderFaqs(query) {
-          const items = faqEntries[currentLang];
+          const items = faqEntries[currentLang].map((item) => ({
+            question: replaceState(item.question),
+            answer: replaceState(item.answer)
+          }));
           const searchTerm = normalizeText(query.trim());
           const filtered = searchTerm
-            ? items.filter((item) => normalizeText(`${item.question} ${item.answer}`).includes(searchTerm))
+            ? items.filter((item) => normalizeText(item.question + " " + item.answer).includes(searchTerm))
             : items;
+          const visibleItems = searchTerm || expandedFaqs ? filtered : filtered.slice(0, INITIAL_FAQ_COUNT);
 
           elements.faqSummary.textContent = searchTerm
-            ? `${filtered.length} / ${items.length} ${translate("faq.summaryFiltered")}`
-            : `${items.length} ${translate("faq.summaryAll")}`;
+            ? filtered.length + " / " + items.length + " " + translate("faq.summaryFiltered")
+            : items.length + " " + translate("faq.summaryAll");
 
           if (!filtered.length) {
-            elements.faqAccordion.innerHTML = "";
+            elements.faqList.innerHTML = "";
             elements.faqEmpty.textContent = translate("faq.noResults");
             elements.faqEmpty.classList.add("is-visible");
+            elements.showMoreButton.hidden = true;
             return;
           }
 
           elements.faqEmpty.classList.remove("is-visible");
-
-          elements.faqAccordion.innerHTML = filtered
-            .map((item, index) => {
-              return `
-                <article class="faq-item">
-                  <h2 class="faq-question-heading">
-                    <span class="faq-index">${String(index + 1)}</span>
-                    <span class="faq-question">${item.question}</span>
-                  </h2>
-                  <div class="faq-body">${item.answer}</div>
-                </article>
-              `;
+          elements.faqList.innerHTML = visibleItems
+            .map((item) => {
+              return (
+                '<article class="faq-item">' +
+                  '<h3 class="faq-question">' + item.question + "</h3>" +
+                  '<p class="faq-answer">' + item.answer + "</p>" +
+                "</article>"
+              );
             })
             .join("");
+
+          const shouldShowToggle = !searchTerm && filtered.length > INITIAL_FAQ_COUNT;
+          elements.showMoreButton.hidden = !shouldShowToggle;
+          if (shouldShowToggle) {
+            elements.showMoreButton.textContent = expandedFaqs ? translate("faq.showLess") : translate("faq.showMore");
+          }
         }
 
         function applyTranslations() {
@@ -1598,6 +1486,10 @@
             if (value) {
               node.setAttribute("placeholder", value);
             }
+          });
+
+          elements.courseLinks.forEach((link) => {
+            link.setAttribute("href", PAGE_CONFIG.courseUrl);
           });
 
           elements.languageSelect.value = currentLang;
@@ -1639,19 +1531,25 @@
           }
         }
 
-        elements.searchForm.addEventListener("submit", (event) => {
+        elements.searchForm.addEventListener("submit", function (event) {
           event.preventDefault();
           renderFaqs(elements.searchInput.value);
         });
 
-        elements.searchInput.addEventListener("input", () => {
+        elements.searchInput.addEventListener("input", function () {
           renderFaqs(elements.searchInput.value);
         });
 
-        elements.languageSelect.addEventListener("change", (event) => {
+        elements.languageSelect.addEventListener("change", function (event) {
           currentLang = event.target.value === "es" ? "es" : "en";
           localStorage.setItem(STORAGE_KEY, currentLang);
+          renderFaqs(elements.searchInput.value);
           applyTranslations();
+        });
+
+        elements.showMoreButton.addEventListener("click", function () {
+          expandedFaqs = !expandedFaqs;
+          renderFaqs(elements.searchInput.value);
         });
 
         elements.shareButton.addEventListener("click", sharePage);

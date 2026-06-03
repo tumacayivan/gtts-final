@@ -217,12 +217,12 @@
       .navbar-nav {
         display: flex;
         align-items: center;
-        gap: 22px;
+        gap: 2px;
       }
 
       .nav-link {
         color: #111;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 500;
         padding: 12px 14px;
         white-space: nowrap;

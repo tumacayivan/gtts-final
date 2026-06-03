@@ -441,10 +441,10 @@
 
       .site-header .main-nav .nav-link {
         color: #111 !important;
-        font-size: 18px !important;
+        font-size: 15px !important;
         font-weight: 500 !important;
         line-height: normal !important;
-        padding: 10px 22px !important;
+        padding: 10px 13px !important;
         white-space: nowrap !important;
       }
 

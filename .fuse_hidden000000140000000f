@@ -1209,7 +1209,7 @@
       .navbar-nav {
         display: flex;
         align-items: center;
-        gap: 22px;
+        gap: 2px;
       }
 
       .navbar-toggler {

@@ -126,7 +126,7 @@ main,
   color: #111;
   font-size: 18px;
   font-weight: 500;
-  padding: 10px 22px;
+  padding: 10px 13px;
   white-space: nowrap;
 }
 
@@ -534,7 +534,7 @@ main,
   display: block;
   margin-bottom: 12px;
   color: #111;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -1211,7 +1211,7 @@ main,
   font-size: 18px;
   font-weight: 500;
   line-height: normal;
-  padding: 10px 22px;
+  padding: 10px 13px;
   white-space: nowrap;
 }
 
@@ -1569,7 +1569,7 @@ main,
   font-size: 18px !important;
   font-weight: 500 !important;
   line-height: normal !important;
-  padding: 10px 22px !important;
+  padding: 10px 13px !important;
   white-space: nowrap !important;
 }
 
