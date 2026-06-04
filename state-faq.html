@@ -468,11 +468,17 @@
         font-size: 2rem;
       }
 
+      .enroll-icon img {
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+      }
+
       .enroll-title {
         margin: 0;
         font-family: Arial, sans-serif;
-        font-size: clamp(1.85rem, 2.3vw, 2.3rem);
-        line-height: 1.12;
+        font-size: clamp(1.4rem, 1.7vw, 1.75rem);
+        line-height: 1.15;
         font-weight: 700;
         color: #263244;
       }
@@ -527,7 +533,7 @@
       }
 
       .faq-meta {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
@@ -585,13 +591,13 @@
       }
 
       .show-more-button {
-        min-width: 90px;
-        padding: 0.42rem 0.9rem;
+        min-width: 150px;
+        padding: 0.75rem 1.7rem;
         border: 0;
-        border-radius: 0.35rem;
+        border-radius: 0.5rem;
         background: var(--navy);
         color: #fff;
-        font-size: 0.72rem;
+        font-size: 1rem;
         font-weight: 700;
       }
 
@@ -633,10 +639,12 @@
         background: rgba(255, 255, 255, 0.12);
       }
 
-      .shield-ring i {
+      .shield-ring img {
         position: relative;
-        font-size: 3rem;
-        color: #fff;
+        z-index: 1;
+        width: 92px;
+        height: 92px;
+        object-fit: contain;
       }
 
       .cta-copy h2 {
@@ -1039,10 +1047,10 @@
           <div class="container-site">
             <article class="enroll-card">
               <div class="enroll-icon" aria-hidden="true">
-                <i class="bi bi-file-earmark-check"></i>
+                <img src="assets/Vector (123).png" alt="">
               </div>
               <div>
-                <h2 class="enroll-title" data-i18n="enroll.title">Are you ready to sign up for the course?</h2>
+                <h2 class="enroll-title" data-i18n="enroll.title">Are you ready to sign<br>up for the course?</h2>
                 <p class="enroll-copy" data-i18n="enroll.copy">
                   Select your state to see your course options and get started today.
                 </p>
@@ -1078,7 +1086,7 @@
           <div class="container-site">
             <div class="cta-panel">
               <div class="shield-ring" aria-hidden="true">
-                <i class="bi bi-shield-check"></i>
+                <img src="assets/icons/Group 2147224704.png" alt="">
               </div>
               <div class="cta-copy">
                 <h2 data-i18n="cta.title">Ready to get started?</h2>
@@ -1219,7 +1227,7 @@
             "language.spanish": "Español",
             "search.placeholder": "Search for a question",
             "search.button": "Search",
-            "enroll.title": "Are you ready to sign up for the course?",
+            "enroll.title": "Are you ready to sign<br>up for the course?",
             "enroll.copy": "Select your state to see your course options and get started today.",
             "enroll.button": "Go to [STATE] Traffic School",
             "enroll.note": "See [STATE] course details, pricing, and requirements.",
@@ -1271,7 +1279,7 @@
             "language.spanish": "Español",
             "search.placeholder": "Busque una pregunta",
             "search.button": "Buscar",
-            "enroll.title": "¿Está listo para inscribirse en el curso?",
+            "enroll.title": "¿Está listo para inscribirse<br>en el curso?",
             "enroll.copy": "Seleccione su estado para ver sus opciones de curso y comenzar hoy mismo.",
             "enroll.button": "Ir a la Escuela de Tránsito de [STATE]",
             "enroll.note": "Vea los detalles, precios y requisitos del curso de [STATE].",
@@ -1508,7 +1516,11 @@
             const key = node.getAttribute("data-i18n");
             const value = translate(key);
             if (value) {
-              node.textContent = value;
+              if (value.indexOf("<br>") !== -1) {
+                node.innerHTML = value;
+              } else {
+                node.textContent = value;
+              }
             }
           });
 
