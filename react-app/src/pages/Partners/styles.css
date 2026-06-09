@@ -371,7 +371,7 @@
       .hero-metrics {
         position: absolute;
         top: 116px;
-        right: 0;
+        right: -24px;
         width: min(100%, 236px);
         display: grid;
         gap: 10px;
