@@ -568,13 +568,13 @@
         color: var(--brand-blue);
       }
 
-      .faq-list {
+      /* .faq-list {
         border-top: 1px solid var(--brand-line);
-      }
+      } */
 
       .faq-item {
         border: 0;
-        border-bottom: 1px solid var(--brand-line);
+        /* border-bottom: 1px solid var(--brand-line); */
         border-radius: 0;
         background: transparent;
       }
