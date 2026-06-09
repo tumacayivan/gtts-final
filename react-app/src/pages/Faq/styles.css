@@ -663,15 +663,22 @@
         width: 92px;
         aspect-ratio: 1;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.26);
+        background: #ffffff;
       }
 
+      /* Replaced the shield glyph with a custom icon image; keep the orb's
+         circular frame for contrast against the dark CTA panel. */
       .shield-orb::after {
-        content: "\F633";
+        content: none;
+      }
+
+      .shield-orb img {
         position: absolute;
-        font-family: bootstrap-icons;
-        font-size: 3rem;
-        color: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: auto;
       }
 
       .cta-copy h2 {
@@ -712,6 +719,21 @@
         font-family: bootstrap-icons;
         color: rgba(255, 255, 255, 0.86);
         font-size: 1.15rem;
+      }
+
+      /* Replaced the CSS dashed arrow with a custom arrow image. */
+      .cta-action::before,
+      .cta-action::after {
+        content: none;
+      }
+
+      .cta-arrow-img {
+        position: absolute;
+        left: -122px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: auto;
       }
 
       .cta-link {
@@ -919,7 +941,8 @@
         }
 
         .cta-action::before,
-        .cta-action::after {
+        .cta-action::after,
+        .cta-arrow-img {
           display: none;
         }
       }
