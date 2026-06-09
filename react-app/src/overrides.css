@@ -1,0 +1,110 @@
+/*
+ * App-level overrides that must survive re-running tools/extract.mjs
+ * (which regenerates each page's content.html / styles.css).
+ */
+
+/*
+ * Homepage trust-grid icons.
+ * All four source icons share a 160x160 canvas and an identical longest-side
+ * footprint (112px), so they render in the same 64x64 box. But their aspect
+ * ratios differ — the bank is a full 112x112 square (reads largest), the
+ * devices icon is 112x69 (reads smallest) — so they look unequal in size.
+ * These per-icon scales normalize their *visual area* so the row reads evenly.
+ * Scales derived from measured content bounding boxes (geometric-mean ~0.63).
+ */
+.trust-grid .trust-item img {
+  transform-origin: center;
+}
+.trust-grid .trust-item:nth-child(2) img {
+  /* Court / bank — square glyph, largest area: scale down. */
+  transform: scale(0.9);
+}
+.trust-grid .trust-item:nth-child(3) img {
+  /* 100% Online / devices — wide glyph, smallest area: scale up. */
+  transform: scale(1.14);
+}
+
+/*
+ * Homepage "How It Works" section.
+ * .section-block applies symmetric top/bottom padding; drop the top padding
+ * so this section sits flush against the section above it.
+ */
+#how-it-works.section-block {
+  padding-top: 0;
+}
+
+/*
+ * Homepage "How It Works" flow steps.
+ * Within .flow-step-top the number badge is pinned left and the icon is
+ * centered, leaving them looking cramped (~18px apart). Nudge the badge
+ * outward to open up the spacing between the number and the icon.
+ */
+.steps-flow .flow-step .step-number {
+  left: -14px;
+}
+
+/*
+ * Homepage "Trusted by Millions" (testimonials) section.
+ * It carried a subtle blue gradient and top padding; flatten it to a plain
+ * white background to match the (white) section that follows, and drop the
+ * top padding. Double-class selector outranks the page's .testimonials rule.
+ */
+.testimonials.section-block {
+  padding-top: 0;
+  background: #ffffff;
+}
+
+/*
+ * Homepage courses carousel arrows.
+ * They were absolutely offset by -1.7rem, leaving ~half the button overlapping
+ * the edge cards. Give the wrap side gutters and seat the arrows inside them so
+ * they sit beside the cards (never overlapping) at every viewport width — no
+ * horizontal overflow. Selectors are scoped under .courses-section to outrank
+ * the page's base rules.
+ */
+.courses-section .courses-carousel-wrap {
+  padding-inline: 4.75rem;
+}
+.courses-section .carousel-arrow.prev {
+  left: 0;
+}
+.courses-section .carousel-arrow.next {
+  right: 0;
+}
+
+/*
+ * Homepage partner-band metrics (desktop 4-column layout).
+ * Every metric has a white left-border separator except the first
+ * (Automated Notifications), which was zeroed out. The grid reserves left
+ * padding for a leading divider, so give the first metric the same left
+ * border as the others (matching "Compliance You Can Trust").
+ * Scoped to >=1200px so the 2-col / 1-col responsive border resets stand.
+ */
+@media (min-width: 1200px) {
+  .partner-band .partner-metric:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.36);
+  }
+}
+
+/*
+ * Partner-band metrics: equal-height left borders.
+ * The grid used align-items:start, so each metric was only as tall as its
+ * content (140px vs 162px) and the left-border separators came out uneven.
+ * Stretch the items to the tallest in the row so every left border matches.
+ */
+.partner-band .partner-metrics {
+  align-items: stretch;
+}
+
+/*
+ * Footer "Follow Us" column.
+ * The Bootstrap gutter leaves only ~24px between the Legal column and the
+ * Follow Us column, so they read as cramped. Add left padding to the Follow Us
+ * column (col-lg-3) on >=992px (side-by-side layout) so it no longer sits flush
+ * against Legal. Mobile (stacked) layout is left untouched.
+ */
+@media (min-width: 992px) {
+  .site-footer .footer-main .row > .col-lg-3 {
+    padding-left: 3.5rem;
+  }
+}

@@ -1,0 +1,329 @@
+<a class="skip-link" href="#mainContent" data-i18n="skip">Skip to main content</a>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="utility-bar">
+          <div class="container-page utility-inner">
+            <button class="share-button" type="button" id="sharePage" data-i18n="share.button">Share This Page</button>
+            <a class="utility-phone" href="tel:18009093909" data-i18n="utility.phone">Contact Us: 1-800-909-3909</a>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-xl main-nav" aria-label="Primary navigation">
+          <div class="container-page">
+            <a class="navbar-brand" href="/" aria-label="GoToTrafficSchool home">
+              <img src="/assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#primaryNav"
+              aria-controls="primaryNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="primaryNav">
+              <ul class="navbar-nav ms-xl-auto align-items-xl-center">
+                <li class="nav-item"><a class="nav-link" href="/about" data-i18n="nav.about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/how-it-works" data-i18n="nav.how">How It Works</a></li>
+                <li class="nav-item"><a class="nav-link" href="/faq" data-i18n="nav.faq">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/partners" data-i18n="nav.partner">Partner with us</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/contact" aria-current="page" data-i18n="nav.contact">Contact Us</a></li>
+              </ul>
+              <a class="login-link" href="https://member.gototrafficschool.com/member/login.aspx">
+                <i class="bi bi-person"></i>
+                <span data-i18n="nav.login">Log In</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main id="mainContent">
+        <section class="hero-section">
+          <div class="container-xxl">
+            <div class="hero-top">
+              <div class="hero-copy">
+                <span class="eyebrow" data-i18n="hero.eyebrow">We're Here To Help</span>
+                <h1 data-i18n="hero.title">Contact Us</h1>
+                <p data-i18n="hero.copy">
+                  Have a question or need assistance? Reach out to us by phone, email, or by filling out the form below.
+                </p>
+              </div>
+
+              <div class="language-picker">
+                <span class="language-heading">
+                  <i class="bi bi-globe2" aria-hidden="true"></i>
+                  <label for="languageSelect" data-i18n="lang.label">Select Language</label>
+                </span>
+                <div class="language-control">
+                  <select class="form-select" id="languageSelect" aria-label="Select language">
+                    <option value="en" data-i18n="lang.english">English (US)</option>
+                    <option value="es" data-i18n="lang.spanish">Español</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-panels">
+          <div class="container-xxl">
+            <div class="contact-grid">
+              <article class="panel-card message-card">
+                <div class="card-title">
+                  <span class="card-title-icon" aria-hidden="true">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+                  <span data-i18n="form.title">Send Us a Message</span>
+                </div>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label class="field-label" for="fullName">
+                        <span data-i18n="form.fullName">Full Name</span>
+                      </label>
+                      <div class="input-with-icon">
+                        <i class="bi bi-person"></i>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="fullName"
+                          name="fullName"
+                          autocomplete="name"
+                          required
+                          data-i18n-placeholder="form.fullNamePlaceholder"
+                          placeholder="Your full name"
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <label class="field-label" for="emailAddress">
+                        <span data-i18n="form.email">Email Address</span>
+                      </label>
+                      <div class="input-with-icon">
+                        <i class="bi bi-envelope"></i>
+                        <input
+                          class="form-control"
+                          type="email"
+                          id="emailAddress"
+                          name="emailAddress"
+                          autocomplete="email"
+                          required
+                          data-i18n-placeholder="form.emailPlaceholder"
+                          placeholder="you@example.com"
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <label class="field-label" for="phoneNumber">
+                        <span data-i18n="form.phone">Phone</span>
+                        <span class="optional" data-i18n="form.optional">(Optional)</span>
+                      </label>
+                      <div class="input-with-icon">
+                        <i class="bi bi-telephone"></i>
+                        <input
+                          class="form-control"
+                          type="tel"
+                          id="phoneNumber"
+                          name="phoneNumber"
+                          autocomplete="tel"
+                          inputmode="tel"
+                          data-i18n-placeholder="form.phonePlaceholder"
+                          placeholder="(888) 329-7069"
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <label class="field-label" for="topic">
+                        <span data-i18n="form.topic">Topic</span>
+                      </label>
+                      <div class="input-with-icon">
+                        <i class="bi bi-chat-square-text"></i>
+                        <select class="form-select" id="topic" name="topic" required>
+                          <option value="" selected data-i18n="form.topicPrompt">Select a topic</option>
+                          <option value="Course enrollment" data-i18n="topic.course">Course enrollment</option>
+                          <option value="Certificate status" data-i18n="topic.certificate">Certificate status</option>
+                          <option value="Account or login help" data-i18n="topic.account">Account or login help</option>
+                          <option value="Billing question" data-i18n="topic.billing">Billing question</option>
+                          <option value="Partner program" data-i18n="topic.partner">Partner program</option>
+                          <option value="Other" data-i18n="topic.other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label class="field-label" for="message">
+                        <span data-i18n="form.message">Message</span>
+                      </label>
+                      <div class="input-with-icon input-area">
+                        <i class="bi bi-pencil"></i>
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          name="message"
+                          required
+                          data-i18n-placeholder="form.messagePlaceholder"
+                          placeholder="How can we help you?"
+                        ></textarea>
+                      </div>
+                      <div class="field-note">
+                        <i class="bi bi-lock"></i>
+                        <span data-i18n="form.note">Please do not include sensitive information such as credit card numbers.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-feedback" id="formFeedback" aria-live="polite"></div>
+
+                  <div class="mt-4">
+                    <button class="send-button" id="sendButton" type="submit" data-i18n="form.submit">Send Message</button>
+                  </div>
+                </form>
+              </article>
+
+              <aside class="panel-card info-card">
+                <h2 data-i18n="info.title">Contact Information</h2>
+                <p data-i18n="info.subtitle">Other ways to reach us</p>
+
+                <div class="info-item">
+                  <img src="/assets/icons/Frames.png" alt="">
+                  <div>
+                    <h3 data-i18n="info.phoneTitle">Phone</h3>
+                    <a class="info-link" href="tel:18883297069">1-888-329-7069</a>
+                    <span class="info-subtext" data-i18n="info.phoneHours">Mon-Fri: 5AM-10PM PT</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <img src="/assets/icons/Frames (1).png" alt="">
+                  <div>
+                    <h3 data-i18n="info.emailTitle">Email</h3>
+                    <a class="info-link" href="mailto:info@gototrafficschool.com">info@gototrafficschool.com</a>
+                    <span class="info-subtext" data-i18n="info.emailHelp">We typically respond within 24 hours</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <img src="/assets/icons/Frames (2).png" alt="">
+                  <div>
+                    <h3 data-i18n="info.addressTitle">Office Address</h3>
+                    <span class="info-value" data-i18n="info.addressValue">Beverly Hills, CA</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <div class="container-xxl">
+            <div class="cta-grid">
+              <div class="shield-badge" aria-hidden="true"></div>
+
+              <div class="cta-copy">
+                <h2 data-i18n="cta.title">Ready to get started?</h2>
+                <p data-i18n="cta.copy">
+                  Select your state to get started and complete your traffic school today.
+                </p>
+              </div>
+
+              <div class="cta-select-wrap">
+                <i class="bi bi-geo-alt-fill cta-select-icon" aria-hidden="true"></i>
+                <select class="cta-select" id="stateSelect" aria-label="Choose your state">
+                  <option value="" selected data-i18n="cta.statePrompt">Choose Your State</option>
+                </select>
+                <i class="bi bi-chevron-down cta-select-chevron" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container-page section-inset footer-main">
+          <div class="row g-4">
+            <div class="col-12 col-lg-5 footer-brand">
+              <a href="/" aria-label="GoToTrafficSchool home">
+                <img src="/assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
+              </a>
+              <p data-i18n="footer.blurb">The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.</p>
+              <div class="footer-contact">
+                <a href="tel:18883297069"><i class="bi bi-telephone"></i><span>1-888-329-7069</span></a>
+                <a href="mailto:info@gototrafficschool.com"><i class="bi bi-envelope"></i><span>info@gototrafficschool.com</span></a>
+                <span><i class="bi bi-geo-alt"></i><span data-i18n="footer.location">8034 Garden Grove Blvd Suite C Garden Grove, CA 92844</span></span>
+              </div>
+            </div>
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-title" data-i18n="footer.company">Company</h3>
+              <ul class="footer-links">
+                <li><a href="/about" data-i18n="footer.about">About Us</a></li>
+                <li><a href="/how-it-works" data-i18n="footer.how">How It Works</a></li>
+                <li><a href="/faq" data-i18n="footer.faq">FAQ</a></li>
+                <li><a href="/contact" data-i18n="footer.contact">Contact</a></li>
+                <li><a href="/partners" data-i18n="footer.partner">Partner Program</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-title" data-i18n="footer.legal">Legal</h3>
+              <ul class="footer-links">
+                <li><a href="https://www.gototrafficschool.com/privacy.aspx" data-i18n="footer.privacy">Privacy Policy</a></li>
+                <li><a href="https://www.gototrafficschool.com/terms.aspx" data-i18n="footer.terms">Terms Of Service</a></li>
+                <li><a href="https://www.gototrafficschool.com/courtDirectory.aspx" data-i18n="footer.court">Court Directory</a></li>
+                <li><a href="https://www.gototrafficschool.com/reviews-v2.aspx" data-i18n="footer.comments">Student Comment</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-3">
+              <h3 class="footer-title" data-i18n="footer.follow">Follow Us</h3>
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.facebook.com/gttsonline/">
+                    <img src="/assets/icons/facebook-mark.svg" alt="">
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/gototrafficschool/">
+                    <img src="/assets/icons/image 117.png" alt="">
+                    <span>Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@gototrafficschool">
+                    <img src="/assets/icons/image 115.png" alt="">
+                    <span>TikTok</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/GoToTrafficNow">
+                    <img src="/assets/icons/image 107.png" alt="">
+                    <span>X</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCPrqnWk4Rzb39eMT0qUeKvg">
+                    <img src="/assets/icons/image 108.png" alt="">
+                    <span>YouTube</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-bar">
+          <span data-i18n="footer.copyrightPrefix">© 2026 gototrafficschool.com Powered by</span>
+          <a href="https://www.cyberactiveonline.com/">Cyberactive</a>.
+          <span data-i18n="footer.copyrightSuffix">All rights reserved.</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="share-toast" id="shareToast" aria-live="polite">Page link copied.</div>

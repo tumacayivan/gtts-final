@@ -1,0 +1,246 @@
+<a class="skip-link" href="#mainContent" data-i18n="skip">Skip to main content</a>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="utility-bar">
+          <div class="container-page utility-inner">
+            <button class="share-button" type="button" id="sharePage" data-i18n="share.button">Share This Page</button>
+            <a class="utility-phone" href="tel:18009093909" data-i18n="utility.phone">Contact Us: 1-800-909-3909</a>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-xl main-nav" aria-label="Primary navigation">
+          <div class="container-page">
+            <a class="navbar-brand" href="/" aria-label="GoToTrafficSchool home">
+              <img src="/assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#primaryNav"
+              aria-controls="primaryNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="primaryNav">
+              <ul class="navbar-nav ms-xl-auto align-items-xl-center">
+                <li class="nav-item"><a class="nav-link" href="/about" data-i18n="nav.about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/how-it-works" data-i18n="nav.how">How It Works</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/faq" aria-current="page" data-i18n="nav.faq">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/partners" data-i18n="nav.partner">Partner with us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact" data-i18n="nav.contact">Contact Us</a></li>
+              </ul>
+              <a class="login-link" href="https://member.gototrafficschool.com/member/login.aspx">
+                <i class="bi bi-person"></i>
+                <span data-i18n="nav.login">Log In</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main id="mainContent">
+        <section class="hero-section">
+          <div class="container-page hero-inner">
+            <div class="hero-top">
+              <div class="hero-copy">
+                <h1 class="hero-title" data-i18n="hero.title">Traffic School FAQ</h1>
+                <p class="hero-lead" data-i18n="hero.lead">
+                  Find answers to the most common questions about traffic school, eligibility, tickets, insurance, and more.
+                </p>
+
+                <div class="search-shell">
+                  <form class="search-form" id="searchForm" novalidate>
+                    <div class="search-input-wrap">
+                      <i class="bi bi-search" aria-hidden="true"></i>
+                      <input
+                        class="form-control search-input"
+                        id="faqSearch"
+                        type="search"
+                        placeholder="Search for a question"
+                        data-i18n-placeholder="search.placeholder"
+                        autocomplete="off"
+                      >
+                    </div>
+                    <button class="search-submit" type="submit" data-i18n="search.button">Search</button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="language-picker">
+                <span class="language-heading">
+                  <i class="bi bi-globe2" aria-hidden="true"></i>
+                  <label for="languageSelect" data-i18n="language.label">Select Language</label>
+                </span>
+                <div class="language-control">
+                  <select class="form-select" id="languageSelect" aria-label="Select language">
+                    <option value="en" data-i18n="language.english">English (US)</option>
+                    <option value="es" data-i18n="language.spanish">Español</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="support-section">
+          <div class="container-page section-inset">
+            <div class="support-grid">
+              <article class="support-card is-pink">
+                <span class="support-icon" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </span>
+                <div>
+                  <h2 class="support-title" data-i18n="support.state.title">Looking for questions specific to your state?</h2>
+                  <p class="support-copy" data-i18n="support.state.copy">
+                    Check out your state FAQ page for rules, eligibility, and requirements.
+                  </p>
+                  <a class="support-link" href="/faq">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    <span data-i18n="support.state.button">Find Your State FAQ</span>
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </article>
+
+              <article class="support-card is-blue">
+                <span class="support-icon" aria-hidden="true">
+                  <img src="/assets/Vector (123).png" alt="">
+                </span>
+                <div>
+                  <h2 class="support-title" data-i18n="support.course.title">Are you ready to sign up for the course?</h2>
+                  <p class="support-copy" data-i18n="support.course.copy">
+                    Select your state to see your course options and get started today.
+                  </p>
+                  <a class="support-link" href="/">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    <span data-i18n="support.course.button">Select Your State to Get Started</span>
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq-section">
+          <div class="container-page section-inset">
+            <div class="faq-shell">
+              <div class="faq-meta">
+                <p id="faqSummary">20 frequently asked questions</p>
+                <p data-i18n="faq.helper">Search by question, topic, or keyword.</p>
+              </div>
+              <div class="faq-list" id="faqAccordion"></div>
+              <div class="faq-empty" id="faqEmpty" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <div class="cta-panel">
+            <div class="shield-orb" aria-hidden="true"></div>
+            <div class="cta-copy">
+              <h2 data-i18n="cta.title">Ready to get started?</h2>
+              <p data-i18n="cta.copy">
+                Start your Alabama traffic school course today and complete it at your own pace.
+              </p>
+            </div>
+            <div class="cta-action">
+              <a class="cta-link" href="https://www.gototrafficschool.com/state/alabama-online-defensive-driving">
+                <span class="cta-link-label">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                  <span data-i18n="cta.button">Go to Alabama Traffic School</span>
+                </span>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container-page section-inset footer-main">
+          <div class="row g-4">
+            <div class="col-12 col-lg-5 footer-brand">
+              <a href="/" aria-label="GoToTrafficSchool home">
+                <img src="/assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
+              </a>
+              <p data-i18n="footer.blurb">The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.</p>
+              <div class="footer-contact">
+                <a href="tel:18883297069"><i class="bi bi-telephone"></i><span>1-888-329-7069</span></a>
+                <a href="mailto:info@gototrafficschool.com"><i class="bi bi-envelope"></i><span>info@gototrafficschool.com</span></a>
+                <span><i class="bi bi-geo-alt"></i><span data-i18n="footer.location">8034 Garden Grove Blvd Suite C Garden Grove, CA 92844</span></span>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-title" data-i18n="footer.company">Company</h3>
+              <ul class="footer-links">
+                <li><a href="/about" data-i18n="footer.about">About Us</a></li>
+                <li><a href="/how-it-works" data-i18n="footer.how">How It Works</a></li>
+                <li><a href="/faq" data-i18n="footer.faq">FAQ</a></li>
+                <li><a href="/contact" data-i18n="footer.contact">Contact</a></li>
+                <li><a href="/partners" data-i18n="footer.partner">Partner Program</a></li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-title" data-i18n="footer.legal">Legal</h3>
+              <ul class="footer-links">
+                <li><a href="https://www.gototrafficschool.com/privacy.aspx" data-i18n="footer.privacy">Privacy Policy</a></li>
+                <li><a href="https://www.gototrafficschool.com/terms.aspx" data-i18n="footer.terms">Terms Of Service</a></li>
+                <li><a href="https://www.gototrafficschool.com/courtDirectory.aspx" data-i18n="footer.court">Court Directory</a></li>
+                <li><a href="https://www.gototrafficschool.com/reviews-v2.aspx" data-i18n="footer.comments">Student Comment</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <h3 class="footer-title" data-i18n="footer.follow">Follow Us</h3>
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.facebook.com/gttsonline/">
+                    <img src="/assets/icons/facebook-mark.svg" alt="">
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/gototrafficschool/">
+                    <img src="/assets/icons/image 117.png" alt="">
+                    <span>Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@gototrafficschool">
+                    <img src="/assets/icons/image 115.png" alt="">
+                    <span>TikTok</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/GoToTrafficNow">
+                    <img src="/assets/icons/image 107.png" alt="">
+                    <span>X</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCPrqnWk4Rzb39eMT0qUeKvg">
+                    <img src="/assets/icons/image 108.png" alt="">
+                    <span>YouTube</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-bar">
+          <span data-i18n="footer.copyrightPrefix">© 2026 gototrafficschool.com Powered by</span>
+          <a href="https://www.cyberactiveonline.com/">Cyberactive.</a>
+          <span data-i18n="footer.copyrightSuffix">All rights reserved.</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="share-toast" id="shareToast" aria-live="polite">Page link copied.</div>

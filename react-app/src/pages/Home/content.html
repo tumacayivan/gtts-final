@@ -1,0 +1,573 @@
+<a class="skip-link" href="#mainContent" data-i18n="skip">Skip to main content</a>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="utility-bar">
+          <div class="container-page utility-inner">
+            <button class="share-button" type="button" id="sharePage" data-i18n="share.button">Share This Page</button>
+            <a class="utility-phone" href="tel:18009093909" data-i18n="utility.contact">Contact Us: 1-800-909-3909</a>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-xl main-nav" aria-label="Primary navigation">
+          <div class="container-page">
+            <a class="navbar-brand" href="/" aria-label="GoToTrafficSchool">
+              <img src="/assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#primaryNav"
+              aria-controls="primaryNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="primaryNav">
+              <ul class="navbar-nav ms-xl-auto align-items-xl-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="/about" data-i18n="nav.about">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/how-it-works" data-i18n="nav.how">How It Works</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/faq" data-i18n="nav.faq">FAQs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/partners" data-i18n="nav.partner">Partner with us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact" data-i18n="nav.contact">Contact Us</a>
+                </li>
+              </ul>
+              <a class="login-link" href="https://member.gototrafficschool.com/member/login.aspx">
+                <i class="bi bi-person"></i>
+                <span data-i18n="nav.login">Log In</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main id="mainContent">
+        <section class="hero">
+          <div class="hero-inner">
+            <div class="language-picker">
+              <span class="language-heading">
+                <i class="bi bi-globe2" aria-hidden="true"></i>
+                <label for="languageSelect" data-i18n="lang.label">Select Language</label>
+              </span>
+              <div class="language-control">
+                <select class="form-select" id="languageSelect" aria-label="Select Language">
+                  <option value="en" data-i18n="lang.english">English (US)</option>
+                  <option value="es" data-i18n="lang.spanish">Español</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="hero-content reveal visible">
+              <h1 data-i18n="hero.title">America&rsquo;s Original Traffic School</h1>
+              <p class="hero-copy" data-i18n="hero.copy">
+                State-approved traffic school and defensive driving courses that help you dismiss tickets, reduce points,
+                and save on insurance.
+              </p>
+              <div class="hero-selects">
+                <select class="form-select hero-select" id="heroStateSelect" aria-label="Select Your State">
+                  <option value="" selected>Select Your State</option>
+                </select>
+                <select class="form-select hero-select" id="heroCourseSelect" aria-label="Select Your Course">
+                  <option value="" selected>Select Your Course</option>
+                  <option value="traffic-school">Traffic School</option>
+                  <option value="defensive-driving">Defensive Driving</option>
+                  <option value="driver-improvement">Driver Improvement</option>
+                </select>
+                <div class="hero-loading" id="heroCourseLoading" role="status" aria-live="polite">
+                  <span class="hero-spinner" aria-hidden="true"></span>
+                  <span id="heroCourseLoadingText">Loading your state landing page...</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-device reveal visible" aria-hidden="true">
+              <img src="/assets/ChatGPT Image May 2, 2026, 01_19_41 AM 1.png" alt="">
+            </div>
+          </div>
+        </section>
+
+        <section class="trust-strip">
+          <div class="container-fluid-wide">
+            <div class="trust-grid">
+              <div class="trust-item reveal">
+                <img src="/assets/icons/trust-certificate.png" alt="">
+                <div>
+                  <h3 data-i18n="trust.1.title">Fast Certificate</h3>
+                  <p data-i18n="trust.1.copy">Receive your certificate as soon as you finish.</p>
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <img src="/assets/icons/trust-court.png" alt="">
+                <div>
+                  <h3 data-i18n="trust.2.title">Court Accepted</h3>
+                  <p data-i18n="trust.2.copy">Accepted in most states and all local courts.</p>
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <img src="/assets/icons/trust-online.png" alt="">
+                <div>
+                  <h3 data-i18n="trust.3.title">100% Online</h3>
+                  <p data-i18n="trust.3.copy">Complete your course on any device, anytime.</p>
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <img src="/assets/icons/trust-shield.png" alt="">
+                <div>
+                  <h3 data-i18n="trust.4.title">Money Back Guarantee</h3>
+                  <p data-i18n="trust.4.copy">14-day money back guarantee.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="container-fluid-wide works-feature-shell">
+            <div class="works-feature">
+              <div class="reveal">
+                <h2 class="section-title" data-i18n="worksFeature.title">Traffic School That Works For You</h2>
+                <div class="checks">
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item1.title">Dismiss Tickets</h3>
+                      <p data-i18n="worksFeature.item1.copy">Qualify to dismiss eligible tickets.</p>
+                    </div>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item2.title">Avoid Points</h3>
+                      <p data-i18n="worksFeature.item2.copy">Prevent points from going on your record.</p>
+                    </div>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item3.title">Lower Insurance Rates</h3>
+                      <p data-i18n="worksFeature.item3.copy">Complete and save on your insurance.</p>
+                    </div>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item4.title">Court &amp; DMV Approved</h3>
+                      <p data-i18n="worksFeature.item4.copy">State-approved and court-accepted courses.</p>
+                    </div>
+                  </div>
+                  <div class="check-item">
+                    <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                    <div>
+                      <h3 data-i18n="worksFeature.item5.title">Action Button</h3>
+                      <p data-i18n="worksFeature.item5.copy">Check If We Accept Your Ticket</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-brand btn-primary-brand" href="/">
+                  <span data-i18n="worksFeature.cta">Check If we accept your ticket</span>
+                  <i class="bi bi-chevron-right"></i>
+                </a>
+              </div>
+
+              <div class="device-showcase reveal">
+                <img src="/assets/ChatGPT Image May 2, 2026, 01_09_51 AM 1.png" alt="How It Works course preview on laptop and phone">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block works-steps" id="how-it-works">
+          <div class="container-fluid-wide">
+            <div class="section-kicker">
+              <h2 class="section-title mb-0" data-i18n="steps.heading">How It Works</h2>
+            </div>
+            <div class="steps-flow">
+              <article class="flow-step reveal">
+                <div class="flow-step-top">
+                  <div class="step-number">1</div>
+                  <div class="step-icon"><img src="/assets/Group 2147224770.png" alt=""></div>
+                </div>
+                <h3 class="step-title" data-i18n="steps.1.title">Sign Up</h3>
+                <p class="step-copy" data-i18n="steps.1.copy">Create your account in just a few minutes.</p>
+              </article>
+              <div class="flow-arrow reveal" aria-hidden="true"><i class="bi bi-chevron-right"></i></div>
+              <article class="flow-step reveal">
+                <div class="flow-step-top">
+                  <div class="step-number">2</div>
+                  <div class="step-icon"><img src="/assets/Vector.png" alt=""></div>
+                </div>
+                <h3 class="step-title" data-i18n="steps.2.title">Take the Course</h3>
+                <p class="step-copy" data-i18n="steps.2.copy">Complete the course online at your own pace.</p>
+              </article>
+              <div class="flow-arrow reveal" aria-hidden="true"><i class="bi bi-chevron-right"></i></div>
+              <article class="flow-step reveal">
+                <div class="flow-step-top">
+                  <div class="step-number">3</div>
+                  <div class="step-icon"><img src="/assets/Group 2147224772.png" alt=""></div>
+                </div>
+                <h3 class="step-title" data-i18n="steps.3.title">Pass the Final Exam</h3>
+                <p class="step-copy" data-i18n="steps.3.copy">Pass the final exam with a 70% or higher.</p>
+              </article>
+              <div class="flow-arrow reveal" aria-hidden="true"><i class="bi bi-chevron-right"></i></div>
+              <article class="flow-step reveal">
+                <div class="flow-step-top">
+                  <div class="step-number">4</div>
+                  <div class="step-icon"><img src="/assets/Group 2147224774.png" alt=""></div>
+                </div>
+                <h3 class="step-title" data-i18n="steps.4.title">Receive Certificate</h3>
+                <p class="step-copy" data-i18n="steps.4.copy">Download your certificate and we notify the court.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        
+
+        <section class="section-block testimonials">
+          <div class="container-fluid-wide text-center">
+            <h2 class="section-title" data-i18n="testimonials.title">Trusted by Millions of Drivers</h2>
+            <p class="section-subtitle" data-i18n="testimonials.subtitle">
+              Don&rsquo;t just take our word for it. See what our satisfied customers have to say.
+            </p>
+
+            <div class="testimonial-grid">
+              <article class="testimonial-card reveal">
+                <img class="testimonial-quote" src="/assets/Inverted Commas.png" alt="">
+                <div class="testimonial-head">
+                  <img class="avatar-badge" src="/assets/Ellipse 1 (4).png" alt="Jakyah J.">
+                  <div class="text-start">
+                    <div class="testimonial-name">Jakyah J.</div>
+                    <div class="testimonial-date" data-i18n="testimonials.1.date">January 2026</div>
+                  </div>
+                </div>
+                <p class="testimonial-copy" data-i18n="testimonials.1.copy">
+                  &ldquo;I like the course just the way it is.&rdquo;
+                </p>
+              </article>
+
+              <article class="testimonial-card reveal">
+                <img class="testimonial-quote" src="/assets/Inverted Commas.png" alt="">
+                <div class="testimonial-head">
+                  <img class="avatar-badge" src="/assets/Ellipse 1 (5).png" alt="Emily H.">
+                  <div class="text-start">
+                    <div class="testimonial-name">Emily H.</div>
+                    <div class="testimonial-date" data-i18n="testimonials.2.date">January 2026</div>
+                  </div>
+                </div>
+                <p class="testimonial-copy" data-i18n="testimonials.2.copy">
+                  &ldquo;I think its good the way it is.&rdquo;
+                </p>
+              </article>
+
+              <article class="testimonial-card reveal">
+                <img class="testimonial-quote" src="/assets/Inverted Commas.png" alt="">
+                <div class="testimonial-head">
+                  <img class="avatar-badge" src="/assets/Ellipse 1 (3).png" alt="Corben R.">
+                  <div class="text-start">
+                    <div class="testimonial-name">Corben R.</div>
+                    <div class="testimonial-date" data-i18n="testimonials.3.date">December 2025</div>
+                  </div>
+                </div>
+                <p class="testimonial-copy" data-i18n="testimonials.3.copy">
+                  &ldquo;I thought the course was great and it was a great reminder of everything I learned while in class.&rdquo;
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="container-fluid-wide text-center">
+            <h2 class="section-title compare-title" data-i18n="compare.title">See How GoToTrafficSchool.com Compares</h2>
+            <div class="compare-wrap reveal">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="compare.col1">Feature</th>
+                    <th>
+                      <span class="compare-pill">GoToTrafficSchool.com</span>
+                    </th>
+                    <th data-i18n="compare.col3">Other online traffic schools</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n="compare.row1.label">State licensed</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row1.other">Varies</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row2.label">100% Online</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row2.other">Most</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row3.label">Mobile-Friendly</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row3.other">Varies</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row4.label">Self-Paced</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row4.other">Most</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row5.label">Instant Enrollment</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row5.other">Varies</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row6.label">Designed Specifically for California Drivers</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row6.other">Not Always</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="compare.row7.label">Clear, Upfront Pricing</td>
+                    <td><span class="compare-yes"><i class="bi bi-check-circle-fill"></i><span data-i18n="compare.yes">Yes</span></span></td>
+                    <td data-i18n="compare.row7.other">Varies</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block courses-section">
+          <div class="container-fluid-wide text-center">
+            <h2 class="section-title" data-i18n="courses.title">Looking For A Different Course?</h2>
+            <p class="section-subtitle" data-i18n="courses.subtitle">
+              Browse our additional online programs and find the one that fits your requirements.
+            </p>
+
+            <div class="courses-carousel-wrap">
+              <button class="carousel-arrow prev" type="button" id="coursePrev" aria-label="Previous courses">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <div class="courses-viewport">
+                <div class="courses-track" id="courseTrack">
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="/assets/figma-home/abetterdriver.png" alt="A Better Driver"></div>
+                      <p data-i18n="courses.1.copy">
+                        Indiana BMV-approved driver safety program for ticket dismissal and point reduction.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.abetterdriver.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="/assets/figma-home/getdefensive.png" alt="Get Defensive"></div>
+                      <p data-i18n="courses.2.copy">
+                        Texas-approved defensive driving to dismiss tickets and earn insurance discounts.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.getdefensive.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="/assets/f92e7f8107279daf2f458f9a8b70ef725190e321.png" alt="DriverEdToGo"></div>
+                      <p data-i18n="courses.3.copy">
+                        State-approved online teen driver education courses built for first-time drivers.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.driveredtogo.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="/assets/figma-home/illinoisadult.png" alt="Illinois Adult DriversEd"></div>
+                      <p data-i18n="courses.4.copy">
+                        Illinois-approved adult driver education for first-time drivers age 18 and older.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.illinoisadultdriversed.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="/assets/figma-home/adultdriversed.png" alt="Adult Drivers Ed"></div>
+                      <p data-i18n="courses.5.copy">
+                        Online adult driver education courses for students in eligible states.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.adultdriversed.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="course-card">
+                    <div class="course-card-inner reveal">
+                      <div class="course-logo"><img src="/assets/figma-home/askillfuldriver.png" alt="A Skillful Driver"></div>
+                      <p data-i18n="courses.6.copy">
+                        Online driver education courses designed to make the learning process simple.
+                      </p>
+                      <a class="btn-brand course-btn" href="https://www.askillfuldriver.com/">
+                        <span data-i18n="courses.cta">Start Now</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <button class="carousel-arrow next" type="button" id="courseNext" aria-label="Next courses">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block partner-band">
+          <div class="container-fluid-wide">
+            <div class="partner-grid">
+              <div class="reveal">
+                <p class="partner-kicker" data-i18n="partner.kicker">Partner with Cyberactive</p>
+                <p class="partner-copy" data-i18n="partner.copy1">
+                  We partner with courts and government agencies to offer approved online traffic school programs to ticketed drivers.
+                  Through white-label or referral solutions, we handle enrollment, payment collection, and certificate reporting &mdash;
+                  helping reduce administrative workload while ensuring drivers are properly educated.
+                </p>
+                <h2 class="partner-title" data-i18n="partner.title">Court-Approved Programs. Simplified.</h2>
+                <p class="partner-copy" data-i18n="partner.copy2">
+                  Offer a seamless traffic school solution without adding operational burden.
+                </p>
+                <a class="btn-brand btn-outline-brand partner-button" href="/partners">
+                  <span data-i18n="partner.cta">Learn More About Court Solutions</span>
+                  <i class="bi bi-chevron-right"></i>
+                </a>
+              </div>
+
+              <div class="partner-metrics reveal">
+                <div class="partner-metric">
+                  <span class="partner-metric-icon" aria-hidden="true"><img src="/assets/Vector (12).png" alt=""></span>
+                  <h3 data-i18n="partner.metric1.title">Automated Notifications</h3>
+                  <p data-i18n="partner.metric1.copy">Real-time updates and reporting.</p>
+                </div>
+                <div class="partner-metric">
+                  <span class="partner-metric-icon" aria-hidden="true"><img src="/assets/Vector (13).png" alt=""></span>
+                  <h3 data-i18n="partner.metric2.title">Compliance You Can Trust</h3>
+                  <p data-i18n="partner.metric2.copy">State-approved programs with built-in compliance.</p>
+                </div>
+                <div class="partner-metric">
+                  <span class="partner-metric-icon" aria-hidden="true"><img src="/assets/Group 2147224853 (1).png" alt=""></span>
+                  <h3 data-i18n="partner.metric3.title">White-Label Options</h3>
+                  <p data-i18n="partner.metric3.copy">Fully branded for your court.</p>
+                </div>
+                <div class="partner-metric">
+                  <span class="partner-metric-icon" aria-hidden="true"><img src="/assets/Group (4).png" alt=""></span>
+                  <h3 data-i18n="partner.metric4.title">Dedicated Support</h3>
+                  <p data-i18n="partner.metric4.copy">Hands-on support from implementation to ongoing success.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ready-band" id="ready">
+          <div class="container-fluid-wide">
+            <div class="ready-grid">
+              <div class="reveal">
+                <h2 class="cta-title" data-i18n="ready.title">Ready to get started?</h2>
+                <p class="ready-copy" data-i18n="ready.copy">Select your state and get started in just 5 minutes.</p>
+              </div>
+
+              <div class="state-select-wrap reveal">
+                <div class="state-select-shell">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <select class="form-select" id="stateSelect" aria-label="Choose your state">
+                    <option value="" selected data-i18n="ready.placeholder">Choose Your State</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container-page section-inset footer-main">
+          <div class="row g-4">
+            <div class="col-12 col-lg-5 footer-brand">
+              <a href="/">
+                <img src="/assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
+              </a>
+              <p data-i18n="footer.brand">
+                The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.
+              </p>
+              <div class="footer-contact">
+                <a href="tel:18883297069"><i class="bi bi-telephone"></i><span>1-888-329-7069</span></a>
+                <a href="mailto:info@gototrafficschool.com"><i class="bi bi-envelope"></i><span>info@gototrafficschool.com</span></a>
+                <span><i class="bi bi-geo-alt"></i><span data-i18n="footer.location">Garden Grove, California</span></span>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-title" data-i18n="footer.company">Company</h3>
+              <ul class="footer-links">
+                <li><a href="/" data-i18n="footer.home">Home</a></li>
+                <li><a href="/about" data-i18n="footer.about">About Us</a></li>
+                <li><a href="/how-it-works" data-i18n="footer.how">How It Works</a></li>
+                <li><a href="/faq" data-i18n="footer.faq">FAQ</a></li>
+                <li><a href="/contact" data-i18n="footer.contact">Contact</a></li>
+                <li><a href="https://www.gototrafficschool.com/articlelist.html" data-i18n="footer.news">News</a></li>
+                <li><a href="/partners" data-i18n="footer.partner">Partner Program</a></li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-title" data-i18n="footer.legal">Legal</h3>
+              <ul class="footer-links">
+                <li><a href="https://www.gototrafficschool.com/privacy.aspx" data-i18n="footer.privacy">Privacy</a></li>
+                <li><a href="https://www.gototrafficschool.com/terms.aspx" data-i18n="footer.terms">Policy Terms of Service</a></li>
+                <li><a href="https://www.gototrafficschool.com/courtDirectory.aspx" data-i18n="footer.court">Court Directory</a></li>
+                <li><a href="https://www.gototrafficschool.com/reviews-v2.aspx" data-i18n="footer.comments">Student Comments</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <h3 class="footer-title" data-i18n="footer.follow">Follow Us</h3>
+              <ul class="social-links">
+                <li><a href="https://www.tiktok.com/@gototrafficschool"><img src="/assets/icons/social/tiktok.png" alt=""><span>Tiktok</span></a></li>
+                <li><a href="https://www.instagram.com/gototrafficschool/"><img src="/assets/icons/social/instagram.png" alt=""><span>Instagram</span></a></li>
+                <li><a href="https://x.com/GoToTrafficNow"><img src="/assets/icons/social/x.svg" alt=""><span>X</span></a></li>
+                <li><a href="https://www.youtube.com/channel/UCPrqnWk4Rzb39eMT0qUeKvg"><img src="/assets/icons/social/youtube.png" alt=""><span>YouTube</span></a></li>
+                <li><a href="https://www.facebook.com/gttsonline/"><img src="/assets/icons/social/facebook.svg" alt=""><span>Facebook</span></a></li>
+                <li><a href="https://www.linkedin.com/company/cyberactive-inc"><img src="/assets/icons/social/linkedin.svg" alt=""><span>LinkedIn</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-bar">
+          <span data-i18n="footer.copyrightLead">&copy; 2026 gototrafficschool.com Powered by</span>
+          <a href="https://www.cyberactiveonline.com/">Cyberactive.</a>
+          <span data-i18n="footer.copyrightTail">All rights reserved.</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast-shell" id="shareToast" role="status" aria-live="polite"></div>
