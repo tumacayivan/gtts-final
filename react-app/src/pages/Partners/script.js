@@ -548,8 +548,10 @@ export function init(root) {
       function renderSteps(lang) {
         stepsGridEl.innerHTML = translations[lang].steps.map((item, index) => `
           <article class="step-card reveal-on-scroll">
-            <div class="step-number">${index + 1}</div>
-            <div>
+            <div class="step-rail">
+              <div class="step-number">${index + 1}</div>
+            </div>
+            <div class="step-body">
               <div class="step-icon">
                 <img src="${item.icon}" alt="">
               </div>

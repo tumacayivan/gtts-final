@@ -681,7 +681,17 @@
         grid-template-columns: 64px minmax(0, 1fr);
         gap: 18px;
         align-items: start;
-        padding: 18px 18px 18px 14px;
+      }
+
+      /* Number + icon rail sits outside (to the left of) the white card body. */
+      .step-rail {
+        display: grid;
+        justify-items: center;
+        gap: 12px;
+      }
+
+      .step-body {
+        padding: 18px;
         border: 1px solid #dce6ef;
         border-radius: 18px;
         background: #fff;
