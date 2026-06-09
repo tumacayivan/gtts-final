@@ -311,9 +311,7 @@ export function init(root) {
             ? items.filter((item) => normalizeText(`${item.question} ${item.answer}`).includes(searchTerm))
             : items;
 
-          elements.faqSummary.textContent = searchTerm
-            ? `${filtered.length} / ${items.length} ${translate("faq.summaryFiltered")}`
-            : `${items.length} ${translate("faq.summaryAll")}`;
+          // Summary count text intentionally removed (kept #faqSummary element empty).
 
           if (!filtered.length) {
             elements.faqAccordion.innerHTML = "";
