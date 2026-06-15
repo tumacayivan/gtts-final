@@ -7,6 +7,13 @@
       "runtimeArgs": ["run", "dev"],
       "cwd": "react-app",
       "port": 4322
+    },
+    {
+      "name": "standalone",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "4399"],
+      "cwd": "react-app/standalone-build",
+      "port": 4399
     }
   ]
 }

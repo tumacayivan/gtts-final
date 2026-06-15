@@ -1,0 +1,2128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>State Traffic School | GoToTrafficSchool.com</title>
+    <meta id="pageDescription" name="description" content="State-approved traffic school and defensive driving courses that help you dismiss tickets, reduce points, and save on insurance.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17691289057"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17691289057');
+    </script>
+    <!-- Live2Support chat widget -->
+    <script>(function(){var pp=document.createElement('script'), ppr=document.getElementsByTagName('script')[0]; stid='dW9OZk0yWXhhbDI0em53cmNDTVVTZz09';pp.type='text/javascript'; pp.async=true; pp.src=('https:' == document.location.protocol ? 'https://' : 'http://') + 's01.live2support.com/dashboardv2/chatwindow/'; ppr.parentNode.insertBefore(pp, ppr);})();</script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+
+      h2 {
+        font-weight: 700;
+      }
+
+      :root {
+        --blue: #00508d;
+        --blue-dark: #004577;
+        --blue-deep: #003e6c;
+        --ink: #0c0f14;
+        --muted: #4d4d4d;
+        --line: #dfe8f1;
+        --pale: #eaf4ff;
+        --red: #ff4f55;
+        --star: #f69a25;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: var(--ink);
+        background: #fff;
+        border-top: 1px solid #0a4978;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .page-wrap {
+        overflow-x: clip;
+      }
+
+      .container-page {
+        width: min(1180px, calc(100% - 32px));
+        margin-inline: auto;
+      }
+
+      .topbar {
+        background: var(--blue);
+        color: #fff;
+      }
+
+      .topbar-inner {
+        min-height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .share-btn {
+        min-width: 177px;
+        height: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.85);
+        border-radius: 8px;
+        background: transparent;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .topbar a {
+        color: #fff;
+        font-size: 18px;
+      }
+
+      .main-nav {
+        background: #fff;
+        border-bottom: 1px solid #eef2f5;
+      }
+
+      .nav-shell {
+        min-height: 86px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .navbar-brand img,
+      .footer-logo {
+        width: 276px;
+      }
+
+      .nav-link {
+        color: #111;
+        font-size: 18px;
+        white-space: nowrap;
+      }
+
+      .account-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: #0f1c3e;
+        font-size: 18px;
+        white-space: nowrap;
+      }
+
+      .language-block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        color: #0f1c3e;
+        font-size: 14px;
+      }
+
+      .language-block select {
+        width: auto;
+        min-width: 106px;
+        height: 31px;
+        padding-block: 3px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 435px;
+        display: flex;
+        align-items: center;
+        background:
+          linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.96) 24%, rgba(255, 255, 255, 0.78) 36%, rgba(255, 255, 255, 0.08) 56%),
+          url("assets/new-gtts-facelift-image8.png") center right / cover no-repeat;
+      }
+
+      .hero {
+        position: relative;
+      }
+
+      .hero-inner {
+        /* position:relative so the absolutely-positioned language picker
+           anchors to this container (and aligns with its right edge) instead
+           of escaping to the full-bleed hero / screen corner. */
+        position: relative;
+        /* Match the wider nav container (1360px) so the hero content's left
+           edge lines up with the navbar logo instead of the 1180px content
+           container. (Manual override — preserve if regenerating this file.) */
+        width: min(1360px, calc(100% - 32px));
+      }
+
+      .language-picker {
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        z-index: 2;
+        width: fit-content;
+        max-width: 100%;
+        text-align: right;
+      }
+
+      .language-heading {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .language-heading i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-picker label {
+        display: inline;
+        margin: 0;
+        color: #2f3540;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .language-control {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 10px 24px rgba(45, 92, 136, 0.12);
+      }
+
+      .language-control i {
+        color: #313e4f;
+        font-size: 1rem;
+      }
+
+      .language-control .form-select {
+        border: 0;
+        padding: 0 28px 0 0;
+        background-color: transparent;
+        box-shadow: none;
+        font-size: 1rem;
+        color: #111;
+      }
+
+      .hero-content {
+        max-width: 610px;
+        padding: 44px 0;
+      }
+
+      .eyebrow {
+        margin-bottom: 22px;
+        color: var(--blue);
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .hero h1 {
+        margin: 0 0 16px;
+        font-size: clamp(42px, 4vw, 50px);
+        line-height: 1.14;
+        font-weight: 800;
+      }
+
+      .hero h1 span {
+        color: var(--red);
+      }
+
+      .price {
+        margin: 0 0 22px;
+        font-size: 27px;
+        font-weight: 800;
+      }
+
+      .license {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 50px;
+        font-size: 23px;
+        font-weight: 800;
+      }
+
+      .license i {
+        color: var(--blue);
+        font-size: 28px;
+      }
+
+      .license a {
+        color: var(--blue);
+      }
+
+      .primary-btn {
+        min-width: 257px;
+        min-height: 57px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        border-radius: 16px;
+        background: var(--blue);
+        color: #fff;
+        font-size: 18px;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .primary-btn:hover,
+      .primary-btn:focus {
+        background: var(--blue-dark);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      .benefits {
+        padding: 43px 0 35px;
+        border-bottom: 1px solid #f2f2f2;
+      }
+
+      .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+      }
+
+      .benefit {
+        min-height: 84px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 0 18px;
+        color: #123d63;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 800;
+        border-right: 1px solid #6e6e6e;
+      }
+
+      .benefit:last-child {
+        border-right: 0;
+      }
+
+      .benefit img {
+        width: 43px;
+        height: 43px;
+        object-fit: contain;
+      }
+
+      .how {
+        padding: 15px 0 28px;
+        text-align: center;
+      }
+
+      .section-kicker {
+        color: var(--blue);
+        font-weight: 800;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      .section-title {
+        margin: 10px 0 16px;
+        font-size: clamp(30px, 3vw, 38px);
+        line-height: 1.16;
+        font-weight: 800;
+      }
+
+      .title-rule {
+        width: 76px;
+        height: 3px;
+        margin: 0 auto 19px;
+        background: var(--blue);
+      }
+
+      .how-copy {
+        max-width: 550px;
+        margin: 0 auto 16px;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .steps {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 72px;
+        max-width: 820px;
+        margin: 0 auto;
+      }
+
+      .steps::before {
+        content: "";
+        position: absolute;
+        top: 42px;
+        left: 17%;
+        right: 17%;
+        height: 1px;
+        background: #4a91d0;
+      }
+
+      .step {
+        position: relative;
+        z-index: 1;
+      }
+
+      .step-icon {
+        width: 84px;
+        height: 84px;
+        position: relative;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 14px;
+        border: 1px solid #d5eaff;
+        border-radius: 50%;
+        background: #fff;
+      }
+
+      .step-icon img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+      }
+
+      .step-number {
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #fff;
+        font-size: 23px;
+        font-weight: 800;
+      }
+
+      .step h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      .step p {
+        margin: 0 auto;
+        max-width: 250px;
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .step small {
+        display: block;
+        margin-top: 28px;
+        color: var(--blue);
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .ticket {
+        padding: 23px 0 31px;
+      }
+
+      .ticket h2 {
+        margin-bottom: 12px;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+      .ticket p {
+        max-width: 570px;
+        margin-bottom: 6px;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .ticket h3 {
+        margin: 20px 0 17px;
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .check-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .check-list li {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+        font-size: 20px;
+      }
+
+      .check-list i {
+        width: 25px;
+        height: 25px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #fff;
+        font-size: 15px;
+      }
+
+      .device-img {
+        max-width: 604px;
+        margin-left: auto;
+      }
+
+      .partner {
+        padding: 17px 0 15px;
+      }
+
+      .partner-panel {
+        overflow: hidden;
+        border-radius: 20px;
+        background: #eef6ff;
+      }
+
+      .partner-copy {
+        padding: 26px 54px;
+      }
+
+      .partner h2 {
+        max-width: 430px;
+        margin: 0;
+        font-size: 38px;
+        line-height: 1.3;
+        font-weight: 800;
+      }
+
+      .partner h2 span {
+        color: var(--blue);
+      }
+
+      .partner .title-rule {
+        margin: 8px 0 20px;
+      }
+
+      .partner-list {
+        margin: 0 0 13px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .partner-list li {
+        margin-bottom: 16px;
+        color: #252525;
+        font-size: 14px;
+      }
+
+      .partner-list i {
+        margin-right: 8px;
+        color: var(--blue);
+        font-weight: 800;
+      }
+
+      .partner-copy p {
+        max-width: 570px;
+        margin: 0 0 27px;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .red-btn {
+        min-width: 295px;
+        min-height: 55px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: var(--red);
+        color: #fff;
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      .red-btn:hover,
+      .red-btn:focus {
+        background: #ee4048;
+        color: #fff;
+      }
+
+      .partner-photo {
+        width: 100%;
+        height: 518px;
+        object-fit: cover;
+      }
+
+      .faq {
+        padding: 28px 0 7px;
+        text-align: center;
+      }
+
+      /* Align the FAQ container's left edge with the navbar logo by matching the
+         wider nav container (1360px) instead of the 1180px content container.
+         (Manual override — preserve if regenerating this file.) */
+      .faq.faq .container-page {
+        width: min(1360px, calc(100% - 32px));
+      }
+
+      .faq-intro {
+        max-width: 600px;
+        margin: 0 auto 34px;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .faq-list {
+        max-width: 1010px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .faq-row {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 14px;
+        margin-bottom: 15px;
+      }
+
+      .faq-num {
+        padding-top: 2px;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      .faq-row h3 {
+        margin: 0 0 13px;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      .faq-row p {
+        margin: 0;
+        color: #3f3f3f;
+        font-size: 16px;
+        line-height: 1.35;
+      }
+
+      .faq-cta {
+        padding: 9px 0 21px;
+      }
+
+      .faq-cta-box {
+        max-width: 960px;
+        min-height: 91px;
+        display: grid;
+        grid-template-columns: 55px 1fr 281px;
+        align-items: center;
+        gap: 19px;
+        margin: 0 auto;
+        padding: 18px 16px 18px 12px;
+        border: 1px solid #e8edf3;
+        border-radius: 12px;
+        background: #f8fbff;
+      }
+
+      .question-icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #fff;
+        font-size: 36px;
+        line-height: 1;
+      }
+
+      .faq-cta-box h3 {
+        margin: 0 0 8px;
+        font-size: 15px;
+        font-weight: 800;
+      }
+
+      .faq-cta-box p {
+        margin: 0;
+        color: #4c4c4c;
+        font-size: 12px;
+      }
+
+      .faq-cta-box .primary-btn {
+        min-width: 281px;
+        min-height: 54px;
+        border-radius: 15px;
+        gap: 34px;
+      }
+
+      .reviews {
+        padding: 14px 0 26px;
+      }
+
+      .reviews-head {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 48px;
+        align-items: end;
+        margin-bottom: 49px;
+      }
+
+      .reviews h2 {
+        margin: 13px 0 13px;
+        color: #111c3f;
+        font-size: 28px;
+        font-weight: 800;
+      }
+
+      .reviews p {
+        max-width: 440px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.85;
+      }
+
+      .rating-box {
+        min-height: 96px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 24px 22px;
+        border: 1px solid #e5edf5;
+        border-radius: 12px;
+      }
+
+      .rating-number {
+        font-size: 42px;
+        font-weight: 800;
+      }
+
+      .stars {
+        color: var(--star);
+        font-size: 23px;
+      }
+
+      .rating-box small {
+        display: block;
+        margin-top: 4px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .review-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+        gap: 27px;
+      }
+
+      .review-card {
+        min-height: 212px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px;
+        border: 1px solid #e5edf5;
+        border-radius: 12px;
+      }
+
+      .review-card .stars {
+        margin-bottom: 13px;
+      }
+
+      .quote {
+        min-height: 62px;
+        margin: 0 0 22px;
+        color: #858585;
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.2;
+      }
+
+      .review-line {
+        height: 1px;
+        margin-top: auto;
+        margin-bottom: 15px;
+        background: #e1e1e1;
+      }
+
+      .reviewer {
+        display: flex;
+        align-items: center;
+        min-height: 33px;
+      }
+
+      .reviewer strong {
+        display: block;
+        font-size: 16px;
+      }
+
+      .reviewer small {
+        color: #717171;
+        font-size: 11px;
+      }
+
+      .updates {
+        padding: 0 0 26px;
+      }
+
+      .updates h2 {
+        margin-bottom: 36px;
+        text-align: center;
+      }
+
+      .post-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 47px;
+      }
+
+      .post img {
+        width: 100%;
+        height: 219px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .post-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px 0 14px;
+        color: #5f5f5f;
+        font-size: 13px;
+      }
+
+      .read-time {
+        padding: 8px 10px;
+        border: 1px solid #e1e1e1;
+        border-radius: 7px;
+      }
+
+      .post h3 {
+        margin: 0 0 17px;
+        font-size: 16px;
+        line-height: 1.35;
+        font-weight: 800;
+      }
+
+      .read-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--blue);
+        font-size: 14px;
+        font-weight: 800;
+        text-decoration: underline;
+      }
+
+      .cities {
+        padding: 10px 0 52px;
+        border-bottom: 1px solid #d7e3ed;
+      }
+
+      .cities h2 {
+        margin: 0;
+        font-size: 33px;
+        line-height: 1.4;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .city-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px 10px;
+      }
+
+      .city-pill {
+        min-height: 43px;
+        display: grid;
+        place-items: center;
+        border: 1px solid #e2e8f0;
+        border-radius: 7px;
+        color: var(--blue);
+        font-size: 14px;
+      }
+
+      .final-cta {
+        padding: 38px 0;
+        background: linear-gradient(120deg, var(--blue) 0%, #113e60 100%);
+        color: #fff;
+      }
+
+      .final-cta-inner {
+        display: grid;
+        grid-template-columns: 174px 1fr 200px;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .shield-ring {
+        width: 172px;
+        height: 172px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.22);
+      }
+
+      .shield-inner {
+        width: 138px;
+        height: 138px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.26);
+      }
+
+      .shield-inner img {
+        width: 96px;
+        height: 96px;
+        object-fit: contain;
+      }
+
+      .final-cta h2 {
+        margin: 0 0 16px;
+        font-size: 26px;
+        font-weight: 800;
+      }
+
+      .final-cta p {
+        max-width: 590px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 2.1;
+      }
+
+      .white-btn {
+        min-height: 58px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+        border-radius: 8px;
+        background: #fff;
+        color: var(--blue);
+        font-size: 20px;
+      }
+
+      .site-footer {
+        background: #cfe7f3;
+      }
+
+      .footer-main {
+        padding: 49px 0 24px;
+      }
+
+      .footer-brand p {
+        max-width: 335px;
+        margin: 28px 0 28px;
+        color: var(--blue);
+        font-size: 16px;
+        line-height: 1.45;
+      }
+
+      .footer-contact {
+        display: grid;
+        gap: 18px;
+      }
+
+      .footer-contact a,
+      .footer-contact span {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--blue);
+      }
+
+      .footer-title {
+        margin: 52px 0 14px;
+        color: #1b4d91;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      .footer-links {
+        display: grid;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer-links a {
+        color: var(--blue);
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: #30559d;
+        font-size: 13px;
+      }
+
+      .social-links img {
+        width: 9px;
+        height: 9px;
+        object-fit: contain;
+      }
+
+      .copyright {
+        padding: 20px 16px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        font-size: 22px;
+      }
+
+      .copyright a {
+        text-decoration: underline;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+      }
+
+      .reveal.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal,
+        .primary-btn {
+          transition: none;
+        }
+      }
+
+      @media (max-width: 1199.98px) {
+        .nav-shell {
+          min-height: auto;
+          padding: 18px 0;
+        }
+
+        .navbar-brand img,
+        .footer-logo {
+          width: 230px;
+        }
+
+        .benefit-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px 0;
+        }
+
+        .benefit:nth-child(4) {
+          border-right: 0;
+        }
+
+        .city-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .topbar-inner,
+        .nav-shell,
+        .final-cta-inner {
+          align-items: flex-start;
+        }
+
+        .hero {
+          background:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.77)),
+            url("assets/new-gtts-facelift-image8.png") center / cover no-repeat;
+        }
+
+        .language-picker {
+          position: static;
+          margin: 18px 0 6px auto;
+        }
+
+        .benefit-grid,
+        .steps,
+        .review-grid,
+        .post-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .benefit,
+        .benefit:nth-child(4) {
+          border-right: 0;
+          border-bottom: 1px solid rgba(110, 110, 110, 0.25);
+          padding-bottom: 18px;
+        }
+
+        .steps::before {
+          display: none;
+        }
+
+        .partner-copy {
+          padding: 28px;
+        }
+
+        .partner-photo {
+          height: 360px;
+        }
+
+        .faq-cta-box,
+        .reviews-head,
+        .final-cta-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .faq-cta-box .primary-btn {
+          min-width: 0;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .topbar-inner {
+          min-height: 82px;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .topbar a {
+          font-size: 15px;
+        }
+
+        .hero-content {
+          padding: 20px 0 34px;
+        }
+
+        .language-picker {
+          width: 100%;
+          margin: 18px 0 0;
+        }
+
+        .language-control {
+          width: 100%;
+        }
+
+        .license {
+          align-items: flex-start;
+          margin-bottom: 28px;
+          font-size: 19px;
+        }
+
+        .primary-btn,
+        .red-btn {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .city-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .cities h2,
+        .partner h2 {
+          font-size: 30px;
+        }
+
+        .copyright {
+          font-size: 16px;
+        }
+      }
+
+      /* Shared header and footer from about.html */
+      .utility-bar {
+        background: #1e4b73;
+        color: #fff;
+        max-height: 40px;
+      }
+
+      .utility-inner {
+        min-height: 40px;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .share-button {
+        min-width: 184px;
+        height: 30px;
+        max-height: 30px;
+        padding: 0 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        background: transparent;
+        color: #fff;
+        line-height: 1;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .share-button:hover,
+      .share-button:focus {
+        background: #fff;
+        color: #143f65;
+      }
+
+      .utility-phone {
+        color: #fff;
+        font-size: 1.05rem;
+        font-weight: 500;
+      }
+
+      .main-nav {
+        border-bottom: 1px solid #dfe8ee;
+        background: #fff;
+      }
+
+      .main-nav .container-page {
+        width: min(1360px, calc(100% - 32px));
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px 20px;
+        min-height: 108px;
+      }
+
+      .navbar {
+        padding: 0;
+      }
+
+      .navbar-brand {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .navbar-brand img {
+        width: clamp(220px, 23vw, 300px);
+      }
+
+      .navbar-collapse {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+      }
+
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+
+      .navbar-toggler {
+        border-color: rgba(0, 0, 0, 0.12);
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.2rem rgba(13, 79, 146, 0.15);
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2810, 30, 50, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .nav-link {
+        color: #111;
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 12px 14px;
+        white-space: nowrap;
+      }
+
+      .nav-link.active,
+      .nav-link:hover,
+      .nav-link:focus {
+        color: var(--blue);
+      }
+
+      .nav-link.active {
+        font-weight: 800;
+      }
+
+      .login-link {
+        min-width: 128px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 2px;
+        padding: 14px 22px;
+        border-radius: 22px;
+        color: #fff;
+        background: linear-gradient(180deg, #2f74aa 0%, #223e57 100%);
+        font-size: 1.05rem;
+        font-weight: 600;
+        flex-shrink: 0;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .login-link:hover,
+      .login-link:focus {
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 14px 24px rgba(20, 63, 101, 0.18);
+      }
+
+      .section-inset {
+        width: min(1140px, calc(100% - 88px));
+      }
+
+      .site-footer {
+        background: #d9edf8;
+      }
+
+      .footer-main {
+        padding: 56px 0 28px;
+      }
+
+      .footer-brand img {
+        width: min(210px, 100%);
+      }
+
+      .footer-brand p {
+        max-width: 380px;
+        margin: 30px 0 36px;
+        color: var(--blue);
+        font-size: 1.15rem;
+        line-height: 1.5;
+      }
+
+      .footer-contact {
+        display: grid;
+        gap: 18px;
+      }
+
+      .footer-contact > a,
+      .footer-contact > span {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: #1f6db8;
+        font-size: 1rem;
+      }
+
+      .footer-contact i {
+        width: 20px;
+        flex: 0 0 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        font-size: 1.4rem;
+      }
+
+      .footer-contact > span > span,
+      .footer-contact > a > span {
+        display: block;
+      }
+
+      .footer-title {
+        margin: 0 0 18px;
+        color: var(--blue);
+        font-size: 1.2rem;
+        font-weight: 800;
+      }
+
+      .footer-links,
+      .social-links {
+        display: grid;
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .footer-links a,
+      .social-links a {
+        color: var(--blue);
+        font-size: 1rem;
+      }
+
+      .footer-links a:hover,
+      .footer-links a:focus,
+      .social-links a:hover,
+      .social-links a:focus {
+        text-decoration: underline;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .social-links img {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
+        object-fit: contain;
+      }
+
+      .copyright-bar {
+        padding: 20px 16px 28px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+      }
+
+      .copyright-bar a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      @media (min-width: 1200px) {
+        .navbar-collapse {
+          display: flex !important;
+          flex-basis: auto;
+          flex-grow: 1;
+        }
+      }
+
+      @media (max-width: 1199.98px) {
+        .main-nav .container-page {
+          min-height: 92px;
+          flex-wrap: wrap;
+        }
+
+        .navbar-collapse {
+          width: 100%;
+          display: block;
+          padding: 14px 0 6px;
+        }
+
+        .navbar-nav {
+          display: block;
+          align-items: flex-start;
+          gap: 0;
+        }
+
+        .nav-link {
+          padding: 10px 0;
+        }
+
+        .login-link {
+          margin: 16px 0 10px;
+          width: fit-content;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .container-page {
+          width: min(1280px, calc(100% - 24px));
+        }
+
+        .section-inset {
+          width: min(1140px, calc(100% - 48px));
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .main-nav .container-page {
+          width: min(1280px, calc(100% - 20px));
+          min-height: 84px;
+        }
+
+        .utility-inner {
+          flex-direction: column;
+          justify-content: center;
+          max-height: none;
+          padding: 0;
+          text-align: center;
+        }
+
+        .share-button {
+          min-width: 0;
+          width: 100%;
+        }
+
+        .section-inset {
+          width: min(1140px, calc(100% - 24px));
+        }
+      }
+    
+
+    </style>
+    <style>
+/*
+ * App-level overrides that must survive re-running tools/extract.mjs
+ * (which regenerates each page's content.html / styles.css).
+ */
+
+/*
+ * Homepage trust-grid icons.
+ * All four source icons share a 160x160 canvas and an identical longest-side
+ * footprint (112px), so they render in the same 64x64 box. But their aspect
+ * ratios differ — the bank is a full 112x112 square (reads largest), the
+ * devices icon is 112x69 (reads smallest) — so they look unequal in size.
+ * These per-icon scales normalize their *visual area* so the row reads evenly.
+ * Scales derived from measured content bounding boxes (geometric-mean ~0.63).
+ */
+.trust-grid .trust-item img {
+  transform-origin: center;
+}
+.trust-grid .trust-item:nth-child(2) img {
+  /* Court / bank — square glyph, largest area: scale down. */
+  transform: scale(0.9);
+}
+.trust-grid .trust-item:nth-child(3) img {
+  /* 100% Online / devices — wide glyph, smallest area: scale up. */
+  transform: scale(1.14);
+}
+
+/*
+ * Homepage "How It Works" section.
+ * .section-block applies symmetric top/bottom padding; drop the top padding
+ * so this section sits flush against the section above it.
+ */
+#how-it-works.section-block {
+  padding-top: 0;
+}
+
+/*
+ * Homepage "How It Works" flow steps.
+ * Within .flow-step-top the number badge is pinned left and the icon is
+ * centered, leaving them looking cramped (~18px apart). Nudge the badge
+ * outward to open up the spacing between the number and the icon.
+ */
+.steps-flow .flow-step .step-number {
+  left: -14px;
+}
+
+/*
+ * Homepage "Trusted by Millions" (testimonials) section.
+ * It carried a subtle blue gradient and top padding; flatten it to a plain
+ * white background to match the (white) section that follows, and drop the
+ * top padding. Double-class selector outranks the page's .testimonials rule.
+ */
+.testimonials.section-block {
+  padding-top: 0;
+  background: #ffffff;
+}
+
+/*
+ * Homepage courses carousel arrows.
+ * They were absolutely offset by -1.7rem, leaving ~half the button overlapping
+ * the edge cards. Give the wrap side gutters and seat the arrows inside them so
+ * they sit beside the cards (never overlapping) at every viewport width — no
+ * horizontal overflow. Selectors are scoped under .courses-section to outrank
+ * the page's base rules.
+ */
+.courses-section .courses-carousel-wrap {
+  padding-inline: 4.75rem;
+}
+.courses-section .carousel-arrow.prev {
+  left: 0;
+}
+.courses-section .carousel-arrow.next {
+  right: 0;
+}
+
+/*
+ * Homepage partner-band metrics (desktop 4-column layout).
+ * Every metric has a white left-border separator except the first
+ * (Automated Notifications), which was zeroed out. The grid reserves left
+ * padding for a leading divider, so give the first metric the same left
+ * border as the others (matching "Compliance You Can Trust").
+ * Scoped to >=1200px so the 2-col / 1-col responsive border resets stand.
+ */
+@media (min-width: 1200px) {
+  .partner-band .partner-metric:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.36);
+  }
+}
+
+/*
+ * Partner-band metrics: equal-height left borders.
+ * The grid used align-items:start, so each metric was only as tall as its
+ * content (140px vs 162px) and the left-border separators came out uneven.
+ * Stretch the items to the tallest in the row so every left border matches.
+ */
+.partner-band .partner-metrics {
+  align-items: stretch;
+}
+
+/*
+ * Footer "Follow Us" column.
+ * The Bootstrap gutter leaves only ~24px between the Legal column and the
+ * Follow Us column, so they read as cramped. Add left padding to the Follow Us
+ * column (col-lg-3) on >=992px (side-by-side layout) so it no longer sits flush
+ * against Legal. Mobile (stacked) layout is left untouched.
+ */
+@media (min-width: 992px) {
+  .site-footer .footer-main .row > .col-lg-3 {
+    padding-left: 3.5rem;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+<div class="page-wrap">
+      <header class="site-header">
+        <div class="utility-bar">
+          <div class="container-page utility-inner">
+            <button class="share-button" type="button" id="sharePage">Share This Page</button>
+            <a class="utility-phone" href="tel:18009093909">Contact Us: 1-800-909-3909</a>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-xl main-nav" aria-label="Primary navigation">
+          <div class="container-page">
+            <a class="navbar-brand" href="index.html" aria-label="GoToTrafficSchool home">
+              <img src="assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#primaryNav"
+              aria-controls="primaryNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="primaryNav">
+              <ul class="navbar-nav ms-xl-auto align-items-xl-center">
+                <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="howItWorks.html">How It Works</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Partner with us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+              </ul>
+              <a class="login-link" href="https://member.gototrafficschool.com/member/login.aspx">
+                <i class="bi bi-person"></i>
+                <span>Log In</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="about">
+          <div class="container-page hero-inner">
+            <div class="language-picker">
+              <span class="language-heading">
+                <i class="bi bi-globe2" aria-hidden="true"></i>
+                <label for="languageSelect">Select Language</label>
+              </span>
+              <div class="language-control">
+                <select id="languageSelect" class="form-select" aria-label="Select Language">
+                  <option value="en">English (US)</option>
+                  <option value="es">Español</option>
+                </select>
+              </div>
+            </div>
+            <div class="hero-content reveal">
+              <p class="eyebrow">Trusted by Over 10 Million Drivers Since 2000</p>
+              <h1><span>California</span> Traffic<br>School - Online</h1>
+              <p class="price">Traffic School Course | $23.90</p>
+              <div class="license">
+                <i class="bi bi-shield-check"></i>
+                <span>California State-licensed <a href="#">(See License)</a></span>
+              </div>
+              <a class="primary-btn" href="#">
+                <span>Get Started</span>
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="benefits" aria-label="Course benefits">
+          <div class="container-page">
+            <div class="benefit-grid">
+              <div class="benefit"><img src="assets/icons/icon11.png" alt=""><span>Lower Rates</span></div>
+              <div class="benefit"><img src="assets/icons/icon202618051602.png" alt=""><span>Best Price</span></div>
+              <div class="benefit"><img src="assets/icons/icon202618051601.png" alt=""><span>100% Online,<br>Fast &amp; Easy</span></div>
+              <div class="benefit"><img src="assets/icons/icon202618051600.png" alt=""><span>Money Back<br>Guarantee</span></div>
+              <div class="benefit"><img src="assets/icons/Vector (5).png" alt=""><span>Start The<br>Course For Free</span></div>
+              <div class="benefit"><img src="assets/figma-home/mobile.svg" alt=""><span>Mobile App Access</span></div>
+              <div class="benefit"><img src="assets/icons/icon202618051559.png" alt=""><span>Live Customer<br>Support</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="how reveal" id="how">
+          <div class="container-page">
+            <div class="section-kicker">Three Simple Steps</div>
+            <h2 class="section-title">How It Works</h2>
+            <div class="title-rule"></div>
+            <p class="how-copy">Complete your DMV-approved California traffic school course online, on your own time. We handle the court reporting for you.</p>
+            <div class="steps">
+              <article class="step">
+                <div class="step-icon">
+                  <img src="assets/icons/Group 2147224770.png" alt="">
+                  <span class="step-number">1</span>
+                </div>
+                <h3>Sign Up</h3>
+                <p>Create your account in just a few minutes, and pay only when you're ready to finish</p>
+                <small>- Under 3 minutes</small>
+              </article>
+              <article class="step">
+                <div class="step-icon">
+                  <img src="assets/icons/icon202618051601.png" alt="">
+                  <span class="step-number">2</span>
+                </div>
+                <h3>Take the Course</h3>
+                <p>Complete the state-licensed course online, at your own pace, on any device. Stop and resume anytime.</p>
+                <small>- 8 Short Chapters</small>
+              </article>
+              <article class="step">
+                <div class="step-icon">
+                  <img src="assets/icons/Group 2147224774.png" alt="">
+                  <span class="step-number">3</span>
+                </div>
+                <h3>Receive Certificate</h3>
+                <p>We report your completion electronically to the California DMV and email you your certificate.</p>
+                <small>- Same-Day Delivery</small>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="ticket reveal">
+          <div class="container-page">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-5">
+                <h2>Mask Your Ticket -<br>Fast and Easy</h2>
+                <p>If you've received a traffic ticket in California, you may be eligible to complete a DMV-approved traffic school course to mask the violation.</p>
+                <p>Our course is fully licensed by the California DMV and designed to help you complete your requirement quickly and conveniently.</p>
+                <h3>Accepted by California Courts</h3>
+                <ul class="check-list">
+                  <li><i class="bi bi-check-lg"></i><span>Register online in minutes</span></li>
+                  <li><i class="bi bi-check-lg"></i><span>Complete the course at your own pace</span></li>
+                  <li><i class="bi bi-check-lg"></i><span>Receive your certificate and submit to court</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-7">
+                <img class="device-img" src="assets/ChatGPT Image May 2, 2026, 01_09_51 AM 1.png" alt="Online traffic school course on laptop and phone">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="partner reveal" id="partner">
+          <div class="container-page">
+            <div class="partner-panel">
+              <div class="row g-0 align-items-stretch">
+                <div class="col-lg-6">
+                  <div class="partner-copy">
+                    <h2>Become a GoToTrafficSchool Partner and <span>Make Money!</span></h2>
+                    <div class="title-rule"></div>
+                    <ul class="partner-list">
+                      <li><i class="bi bi-check-lg"></i>Do you own a brick and mortar traffic school?</li>
+                      <li><i class="bi bi-check-lg"></i>Has your school been losing customers daily?</li>
+                      <li><i class="bi bi-check-lg"></i>Want to start offering an online traffic school course?</li>
+                    </ul>
+                    <p>If you answered yes to all of those above questions then you must watch this short video. It will change your business.</p>
+                    <a class="red-btn" href="#">See How It Works</a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <img class="partner-photo" src="assets/Gemini_Generated_Image_g7vci4g7vci4g7vc 1.png" alt="Student driver car on a curving road near a drive safely sign">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq reveal" id="faqs">
+          <div class="container-page">
+            <div class="section-kicker">Got Questions?</div>
+            <h2 class="section-title">California Traffic School - State FAQs</h2>
+            <p class="faq-intro">
+              Quick answers to the questions we hear most from California drivers.<br>
+              Can't find what you're looking for? Visit our full FAQ page.
+            </p>
+            <div class="faq-list">
+              <article class="faq-row">
+                <div class="faq-num">1</div>
+                <div>
+                  <h3>Is your California traffic school course DMV-approved?</h3>
+                  <p>Yes. Our course is fully licensed by the California DMV and accepted by courts throughout California for eligible traffic violations. You can view our official California license near the top of this page.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">2</div>
+                <div>
+                  <h3>How long does the course take to complete?</h3>
+                  <p>California traffic school courses are regulated by the state and generally take about 8 hours to complete. You can work at your own pace, log in and out anytime, and your progress will automatically be saved.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">3</div>
+                <div>
+                  <h3>How much does the course cost?</h3>
+                  <p>Our California traffic school course is only $23.90. Optional upgrades, such as same-day processing or mailed certificates, may be available during checkout.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">4</div>
+                <div>
+                  <h3>Can I take the course on my phone or tablet?</h3>
+                  <p>Yes. Our course works on phones, tablets, laptops, and desktop computers. You can even switch devices anytime and continue where you left off.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">5</div>
+                <div>
+                  <h3>What happens if I fail the final exam?</h3>
+                  <p>Don't worry. Most students pass easily, and you can retake the final exam if needed. The course is designed to help you learn the material and complete your requirement successfully.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">6</div>
+                <div>
+                  <h3>How long until my certificate reaches the court?</h3>
+                  <p>Delivery times depend on the court and the delivery option selected during registration. Many certificates are processed quickly, and same-day processing may be available for eligible students.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">7</div>
+                <div>
+                  <h3>Can I take traffic school more than once?</h3>
+                  <p>In California, most drivers are eligible for traffic school once every 18 months for qualifying violations. Eligibility is determined by the court handling your citation.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">8</div>
+                <div>
+                  <h3>Will traffic school remove the ticket from my record?</h3>
+                  <p>Completing an approved traffic school course generally helps keep eligible violations from appearing on your public driving record. Final eligibility is determined by the court and California DMV.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">9</div>
+                <div>
+                  <h3>What information do I need to register?</h3>
+                  <p>Registration is simple. Most students only need basic information such as their name, email address, driver's license number, and citation details to get started.</p>
+                </div>
+              </article>
+              <article class="faq-row">
+                <div class="faq-num">10</div>
+                <div>
+                  <h3>Do you offer a money-back guarantee?</h3>
+                  <p>Yes. We stand behind our course and customer support. If you experience an issue, our team is here to help. Please review our refund policy or contact customer support for assistance.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq-cta reveal">
+          <div class="container-page">
+            <div class="faq-cta-box">
+              <div class="question-icon">?</div>
+              <div>
+                <h3>Any more questions left unanswered?</h3>
+                <p>Visit our State FAQ page that covers everything.</p>
+              </div>
+              <a class="primary-btn" href="#">
+                <span>Visit Our California FAQ Page</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews reveal">
+          <div class="container-page">
+            <div class="reviews-head">
+              <div>
+                <div class="section-kicker">Real Students Reviews</div>
+                <h2>What California drivers say about us</h2>
+                <p>Pulled from real students who completed our California traffic school course in the last 30 days. Verified through our internal course platform.</p>
+              </div>
+              <div class="rating-box">
+                <div class="rating-number">4.8</div>
+                <div>
+                  <div class="stars">★★★★★</div>
+                  <small>Based on 17,847 reviews</small>
+                </div>
+              </div>
+            </div>
+            <div class="review-grid">
+              <article class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"DriverEdToGo made it so easy to learn at my own pace. The practice tests really helped me pass on my first try!"</p>
+                <div class="review-line"></div>
+                <div class="reviewer">
+                  <div><strong>Jakyah J.</strong><small>January 2026</small></div>
+                </div>
+              </article>
+              <article class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"I was nervous about online drivers ed but this was honestly the easiest thing. Did most of it on my phone, passed my permit test on the first try."</p>
+                <div class="review-line"></div>
+                <div class="reviewer">
+                  <div><strong>Emily H.</strong><small>January 2026</small></div>
+                </div>
+              </article>
+              <article class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"I thought the course was great and it was a great reminder of everything I learned while in class."</p>
+                <div class="review-line"></div>
+                <div class="reviewer">
+                  <div><strong>Corben R.</strong><small>December 2025</small></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="updates reveal">
+          <div class="container-page">
+            <h2 class="section-title">Updates In California</h2>
+            <div class="post-grid">
+              <article class="post">
+                <img src="assets/state-post-1.png" alt="Driving on a forest road">
+                <div class="post-meta">
+                  <span>26 August 2024</span>
+                  <span class="read-time">7 Min</span>
+                </div>
+                <h3>Focused Driving in California: Building Habits That Prevent Distractions</h3>
+                <a class="read-link" href="#">Read Full Post <i class="bi bi-chevron-right"></i></a>
+              </article>
+              <article class="post">
+                <img src="assets/state-post-2.png" alt="Passenger using a laptop inside a car">
+                <div class="post-meta">
+                  <span>26 August 2024</span>
+                  <span class="read-time">7 Min</span>
+                </div>
+                <h3>How California Drivers Can Use Traffic School to Keep Points Off Their Record and</h3>
+                <a class="read-link" href="#">Read Full Post <i class="bi bi-chevron-right"></i></a>
+              </article>
+              <article class="post">
+                <img src="assets/state-post-3.png" alt="Driving through a green road">
+                <div class="post-meta">
+                  <span>26 August 2024</span>
+                  <span class="read-time">7 Min</span>
+                </div>
+                <h3>How California Traffic School Helps You Mask a Ticket</h3>
+                <a class="read-link" href="#">Read Full Post <i class="bi bi-chevron-right"></i></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="cities reveal">
+          <div class="container-page">
+            <div class="row g-4 align-items-start">
+              <div class="col-lg-5">
+                <h2>Online Traffic School Courses Also Offered In These California Cities:</h2>
+              </div>
+              <div class="col-lg-7">
+                <div class="city-grid">
+                  <a class="city-pill" href="#">Antioch</a>
+                  <a class="city-pill" href="#">Bakersfield</a>
+                  <a class="city-pill" href="#">Berkeley</a>
+                  <a class="city-pill" href="#">Burbank</a>
+                  <a class="city-pill" href="#">Carlsbad</a>
+                  <a class="city-pill" href="#">Clovis</a>
+                  <a class="city-pill" href="#">Concord</a>
+                  <a class="city-pill" href="#">Downey</a>
+                  <a class="city-pill" href="#">Fairfield</a>
+                  <a class="city-pill" href="#">Fontana</a>
+                  <a class="city-pill" href="#">Fresno</a>
+                  <a class="city-pill" href="#">Glendale</a>
+                  <a class="city-pill" href="#">Irvine</a>
+                  <a class="city-pill" href="#">Lancaster</a>
+                  <a class="city-pill" href="#">Long Beach</a>
+                  <a class="city-pill" href="#">Los Angeles</a>
+                  <a class="city-pill" href="#">Oakland</a>
+                  <a class="city-pill" href="#">Orange</a>
+                  <a class="city-pill" href="#">Oxnard</a>
+                  <a class="city-pill" href="#">Palmdale</a>
+                  <a class="city-pill" href="#">San Diego</a>
+                  <a class="city-pill" href="#">San Francisco</a>
+                  <a class="city-pill" href="#">San Jose</a>
+                  <a class="city-pill" href="#">Pasadena</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="final-cta reveal">
+          <div class="container-page final-cta-inner">
+            <div class="shield-ring" aria-hidden="true">
+              <div class="shield-inner"><img src="assets/icons/Group 2147224704.png" alt=""></div>
+            </div>
+            <div>
+              <h2>Enroll in Our Online Traffic School Course</h2>
+              <p>Join over 10 millions satisfied customers and complete your traffic school requirement today</p>
+            </div>
+            <a class="white-btn" href="#">Register Now <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container-page section-inset footer-main">
+          <div class="row g-4">
+            <div class="col-12 col-lg-5 footer-brand">
+              <a href="index.html" aria-label="GoToTrafficSchool home">
+                <img src="assets/27011e2d11f5db744e67f9d6a10997a321353540.png" alt="Go To Traffic School">
+              </a>
+              <p>The fastest, easiest way to complete your traffic school online. Trusted by over 10 million drivers nationwide.</p>
+              <div class="footer-contact">
+                <a href="tel:18883297069"><i class="bi bi-telephone"></i><span>1-888-329-7069</span></a>
+                <a href="mailto:info@gototrafficschool.com"><i class="bi bi-envelope"></i><span>info@gototrafficschool.com</span></a>
+                <span><i class="bi bi-geo-alt"></i><span>8034 Garden Grove Blvd Suite C Garden Grove, CA 92844</span></span>
+              </div>
+            </div>
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-title">Company</h3>
+              <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="howItWorks.html">How It Works</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="partners.html">Partner Program</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-title">Legal</h3>
+              <ul class="footer-links">
+                <li><a href="https://www.gototrafficschool.com/privacy.aspx">Privacy Policy</a></li>
+                <li><a href="https://www.gototrafficschool.com/terms.aspx">Terms Of Service</a></li>
+                <li><a href="https://www.gototrafficschool.com/courtDirectory.aspx">Court Directory</a></li>
+                <li><a href="https://www.gototrafficschool.com/reviews-v2.aspx">Student Comment</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-3">
+              <h3 class="footer-title">Follow Us</h3>
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.facebook.com/gttsonline/">
+                    <img src="assets/icons/facebook-mark.svg" alt="">
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/gototrafficschool/">
+                    <img src="assets/icons/image 117.png" alt="">
+                    <span>Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@gototrafficschool">
+                    <img src="assets/icons/image 115.png" alt="">
+                    <span>TikTok</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/GoToTrafficNow">
+                    <img src="assets/icons/image 107.png" alt="">
+                    <span>X</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCPrqnWk4Rzb39eMT0qUeKvg">
+                    <img src="assets/icons/image 108.png" alt="">
+                    <span>YouTube</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-bar">
+          <span>© 2026 gototrafficschool.com Powered by</span>
+          <a href="https://www.cyberactiveonline.com/">Cyberactive</a>.
+          <span>All rights reserved.</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+// Auto-ported from the original page's inline <script> blocks.
+// Runs once after the page markup mounts (see PageShell).
+function init(root) {
+  // ---- page script block 1 ----
+  ;(function(){
+
+      const shareButton = document.querySelector("#sharePage");
+      shareButton?.addEventListener("click", async () => {
+        const shareData = {
+          title: document.title,
+          url: window.location.href
+        };
+
+        if (navigator.share) {
+          await navigator.share(shareData);
+          return;
+        }
+
+        await navigator.clipboard?.writeText(window.location.href);
+        shareButton.textContent = "Link Copied";
+        window.setTimeout(() => {
+          shareButton.textContent = "Share This Page";
+        }, 1600);
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      }, { threshold: 0.18 });
+
+      document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+    
+  })();
+
+}
+
+      (function(){
+        function run(){ try { init(document); } catch (e) { console.error('page init error:', e); } }
+        if (document.readyState !== 'loading') run();
+        else document.addEventListener('DOMContentLoaded', run);
+      })();
+    </script>
+  </body>
+</html>
