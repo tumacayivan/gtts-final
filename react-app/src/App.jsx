@@ -12,6 +12,9 @@ import CourtLanding from './pages/CourtLanding/index.jsx'
 import StateLanding from './pages/StateLanding/index.jsx'
 import StateFaq from './pages/StateFaq/index.jsx'
 import AltRegistration from './pages/AltRegistration/index.jsx'
+import StateCalifornia from './pages/StateCalifornia/index.jsx'
+import StateAlaska from './pages/StateAlaska/index.jsx'
+import StateTemplate from './pages/StateTemplate/index.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -36,6 +39,9 @@ export default function App() {
         <Route path="/state-landing" element={<StateLanding />} />
         <Route path="/state-faq" element={<StateFaq />} />
         <Route path="/alt-registration" element={<AltRegistration />} />
+        <Route path="/california" element={<StateCalifornia />} />
+        <Route path="/alaska" element={<StateAlaska />} />
+        <Route path="/state-template" element={<StateTemplate />} />
         <Route path="*" element={<Home />} />
       </Routes>
       {import.meta.env.DEV && <Agentation />}
