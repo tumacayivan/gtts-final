@@ -337,6 +337,14 @@
         flex-shrink: 0;
       }
 
+      .trust-item img {
+        height: 32px;
+        width: auto;
+        max-width: 46px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
       .trust-text {
         display: flex;
         flex-direction: column;
@@ -839,6 +847,15 @@
       .reviewer small {
         color: #717171;
         font-size: 11px;
+      }
+
+      .reviewer-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 12px;
+        flex-shrink: 0;
       }
 
       .updates {
