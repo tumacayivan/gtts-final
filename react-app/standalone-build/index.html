@@ -405,7 +405,7 @@
 
       .trust-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
       }
 
       .trust-item {
@@ -426,6 +426,20 @@
         height: 64px;
         flex: 0 0 64px;
         object-fit: contain;
+      }
+
+      .trust-item .trust-svg {
+        width: 64px;
+        height: 64px;
+        flex: 0 0 64px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .trust-item .trust-svg svg {
+        width: 56px;
+        height: 56px;
       }
 
       .trust-item h3 {
@@ -1213,7 +1227,7 @@
           grid-template-columns: repeat(2, 1fr);
         }
 
-        .trust-item:nth-child(3) {
+        .trust-item:nth-child(odd) {
           border-left: 0;
         }
 
@@ -1814,6 +1828,11 @@
   /* 100% Online / devices — wide glyph, smallest area: scale up. */
   transform: scale(1.14);
 }
+.trust-grid .trust-item:nth-child(5) img {
+  /* Steering wheel (Trusted by 10M+) — full-bleed glyph, no padding: scale
+     down to match the ~45px footprint of the other icons. */
+  transform: scale(0.72);
+}
 
 /*
  * Homepage "How It Works" section.
@@ -2009,14 +2028,14 @@
                 <img src="assets/icons/trust-certificate.png" alt="">
                 <div>
                   <h3 data-i18n="trust.1.title">Fast Certificate</h3>
-                  <p data-i18n="trust.1.copy">Receive your certificate as soon as you finish.</p>
+                  <p data-i18n="trust.1.copy">Quick reporting and certificate delivery options.</p>
                 </div>
               </div>
               <div class="trust-item reveal">
                 <img src="assets/icons/trust-court.png" alt="">
                 <div>
-                  <h3 data-i18n="trust.2.title">Court Accepted</h3>
-                  <p data-i18n="trust.2.copy">Accepted in most states and all local courts.</p>
+                  <h3 data-i18n="trust.2.title">State Approved Courses</h3>
+                  <p data-i18n="trust.2.copy">Licensed, approved, or accepted where applicable.</p>
                 </div>
               </div>
               <div class="trust-item reveal">
@@ -2029,8 +2048,15 @@
               <div class="trust-item reveal">
                 <img src="assets/icons/trust-shield.png" alt="">
                 <div>
-                  <h3 data-i18n="trust.4.title">Money Back Guarantee</h3>
-                  <p data-i18n="trust.4.copy">14-day money back guarantee.</p>
+                  <h3 data-i18n="trust.4.title">Lowest Price Guarantee</h3>
+                  <p data-i18n="trust.4.copy">Affordable state-approved courses with no hidden fees.</p>
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <img src="assets/Group 2147225127.png" alt="">
+                <div>
+                  <h3 data-i18n="trust.5.title">Trusted by 10+ Million Drivers</h3>
+                  <p data-i18n="trust.5.copy">Helping drivers nationwide since 2000.</p>
                 </div>
               </div>
             </div>
@@ -2514,13 +2540,15 @@ function init(root) {
           "hero.proof3a": "10 Million+",
           "hero.proof3b": "Drivers Served",
           "trust.1.title": "Fast Certificate",
-          "trust.1.copy": "Receive your certificate as soon as you finish.",
-          "trust.2.title": "Court Accepted",
-          "trust.2.copy": "Accepted in most states and all local courts.",
+          "trust.1.copy": "Quick reporting and certificate delivery options.",
+          "trust.2.title": "State Approved Courses",
+          "trust.2.copy": "Licensed, approved, or accepted where applicable.",
           "trust.3.title": "100% Online",
           "trust.3.copy": "Complete your course on any device, anytime.",
-          "trust.4.title": "Money Back Guarantee",
-          "trust.4.copy": "14-day money back guarantee.",
+          "trust.4.title": "Lowest Price Guarantee",
+          "trust.4.copy": "Affordable state-approved courses with no hidden fees.",
+          "trust.5.title": "Trusted by 10+ Million Drivers",
+          "trust.5.copy": "Helping drivers nationwide since 2000.",
           "worksFeature.title": "Traffic School That Works For You",
           "worksFeature.item1.title": "Dismiss Tickets",
           "worksFeature.item1.copy": "Qualify to dismiss eligible tickets.",
@@ -2638,13 +2666,15 @@ function init(root) {
           "hero.proof3a": "10 Millones+",
           "hero.proof3b": "Conductores Atendidos",
           "trust.1.title": "Certificado Rápido",
-          "trust.1.copy": "Reciba su certificado tan pronto como termine.",
-          "trust.2.title": "Aceptado por Tribunales",
-          "trust.2.copy": "Aceptado en la mayoría de los estados y tribunales locales.",
+          "trust.1.copy": "Opciones rápidas de reporte y entrega de certificados.",
+          "trust.2.title": "Cursos Aprobados por el Estado",
+          "trust.2.copy": "Con licencia, aprobados o aceptados según corresponda.",
           "trust.3.title": "100% En Línea",
           "trust.3.copy": "Complete su curso en cualquier dispositivo, en cualquier momento.",
-          "trust.4.title": "Garantía de Reembolso",
-          "trust.4.copy": "Garantía de devolución de dinero de 14 días.",
+          "trust.4.title": "Garantía del Precio Más Bajo",
+          "trust.4.copy": "Cursos asequibles aprobados por el estado, sin cargos ocultos.",
+          "trust.5.title": "Con la Confianza de Más de 10 Millones de Conductores",
+          "trust.5.copy": "Ayudando a conductores en todo el país desde el año 2000.",
           "worksFeature.title": "Escuela de Tránsito que Funciona Para Usted",
           "worksFeature.item1.title": "Desestime Multas",
           "worksFeature.item1.copy": "Califique para desestimar multas elegibles.",

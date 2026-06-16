@@ -383,7 +383,7 @@
 
       .trust-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
       }
 
       .trust-item {
@@ -404,6 +404,20 @@
         height: 64px;
         flex: 0 0 64px;
         object-fit: contain;
+      }
+
+      .trust-item .trust-svg {
+        width: 64px;
+        height: 64px;
+        flex: 0 0 64px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .trust-item .trust-svg svg {
+        width: 56px;
+        height: 56px;
       }
 
       .trust-item h3 {
@@ -1191,7 +1205,7 @@
           grid-template-columns: repeat(2, 1fr);
         }
 
-        .trust-item:nth-child(3) {
+        .trust-item:nth-child(odd) {
           border-left: 0;
         }
 
