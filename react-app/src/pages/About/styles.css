@@ -336,8 +336,15 @@
         padding-right: 32px;
       }
 
+      .hero-eyebrow {
+        margin: 0;
+        color: var(--brand-blue);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
       .hero-title {
-        margin: 22px 0 24px;
+        margin: 14px 0 24px;
         font-size: 36px;
         font-weight: 800;
         line-height: 1.18;
@@ -479,7 +486,7 @@
 
       .metrics-grid {
         display: grid;
-        grid-template-columns: 1fr 0.9fr 1.42fr 1.32fr 1.22fr;
+        grid-template-columns: repeat(4, 1fr);
         gap: 0;
       }
 

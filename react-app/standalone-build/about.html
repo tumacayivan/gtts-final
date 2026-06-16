@@ -358,8 +358,15 @@
         padding-right: 32px;
       }
 
+      .hero-eyebrow {
+        margin: 0;
+        color: var(--brand-blue);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
       .hero-title {
-        margin: 22px 0 24px;
+        margin: 14px 0 24px;
         font-size: 36px;
         font-weight: 800;
         line-height: 1.18;
@@ -501,7 +508,7 @@
 
       .metrics-grid {
         display: grid;
-        grid-template-columns: 1fr 0.9fr 1.42fr 1.32fr 1.22fr;
+        grid-template-columns: repeat(4, 1fr);
         gap: 0;
       }
 
@@ -1428,9 +1435,10 @@
           <div class="row align-items-end g-4">
             <div class="col-lg-8">
               <div class="hero-copy">
-                <h1 class="hero-title" data-i18n="hero.title">We pioneered online traffic school. We’ve been refining it ever since.</h1>
+                <p class="hero-eyebrow" data-i18n="hero.eyebrow">We pioneered online traffic school. We’ve been refining it ever since.</p>
+                <h1 class="hero-title" data-i18n="hero.title">About GoToTrafficSchool: Online Traffic School Since 2000</h1>
                 <p class="hero-lead" data-i18n="hero.lead">
-                  Founded in 2000, GoToTrafficSchool helped bring traffic school online. Today, over 10 million drivers trust our platform nationwide.
+                  Founded in 2000, GoToTrafficSchool helped bring traffic school online. More than 10 million drivers nationwide have trusted our platform to meet their requirements quickly and stay compliant.
                 </p>
                 <a class="hero-cta" href="index.html" data-i18n="hero.cta">Start Your Course</a>
                 <ul class="hero-pills">
@@ -1444,7 +1452,7 @@
                   </li>
                   <li>
                     <span class="check"><i class="bi bi-check-lg"></i></span>
-                    <span data-i18n="hero.pill3">Same-day processing (State dependent)</span>
+                    <span data-i18n="hero.pill3">Real human support</span>
                   </li>
                 </ul>
               </div>
@@ -1499,10 +1507,6 @@
               <span data-i18n="stats.three.label">Approved Where Allowed</span>
             </div>
             <div class="metric">
-              <strong data-i18n="stats.four.value">Same-Day</strong>
-              <span data-i18n="stats.four.label">Certificate Processing</span>
-            </div>
-            <div class="metric">
               <strong data-i18n="stats.five.value">Real Support</strong>
               <span data-i18n="stats.five.label">No Bots</span>
             </div>
@@ -1516,10 +1520,10 @@
           <div class="section-underline"></div>
           <div class="story-copy">
             <p data-i18n="story.p1">
-              GoToTrafficSchool launched one of the first fully online traffic school programs in California in 2000, replacing the inconvenience of classroom courses with a flexible alternative. Since then, more than 10 million drivers have completed courses through our platform. Today, we operate nationwide in every state that allows online traffic school, defensive driving, or driver improvement programs.
+              GoToTrafficSchool launched one of the first fully online traffic school programs in California in 2000, replacing inconvenient classroom courses with a flexible, self-paced alternative. Since then, more than 10 million drivers have completed their courses through our platform. Today we operate nationwide, in every state that allows online traffic school, defensive driving, or driver improvement programs.
             </p>
             <p data-i18n="story.p2">
-              Traffic School, Defensive driving, and driver improvement may vary by state but the goal is the same: meet requirements, avoid points, and stay compliant.
+              The requirements differ by state. Traffic school, defensive driving, and driver improvement each carry their own rules, but the goal is the same: meet your requirement, keep points off your record, and stay compliant. We built our platform to get you there with as little friction as possible.
             </p>
           </div>
         </div>
@@ -1527,7 +1531,38 @@
 
       <section class="section-shell pt-0">
         <div class="container-page">
-          <h2 class="section-title" data-i18n="simplicity.title">Built for Simplicity. Designed for Real Life</h2>
+          <h2 class="section-title" data-i18n="different.title">What Makes Us different</h2>
+          <div class="section-underline"></div>
+          <div class="difference-grid">
+            <div class="difference-card">
+              <div class="difference-icon" aria-hidden="true">
+                <img src="assets/icons/difference-priority.png" alt="">
+              </div>
+              <p data-i18n="different.item1">We’ve been in this space longer than most- and it shows.</p>
+            </div>
+            <div class="difference-card">
+              <div class="difference-icon" aria-hidden="true">
+                <img src="assets/icons/difference-experience.png" alt="">
+              </div>
+              <p data-i18n="different.item2">
+                <strong>Our platform prioritizes speed, flexibility, and simplicity</strong> over unnecessary restrictions.
+              </p>
+            </div>
+            <div class="difference-card">
+              <div class="difference-icon" aria-hidden="true">
+                <img src="assets/icons/difference-works.png" alt="">
+              </div>
+              <p data-i18n="different.item3">
+                The result is a system that <strong>works the way drivers actually need it to.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell pt-0">
+        <div class="container-page">
+          <h2 class="section-title" data-i18n="simplicity.title">Built for Efficiency</h2>
           <div class="section-underline"></div>
           <div class="simplicity-grid">
             <div class="row g-0 simplicity-row">
@@ -1714,37 +1749,6 @@
         </div>
       </section>
 
-      <section class="section-shell pt-0">
-        <div class="container-page">
-          <h2 class="section-title" data-i18n="different.title">What Makes Us different</h2>
-          <div class="section-underline"></div>
-          <div class="difference-grid">
-            <div class="difference-card">
-              <div class="difference-icon" aria-hidden="true">
-                <img src="assets/icons/difference-priority.png" alt="">
-              </div>
-              <p data-i18n="different.item1">We’ve been in this space longer than most- and it shows.</p>
-            </div>
-            <div class="difference-card">
-              <div class="difference-icon" aria-hidden="true">
-                <img src="assets/icons/difference-experience.png" alt="">
-              </div>
-              <p data-i18n="different.item2">
-                <strong>Our platform prioritizes speed, flexibility, and simplicity</strong> over unnecessary restrictions.
-              </p>
-            </div>
-            <div class="difference-card">
-              <div class="difference-icon" aria-hidden="true">
-                <img src="assets/icons/difference-works.png" alt="">
-              </div>
-              <p data-i18n="different.item3">
-                The result is a system that <strong>works the way drivers actually need it to.</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="cta-section">
         <div class="container-page cta-inner">
           <h2 data-i18n="cta.title">Start Your Traffic School Today</h2>
@@ -1846,12 +1850,13 @@ function init(root) {
           "nav.contact": "Contact Us",
           "nav.login": "Log In",
           "language.label": "Select Language",
-          "hero.title": "We pioneered online traffic school. We’ve been refining it ever since.",
-          "hero.lead": "Founded in 2000, GoToTrafficSchool helped bring traffic school online. Today, over 10 million drivers trust our platform nationwide.",
+          "hero.eyebrow": "We pioneered online traffic school. We’ve been refining it ever since.",
+          "hero.title": "About GoToTrafficSchool: Online Traffic School Since 2000",
+          "hero.lead": "Founded in 2000, GoToTrafficSchool helped bring traffic school online. More than 10 million drivers nationwide have trusted our platform to meet their requirements quickly and stay compliant.",
           "hero.cta": "Start Your Course",
           "hero.pill1": "No timers",
           "hero.pill2": "Self-paced",
-          "hero.pill3": "Same-day processing (State dependent)",
+          "hero.pill3": "Real human support",
           "hero.stat1": "One of the first online traffic schools (2000)",
           "hero.stat2": "10 million+ drivers served",
           "hero.stat3": "Approved nationwide where allowed",
@@ -1867,9 +1872,9 @@ function init(root) {
           "stats.five.value": "Real Support",
           "stats.five.label": "No Bots",
           "story.title": "Our Story",
-          "story.p1": "GoToTrafficSchool launched one of the first fully online traffic school programs in California in 2000, replacing the inconvenience of classroom courses with a flexible alternative. Since then, more than 10 million drivers have completed courses through our platform. Today, we operate nationwide in every state that allows online traffic school, defensive driving, or driver improvement programs.",
-          "story.p2": "Traffic School, Defensive driving, and driver improvement may vary by state but the goal is the same: meet requirements, avoid points, and stay compliant.",
-          "simplicity.title": "Built for Simplicity. Designed for Real Life",
+          "story.p1": "GoToTrafficSchool launched one of the first fully online traffic school programs in California in 2000, replacing inconvenient classroom courses with a flexible, self-paced alternative. Since then, more than 10 million drivers have completed their courses through our platform. Today we operate nationwide, in every state that allows online traffic school, defensive driving, or driver improvement programs.",
+          "story.p2": "The requirements differ by state. Traffic school, defensive driving, and driver improvement each carry their own rules, but the goal is the same: meet your requirement, keep points off your record, and stay compliant. We built our platform to get you there with as little friction as possible.",
+          "simplicity.title": "Built for Efficiency",
           "simplicity.item1": "Fully Self-Paced",
           "simplicity.item2": "No Timers",
           "simplicity.item3": "Any Devices",
@@ -1943,12 +1948,13 @@ function init(root) {
           "nav.contact": "Contáctenos",
           "nav.login": "Iniciar Sesión",
           "language.label": "Seleccionar Idioma",
-          "hero.title": "Fuimos pioneros en la escuela de tránsito en línea. La hemos perfeccionado desde entonces.",
-          "hero.lead": "Fundada en el año 2000, GoToTrafficSchool ayudó a llevar la escuela de tránsito al entorno digital. Hoy, más de 10 millones de conductores confían en nuestra plataforma en todo el país.",
+          "hero.eyebrow": "Fuimos pioneros en la escuela de tránsito en línea. La hemos perfeccionado desde entonces.",
+          "hero.title": "Acerca de GoToTrafficSchool: Escuela de Tránsito en Línea Desde el Año 2000",
+          "hero.lead": "Fundada en el año 2000, GoToTrafficSchool ayudó a llevar la escuela de tránsito al entorno digital. Más de 10 millones de conductores en todo el país han confiado en nuestra plataforma para cumplir sus requisitos rápidamente y mantenerse al día.",
           "hero.cta": "Comience Su Curso",
           "hero.pill1": "Sin temporizadores",
           "hero.pill2": "A su ritmo",
-          "hero.pill3": "Procesamiento el mismo día (según el estado)",
+          "hero.pill3": "Soporte humano real",
           "hero.stat1": "Una de las primeras escuelas de tránsito en línea (2000)",
           "hero.stat2": "Más de 10 millones de conductores atendidos",
           "hero.stat3": "Aprobado a nivel nacional donde se permite",
@@ -1964,9 +1970,9 @@ function init(root) {
           "stats.five.value": "Soporte Real",
           "stats.five.label": "Sin Bots",
           "story.title": "Nuestra Historia",
-          "story.p1": "GoToTrafficSchool lanzó uno de los primeros programas de escuela de tránsito totalmente en línea en California en el año 2000, reemplazando la incomodidad de las clases presenciales por una alternativa flexible. Desde entonces, más de 10 millones de conductores han completado cursos a través de nuestra plataforma. Hoy operamos a nivel nacional en todos los estados que permiten escuela de tránsito en línea, manejo defensivo o programas de mejoramiento del conductor.",
-          "story.p2": "La escuela de tránsito, el manejo defensivo y el mejoramiento del conductor pueden variar según el estado, pero el objetivo es el mismo: cumplir requisitos, evitar puntos y mantenerse al día.",
-          "simplicity.title": "Creado para la simplicidad. Diseñado para la vida real",
+          "story.p1": "GoToTrafficSchool lanzó uno de los primeros programas de escuela de tránsito totalmente en línea en California en el año 2000, reemplazando las incómodas clases presenciales por una alternativa flexible y a su propio ritmo. Desde entonces, más de 10 millones de conductores han completado sus cursos a través de nuestra plataforma. Hoy operamos a nivel nacional, en todos los estados que permiten escuela de tránsito en línea, manejo defensivo o programas de mejoramiento del conductor.",
+          "story.p2": "Los requisitos varían según el estado. La escuela de tránsito, el manejo defensivo y el mejoramiento del conductor tienen cada uno sus propias reglas, pero el objetivo es el mismo: cumplir su requisito, evitar puntos en su registro y mantenerse al día. Creamos nuestra plataforma para lograrlo con la menor fricción posible.",
+          "simplicity.title": "Diseñado para la Eficiencia",
           "simplicity.item1": "Totalmente A Su Ritmo",
           "simplicity.item2": "Sin Temporizadores",
           "simplicity.item3": "Cualquier Dispositivo",

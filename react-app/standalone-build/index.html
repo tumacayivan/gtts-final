@@ -252,13 +252,24 @@
         color: rgba(255, 255, 255, 0.94);
       }
 
+      .hero-freetrial {
+        margin: -0.8rem 0 1.4rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
       .hero-selects {
-        display: grid;
-        gap: 20px;
-        width: min(272px, 100%);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        width: 100%;
+        max-width: 580px;
       }
 
       .hero-select {
+        flex: 1 1 240px;
+        min-width: 0;
         min-height: 60px;
         border: 0;
         border-radius: 12px;
@@ -269,6 +280,46 @@
         color: #111;
         font-size: 1rem;
         box-shadow: none;
+      }
+
+      .hero-howitworks {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-top: 22px;
+        min-height: 54px;
+        padding: 7px 32px 7px 26px;
+        border-radius: 14px;
+        background: linear-gradient(180deg, #2e72b0 0%, #134f86 100%);
+        color: #fff;
+        font-size: 1.12rem;
+        font-weight: 700;
+        transition: filter 180ms ease, transform 180ms ease;
+      }
+
+      .hero-howitworks:hover,
+      .hero-howitworks:focus {
+        color: #fff;
+        filter: brightness(1.06);
+        transform: translateY(-2px);
+      }
+
+      .hero-play {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-play img {
+        width: 17px;
+        height: 17px;
+        object-fit: contain;
+        margin-left: 2px;
       }
 
       .hero-loading {
@@ -1998,6 +2049,7 @@
                 State-approved traffic school and defensive driving courses that help you dismiss tickets, reduce points,
                 and save on insurance.
               </p>
+              <p class="hero-freetrial" data-i18n="hero.freetrial">Try our course for free - no credit card required.</p>
               <div class="hero-selects">
                 <select class="form-select hero-select" id="heroStateSelect" aria-label="Select Your State">
                   <option value="" selected>Select Your State</option>
@@ -2008,11 +2060,15 @@
                   <option value="defensive-driving">Defensive Driving</option>
                   <option value="driver-improvement">Driver Improvement</option>
                 </select>
-                <div class="hero-loading" id="heroCourseLoading" role="status" aria-live="polite">
-                  <span class="hero-spinner" aria-hidden="true"></span>
-                  <span id="heroCourseLoadingText">Loading your state landing page...</span>
-                </div>
               </div>
+              <div class="hero-loading" id="heroCourseLoading" role="status" aria-live="polite">
+                <span class="hero-spinner" aria-hidden="true"></span>
+                <span id="heroCourseLoadingText">Loading your state landing page...</span>
+              </div>
+              <a class="hero-howitworks" href="#how-it-works">
+                <span class="hero-play" aria-hidden="true"><img src="assets/Group 2147224795.png" alt=""></span>
+                <span data-i18n="hero.secondary">How It Works</span>
+              </a>
             </div>
 
             <div class="hero-device reveal visible" aria-hidden="true">
@@ -2531,8 +2587,9 @@ function init(root) {
           "lang.spanish": "Español",
           "hero.title": "America's Original Traffic School",
           "hero.copy": "State-approved traffic school and defensive driving courses that help you dismiss tickets, reduce points, and save on insurance.",
+          "hero.freetrial": "Try our course for free - no credit card required.",
           "hero.primary": "Get Started Now",
-          "hero.secondary": "How it Works",
+          "hero.secondary": "How It Works",
           "hero.proof1a": "State Approved",
           "hero.proof1b": "Trusted by Courts",
           "hero.proof2a": "Certificate Delivered",
@@ -2657,6 +2714,7 @@ function init(root) {
           "lang.spanish": "Español",
           "hero.title": "La escuela de tránsito original de Estados Unidos",
           "hero.copy": "Cursos aprobados por el estado de escuela de tránsito y manejo defensivo que le ayudan a desestimar multas, reducir puntos y ahorrar en el seguro.",
+          "hero.freetrial": "Pruebe nuestro curso gratis: no se requiere tarjeta de crédito.",
           "hero.primary": "Comenzar Ahora",
           "hero.secondary": "Cómo Funciona",
           "hero.proof1a": "Aprobado por el Estado",
