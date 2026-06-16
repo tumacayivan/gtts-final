@@ -334,6 +334,70 @@
         object-fit: contain;
       }
 
+      /* Hero trust row (icon + title + description, with dividers). */
+      .trust-row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 4px 26px;
+        border-right: 1px solid #dfe3e8;
+      }
+
+      .trust-item:last-child {
+        border-right: 0;
+      }
+
+      .trust-item .bi {
+        font-size: 30px;
+        line-height: 1;
+        color: #0a5399;
+        flex-shrink: 0;
+      }
+
+      .trust-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .trust-text strong {
+        color: #123d63;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .trust-text span {
+        color: #5f7082;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+      }
+
+      @media (max-width: 991.98px) {
+        .trust-row {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 22px 0;
+        }
+        .trust-item:nth-child(2n) {
+          border-right: 0;
+        }
+      }
+
+      @media (max-width: 575.98px) {
+        .trust-row {
+          grid-template-columns: 1fr;
+        }
+        .trust-item {
+          border-right: 0;
+        }
+      }
+
       .how {
         padding: 15px 0 28px;
         text-align: center;
@@ -578,6 +642,20 @@
         width: 100%;
         height: 518px;
         object-fit: cover;
+      }
+
+      /* Desktop: let the photo fully cover its right column (matches the taller
+         copy column height instead of a fixed height that leaves a gap). */
+      @media (min-width: 992px) {
+        .partner-panel .row {
+          min-height: 518px;
+        }
+        .partner-panel .row > .col-lg-6:last-child {
+          display: flex;
+        }
+        .partner-panel .row > .col-lg-6:last-child .partner-photo {
+          height: 100%;
+        }
       }
 
       .faq {
@@ -1673,14 +1751,27 @@
 
         <section class="benefits" aria-label="Course benefits">
           <div class="container-page">
-            <div class="benefit-grid">
-              <div class="benefit"><img src="assets/icons/icon11.png" alt=""><span>Lower Rates</span></div>
-              <div class="benefit"><img src="assets/icons/icon202618051602.png" alt=""><span>Best Price</span></div>
-              <div class="benefit"><img src="assets/icons/icon202618051601.png" alt=""><span>100% Online,<br>Fast &amp; Easy</span></div>
-              <div class="benefit"><img src="assets/icons/icon202618051600.png" alt=""><span>Money Back<br>Guarantee</span></div>
-              <div class="benefit"><img src="assets/icons/Vector (5).png" alt=""><span>Start The<br>Course For Free</span></div>
-              <div class="benefit"><img src="assets/figma-home/mobile.svg" alt=""><span>Mobile App Access</span></div>
-              <div class="benefit"><img src="assets/icons/icon202618051559.png" alt=""><span>Live Customer<br>Support</span></div>
+            <div class="trust-row">
+              <div class="trust-item">
+                <i class="bi bi-clock" aria-hidden="true"></i>
+                <div class="trust-text"><strong>No Course Timers</strong><span>Learn at your own pace.</span></div>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-file-earmark-check" aria-hidden="true"></i>
+                <div class="trust-text"><strong>Fast Processing</strong><span>Quick certificate delivery.</span></div>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-phone" aria-hidden="true"></i>
+                <div class="trust-text"><strong>Mobile-Friendly</strong><span>Works on any device.</span></div>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-bank" aria-hidden="true"></i>
+                <div class="trust-text"><strong>California DMV Licensed</strong><span>Licensed by the DMV.</span></div>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-headset" aria-hidden="true"></i>
+                <div class="trust-text"><strong>Real Human Support</strong><span>Phone, chat, and email.</span></div>
+              </div>
             </div>
           </div>
         </section>

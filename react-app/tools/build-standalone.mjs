@@ -21,6 +21,10 @@ const pages = [
   { name: 'StateLanding',    out: 'state-landingpage.html',  title: 'State Traffic School | GoToTrafficSchool.com' },
   { name: 'StateFaq',        out: 'state-faq.html',          title: 'State Traffic School FAQ | GoToTrafficSchool.com' },
   { name: 'AltRegistration', out: 'alt-registration.html',   title: 'Registration | GoToTrafficSchool.com' },
+  // New state landing pages — these reuse StateLanding's styles.css and script.js.
+  { name: 'StateCalifornia', out: 'california.html',         title: 'California Traffic School Online | GoToTrafficSchool.com', cssFrom: 'StateLanding', scriptFrom: 'StateLanding' },
+  { name: 'StateAlaska',     out: 'alaska.html',             title: 'Alaska Traffic School Online | GoToTrafficSchool.com',     cssFrom: 'StateLanding', scriptFrom: 'StateLanding' },
+  { name: 'StateTemplate',   out: 'state-template.html',     title: 'State Traffic School Online | GoToTrafficSchool.com',      cssFrom: 'StateLanding', scriptFrom: 'StateLanding' },
 ]
 
 // Internal SPA routes -> standalone filenames. Longer/specific first; "/" last.
@@ -34,6 +38,9 @@ const linkRewrites = [
   ['href="/state-landing"', 'href="state-landingpage.html"'],
   ['href="/state-faq"', 'href="state-faq.html"'],
   ['href="/alt-registration"', 'href="alt-registration.html"'],
+  ['href="/california"', 'href="california.html"'],
+  ['href="/alaska"', 'href="alaska.html"'],
+  ['href="/state-template"', 'href="state-template.html"'],
   ['href="/"', 'href="index.html"'],
 ]
 
@@ -65,9 +72,11 @@ mkdirSync(OUT, { recursive: true })
 
 for (const page of pages) {
   const dir = join(PAGES, page.name)
+  const cssDir = join(PAGES, page.cssFrom || page.name)
+  const scriptDir = join(PAGES, page.scriptFrom || page.name)
   const content = rewriteLinks(toRelativeAssets(readFileSync(join(dir, 'content.html'), 'utf8')))
-  const css = toRelativeAssets(readFileSync(join(dir, 'styles.css'), 'utf8'))
-  let script = toRelativeAssets(readFileSync(join(dir, 'script.js'), 'utf8'))
+  const css = toRelativeAssets(readFileSync(join(cssDir, 'styles.css'), 'utf8'))
+  let script = toRelativeAssets(readFileSync(join(scriptDir, 'script.js'), 'utf8'))
     .replace(/export\s+function\s+init/, 'function init')
     .split('</script>').join('<\\/script>') // guard against premature script close
 

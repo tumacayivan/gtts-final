@@ -622,6 +622,20 @@
         object-fit: cover;
       }
 
+      /* Desktop: let the photo fully cover its right column (matches the taller
+         copy column height instead of a fixed height that leaves a gap). */
+      @media (min-width: 992px) {
+        .partner-panel .row {
+          min-height: 518px;
+        }
+        .partner-panel .row > .col-lg-6:last-child {
+          display: flex;
+        }
+        .partner-panel .row > .col-lg-6:last-child .partner-photo {
+          height: 100%;
+        }
+      }
+
       .faq {
         padding: 28px 0 7px;
         text-align: center;
